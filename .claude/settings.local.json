@@ -22,7 +22,11 @@
       "Bash(git branch:*)",
       "Bash(git remote add:*)",
       "Bash(git push:*)",
-      "Bash(del nul)"
+      "Bash(del nul)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(echo.:*)",
+      "Bash(del .env.local)"
     ]
   }
 }

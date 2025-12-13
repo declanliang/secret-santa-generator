@@ -9,6 +9,11 @@ import { EmailStep } from '@/components/steps/EmailStep';
 import { PublishStep } from '@/components/steps/PublishStep';
 import { SuccessStep } from '@/components/steps/SuccessStep';
 import { Snowflakes } from '@/components/Snowflakes';
+import { HowItWorks } from '@/components/seo/HowItWorks';
+import { Features } from '@/components/seo/Features';
+import { UseCases } from '@/components/seo/UseCases';
+import { FAQ } from '@/components/seo/FAQ';
+import { StructuredData } from '@/components/seo/StructuredData';
 
 export type Participant = {
   id: string;
@@ -66,6 +71,7 @@ export default function Home() {
 
   return (
     <div className="christmas-bg relative">
+      <StructuredData />
       <Snowflakes />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
@@ -84,12 +90,22 @@ export default function Home() {
           {/* Step Content */}
           <div className="mt-8">
             {currentStep === 1 && (
-              <ParticipantsStep
-                participants={participants}
-                setParticipants={setParticipants}
-                onNext={handleNext}
-                setOrganizerName={(name) => setEventDetails({...eventDetails, organizerName: name})}
-              />
+              <>
+                <ParticipantsStep
+                  participants={participants}
+                  setParticipants={setParticipants}
+                  onNext={handleNext}
+                  setOrganizerName={(name) => setEventDetails({...eventDetails, organizerName: name})}
+                />
+
+                {/* SEO Content - Only show on step 1 */}
+                <div className="mt-16">
+                  <HowItWorks />
+                  <Features />
+                  <UseCases />
+                  <FAQ />
+                </div>
+              </>
             )}
             {currentStep === 2 && (
               <RestrictionsStep

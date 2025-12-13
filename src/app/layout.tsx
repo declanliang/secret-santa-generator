@@ -15,8 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Secret Santa Generator",
-  description: "Create your gift exchange in minutes - no email required!",
+  title: "Free Secret Santa Generator - No Email Required | 2025",
+  description: "Create your Secret Santa gift exchange in minutes. Free online generator with no registration. Perfect for office, family, and friends. Share via WhatsApp, email, or direct link!",
+  keywords: "secret santa generator, free secret santa, gift exchange generator, no email required, secret santa online, random name picker, secret santa organizer, secret santa app",
+  openGraph: {
+    title: "Free Secret Santa Generator - No Email Required",
+    description: "Create your Secret Santa gift exchange in minutes. Free online generator with no registration.",
+    type: "website",
+    url: "https://secret-santa-generator.net",
+  },
 };
 
 export default function RootLayout({
