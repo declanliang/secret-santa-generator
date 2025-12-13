@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS events (
   id TEXT PRIMARY KEY,
   group_name TEXT NOT NULL,
   organizer_name TEXT NOT NULL,
+  organizer_email TEXT,
   event_type TEXT NOT NULL,
   exchange_date DATE NOT NULL,
   budget_amount NUMERIC NOT NULL,
@@ -22,6 +23,8 @@ CREATE TABLE IF NOT EXISTS participants (
   id TEXT PRIMARY KEY,
   event_id TEXT NOT NULL REFERENCES events(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
+  email TEXT,
+  email_sent BOOLEAN DEFAULT FALSE,
   order_index INTEGER NOT NULL,
   token TEXT NOT NULL UNIQUE,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()

@@ -44,6 +44,10 @@ export function PublishStep({
   const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [participantsWithTokens, setParticipantsWithTokens] = useState<ParticipantWithToken[]>([]);
   const [activeTab, setActiveTab] = useState<'universal' | 'personalized'>('universal');
+  const [email, setEmail] = useState('');
+  const [showEmailInput, setShowEmailInput] = useState(true);
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
   // Secret Santa pairing algorithm
   const generateAssignments = (): Assignment[] | null => {
@@ -116,8 +120,9 @@ export function PublishStep({
 
       if (eventError) throw eventError;
 
-      // Create participants with tokens (let database generate IDs)
+      // Create participants with tokens and generated IDs
       const participantRecords = participants.map((p, index) => ({
+        id: nanoid(10),
         event_id: newEventId,
         name: p.name,
         order_index: index,
@@ -205,6 +210,49 @@ export function PublishStep({
     setTimeout(() => setCopiedLink(''), 2000);
   };
 
+  const handleSendEmail = async () => {
+    if (!email.trim()) {
+      toast.error('Please enter an email address');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+
+    setIsSendingEmail(true);
+
+    try {
+      const response = await fetch('/api/send-organizer-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          eventId,
+          email: email.trim(),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send email');
+      }
+
+      setEmailSent(true);
+      setShowEmailInput(false);
+      toast.success('Email sent successfully! 📧');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error(error instanceof Error ? error.message : 'Failed to send email. Please try again.');
+    } finally {
+      setIsSendingEmail(false);
+    }
+  };
+
   if (isCreating) {
     return (
       <Card className="p-6 md:p-8 shadow-lg text-center">
@@ -226,6 +274,58 @@ export function PublishStep({
         <Badge className="bg-green-500 mb-2">✓ Event Created Successfully</Badge>
         <h2 className="text-3xl font-bold mb-2">Your Secret Santa is Ready! 🎁</h2>
       </div>
+
+      {/* Email Input Section */}
+      {showEmailInput && !emailSent && eventId && isCreated && (
+        <Card className="p-6 bg-gradient-to-br from-violet-50 to-purple-50 border-violet-200">
+          <div className="flex items-start gap-4">
+            <div className="text-4xl">📧</div>
+            <div className="flex-1">
+              <h3 className="text-lg font-bold text-violet-900 mb-2">Save Your Links via Email</h3>
+              <p className="text-sm text-violet-700 mb-4">
+                Get all your event links sent to your email for safekeeping. We'll send you the universal link, personalized links for each participant, and your organizer dashboard link.
+              </p>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  className="flex-1 px-4 py-2 border border-violet-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  disabled={isSendingEmail}
+                />
+                <Button
+                  onClick={handleSendEmail}
+                  disabled={isSendingEmail}
+                  className="bg-violet-600 hover:bg-violet-700 text-white px-6"
+                >
+                  {isSendingEmail ? 'Sending...' : 'Send Email'}
+                </Button>
+                <Button
+                  onClick={() => setShowEmailInput(false)}
+                  variant="outline"
+                  disabled={isSendingEmail}
+                >
+                  Skip
+                </Button>
+              </div>
+              <p className="text-xs text-violet-600 mt-2">
+                🔒 We only use your email to send event links. No spam, ever.
+              </p>
+            </div>
+          </div>
+        </Card>
+      )}
+
+      {/* Email Sent Confirmation */}
+      {emailSent && (
+        <Card className="p-4 bg-green-50 border-green-200">
+          <div className="flex items-center gap-2 text-green-700">
+            <Check className="w-5 h-5" />
+            <p className="font-medium">Email sent successfully! Check your inbox for all your event links.</p>
+          </div>
+        </Card>
+      )}
 
       {/* How it works */}
       <Card className="p-6 bg-violet-50 border-violet-200">

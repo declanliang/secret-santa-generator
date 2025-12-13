@@ -37,6 +37,9 @@ export default function JoinEventPage() {
   const [eventData, setEventData] = useState<EventData | null>(null);
   const [selectedParticipant, setSelectedParticipant] = useState('');
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [showEmailInput, setShowEmailInput] = useState(false);
+  const [email, setEmail] = useState('');
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const [assignment, setAssignment] = useState<string>('');
 
@@ -95,7 +98,62 @@ export default function JoinEventPage() {
     setShowConfirmation(true);
   };
 
-  const handleReveal = async () => {
+  const handleConfirmIdentity = () => {
+    // Show email input screen instead of directly revealing
+    setShowEmailInput(true);
+  };
+
+  const handleSendEmail = async () => {
+    if (!email.trim()) {
+      toast.error('Please enter an email address');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+
+    setIsSendingEmail(true);
+
+    try {
+      // First reveal the assignment
+      await revealAssignment();
+
+      // Then send email
+      const response = await fetch('/api/send-participant-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          participantId: selectedParticipant,
+          email: email.trim(),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send email');
+      }
+
+      toast.success('Email sent successfully! 📧');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error(error instanceof Error ? error.message : 'Failed to send email');
+    } finally {
+      setIsSendingEmail(false);
+    }
+  };
+
+  const handleSkipEmail = async () => {
+    // Just reveal without sending email
+    await revealAssignment();
+  };
+
+  const revealAssignment = async () => {
     try {
       // Get assignment
       const { data: assignmentData, error: assignmentError } = await supabase
@@ -123,6 +181,7 @@ export default function JoinEventPage() {
     } catch (error) {
       console.error('Error revealing assignment:', error);
       toast.error('Failed to reveal assignment. Please try again.');
+      throw error;
     }
   };
 
@@ -242,37 +301,99 @@ export default function JoinEventPage() {
                 </p>
               </Card>
             ) : (
-              <Card className="p-8 shadow-lg text-center">
-                <div className="mb-6">
-                  <div className="text-6xl mb-4">🎁</div>
-                  <h2 className="text-3xl font-bold mb-4">Confirm Your Identity</h2>
-                  <p className="text-lg text-muted-foreground mb-4">
-                    Please confirm you are
-                  </p>
-                  <div className="text-3xl font-bold text-violet-600 mb-4">
-                    {participants.find(p => p.id === selectedParticipant)?.name}
+              !showEmailInput ? (
+                <Card className="p-8 shadow-lg text-center">
+                  <div className="mb-6">
+                    <div className="text-6xl mb-4">🎁</div>
+                    <h2 className="text-3xl font-bold mb-4">Confirm Your Identity</h2>
+                    <p className="text-lg text-muted-foreground mb-4">
+                      Please confirm you are
+                    </p>
+                    <div className="text-3xl font-bold text-violet-600 mb-4">
+                      {participants.find(p => p.id === selectedParticipant)?.name}
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Once you reveal, you cannot change your selection
+                    </p>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Once you reveal, you cannot change your selection
-                  </p>
-                </div>
 
-                <div className="space-y-3">
-                  <Button
-                    onClick={handleReveal}
-                    className="w-full bg-gradient-to-r from-violet-600 to-violet-500 hover:from-violet-700 hover:to-violet-600 text-white font-semibold py-6 text-lg"
-                  >
-                    Yes, I'm {participants.find(p => p.id === selectedParticipant)?.name}
-                  </Button>
-                  <Button
-                    onClick={() => setShowConfirmation(false)}
-                    variant="outline"
-                    className="w-full py-6"
-                  >
-                    Back
-                  </Button>
-                </div>
-              </Card>
+                  <div className="space-y-3">
+                    <Button
+                      onClick={handleConfirmIdentity}
+                      className="w-full bg-gradient-to-r from-violet-600 to-violet-500 hover:from-violet-700 hover:to-violet-600 text-white font-semibold py-6 text-lg"
+                    >
+                      Yes, I'm {participants.find(p => p.id === selectedParticipant)?.name}
+                    </Button>
+                    <Button
+                      onClick={() => setShowConfirmation(false)}
+                      variant="outline"
+                      className="w-full py-6"
+                    >
+                      Back
+                    </Button>
+                  </div>
+                </Card>
+              ) : (
+                <Card className="p-8 shadow-lg">
+                  <div className="text-center mb-6">
+                    <div className="text-6xl mb-4">📧</div>
+                    <h2 className="text-3xl font-bold mb-2">Save Your Assignment</h2>
+                    <p className="text-muted-foreground">
+                      Get your Secret Santa assignment sent to your email (optional)
+                    </p>
+                  </div>
+
+                  <div className="bg-violet-50 border border-violet-200 rounded-lg p-4 mb-6">
+                    <div className="flex items-start gap-2">
+                      <span className="text-xl">✨</span>
+                      <div className="text-sm">
+                        <p className="font-semibold text-violet-900 mb-1">Why provide your email?</p>
+                        <p className="text-violet-700">
+                          We'll send you a reminder with your assignment details, including who you're buying for, the budget, and exchange date. Never lose track of your Secret Santa!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block font-semibold mb-2">Your Email Address</label>
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="you@example.com"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                        disabled={isSendingEmail}
+                      />
+                    </div>
+
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                      <p className="text-sm text-gray-600">
+                        <span className="font-semibold">🔒 Privacy:</span> We only use your email to send your assignment. No spam, ever.
+                      </p>
+                    </div>
+
+                    <div className="space-y-3">
+                      <Button
+                        onClick={handleSendEmail}
+                        disabled={isSendingEmail}
+                        className="w-full bg-gradient-to-r from-violet-600 to-violet-500 hover:from-violet-700 hover:to-violet-600 text-white font-semibold py-6 text-lg"
+                      >
+                        {isSendingEmail ? 'Sending...' : 'Send Email & Reveal'}
+                      </Button>
+                      <Button
+                        onClick={handleSkipEmail}
+                        variant="outline"
+                        disabled={isSendingEmail}
+                        className="w-full py-6"
+                      >
+                        Skip & Reveal Now
+                      </Button>
+                    </div>
+                  </div>
+                </Card>
+              )
             )
           ) : (
             <Card className="p-8 shadow-lg text-center">
