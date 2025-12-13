@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(bun --version:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(set NEXT_PUBLIC_SUPABASE_URL)",
+      "Bash(set NEXT_PUBLIC_SUPABASE_ANON_KEY)",
+      "Bash(cat:*)",
+      "Bash(rd /s /q \".next\")",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(rm:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(tasklist:*)",
+      "Bash(xargs:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(del nul)"
+    ]
+  }
+}
