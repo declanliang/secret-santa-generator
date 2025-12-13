@@ -53,12 +53,14 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
   const [budgetError, setBudgetError] = React.useState<string>('');
 
   // Set default custom message on mount
+  // Set default custom message on mount
   React.useEffect(() => {
     if (!eventDetails.customMessage) {
       const groupName = eventDetails.groupName || 'Secret Santa 2025';
       const defaultMessage = `You've been invited to join ${groupName}! Make a wish list, draw a name, and let the magic begin.`;
       setEventDetails({ ...eventDetails, customMessage: defaultMessage });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateDetail = (key: keyof EventDetails, value: string | number) => {
@@ -160,11 +162,10 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
             <Button
               variant={selectedDateOption === '2025-12-20' ? 'default' : 'outline'}
               onClick={() => handleDateSelection('2025-12-20')}
-              className={`w-full justify-start text-left h-auto py-4 ${
-                selectedDateOption === '2025-12-20'
+              className={`w-full justify-start text-left h-auto py-4 ${selectedDateOption === '2025-12-20'
                   ? 'bg-violet-600 hover:bg-violet-700 text-white'
                   : 'hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-base font-medium">Saturday, December 20, 2025</span>
             </Button>
@@ -172,11 +173,10 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
             <Button
               variant={selectedDateOption === '2025-12-24' ? 'default' : 'outline'}
               onClick={() => handleDateSelection('2025-12-24')}
-              className={`w-full justify-start text-left h-auto py-4 ${
-                selectedDateOption === '2025-12-24'
+              className={`w-full justify-start text-left h-auto py-4 ${selectedDateOption === '2025-12-24'
                   ? 'bg-violet-600 hover:bg-violet-700 text-white'
                   : 'hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-base font-medium">Wednesday, December 24, 2025</span>
             </Button>
@@ -184,11 +184,10 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
             <Button
               variant={selectedDateOption === '2025-12-25' ? 'default' : 'outline'}
               onClick={() => handleDateSelection('2025-12-25')}
-              className={`w-full justify-start text-left h-auto py-4 ${
-                selectedDateOption === '2025-12-25'
+              className={`w-full justify-start text-left h-auto py-4 ${selectedDateOption === '2025-12-25'
                   ? 'bg-violet-600 hover:bg-violet-700 text-white'
                   : 'hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-base font-medium">Thursday, December 25, 2025</span>
             </Button>
@@ -199,11 +198,10 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
                 setSelectedDateOption('other');
                 setShowCustomDate(true);
               }}
-              className={`w-full justify-start text-left h-auto py-4 ${
-                selectedDateOption === 'other' && showCustomDate
+              className={`w-full justify-start text-left h-auto py-4 ${selectedDateOption === 'other' && showCustomDate
                   ? 'bg-violet-600 hover:bg-violet-700 text-white'
                   : 'hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-base font-medium">Other</span>
             </Button>
@@ -231,11 +229,10 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
             <Button
               variant={selectedBudgetOption === '10' ? 'default' : 'outline'}
               onClick={() => handleBudgetSelection('10')}
-              className={`w-full justify-start text-left h-auto py-4 ${
-                selectedBudgetOption === '10'
+              className={`w-full justify-start text-left h-auto py-4 ${selectedBudgetOption === '10'
                   ? 'bg-violet-600 hover:bg-violet-700 text-white'
                   : 'hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-base font-medium">$10</span>
             </Button>
@@ -243,11 +240,10 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
             <Button
               variant={selectedBudgetOption === '20' ? 'default' : 'outline'}
               onClick={() => handleBudgetSelection('20')}
-              className={`w-full justify-start text-left h-auto py-4 ${
-                selectedBudgetOption === '20'
+              className={`w-full justify-start text-left h-auto py-4 ${selectedBudgetOption === '20'
                   ? 'bg-violet-600 hover:bg-violet-700 text-white'
                   : 'hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-base font-medium">$20</span>
             </Button>
@@ -255,11 +251,10 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
             <Button
               variant={selectedBudgetOption === '50' ? 'default' : 'outline'}
               onClick={() => handleBudgetSelection('50')}
-              className={`w-full justify-start text-left h-auto py-4 ${
-                selectedBudgetOption === '50'
+              className={`w-full justify-start text-left h-auto py-4 ${selectedBudgetOption === '50'
                   ? 'bg-violet-600 hover:bg-violet-700 text-white'
                   : 'hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-base font-medium">$50</span>
             </Button>
@@ -267,11 +262,10 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
             <Button
               variant={selectedBudgetOption === 'other' || showCustomBudget ? 'default' : 'outline'}
               onClick={() => handleBudgetSelection('other')}
-              className={`w-full justify-start text-left h-auto py-4 ${
-                selectedBudgetOption === 'other' || showCustomBudget
+              className={`w-full justify-start text-left h-auto py-4 ${selectedBudgetOption === 'other' || showCustomBudget
                   ? 'bg-violet-600 hover:bg-violet-700 text-white'
                   : 'hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-base font-medium">Other</span>
             </Button>

@@ -44,51 +44,51 @@ export default function JoinEventPage() {
   const [assignment, setAssignment] = useState<string>('');
 
   useEffect(() => {
-    loadEventData();
-  }, [eventId]);
+    const loadEventData = async () => {
+      try {
+        // Load event details
+        const { data: event, error: eventError } = await supabase
+          .from('events')
+          .select('*')
+          .eq('id', eventId)
+          .single();
 
-  const loadEventData = async () => {
-    try {
-      // Load event details
-      const { data: event, error: eventError } = await supabase
-        .from('events')
-        .select('*')
-        .eq('id', eventId)
-        .single();
+        if (eventError) throw eventError;
+        setEventData(event);
 
-      if (eventError) throw eventError;
-      setEventData(event);
+        // Load participants
+        const { data: parts, error: partsError } = await supabase
+          .from('participants')
+          .select('*')
+          .eq('event_id', eventId)
+          .order('order_index');
 
-      // Load participants
-      const { data: parts, error: partsError } = await supabase
-        .from('participants')
-        .select('*')
-        .eq('event_id', eventId)
-        .order('order_index');
+        if (partsError) throw partsError;
 
-      if (partsError) throw partsError;
+        const participantsList = parts as Participant[];
+        setParticipants(participantsList);
 
-      const participantsList = parts as Participant[];
-      setParticipants(participantsList);
-
-      // Auto-select participant if token is provided
-      if (token && participantsList) {
-        const matchingParticipant = participantsList.find((p) => p.token === token);
-        if (matchingParticipant) {
-          setSelectedParticipant(matchingParticipant.id);
-          // Automatically show confirmation for personalized links
-          setShowConfirmation(true);
-        } else {
-          toast.error('Invalid personalized link. Please use the correct link sent to you.');
+        // Auto-select participant if token is provided
+        if (token && participantsList) {
+          const matchingParticipant = participantsList.find((p) => p.token === token);
+          if (matchingParticipant) {
+            setSelectedParticipant(matchingParticipant.id);
+            // Automatically show confirmation for personalized links
+            setShowConfirmation(true);
+          } else {
+            toast.error('Invalid personalized link. Please use the correct link sent to you.');
+          }
         }
+      } catch (error) {
+        console.error('Error loading event:', error);
+        toast.error('Failed to load event. Please check the link.');
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error('Error loading event:', error);
-      toast.error('Failed to load event. Please check the link.');
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
+
+    loadEventData();
+  }, [eventId, token]);
 
   const handleSelectName = () => {
     if (!selectedParticipant) {
@@ -166,14 +166,17 @@ export default function JoinEventPage() {
       if (assignmentError) throw assignmentError;
 
       // Get receiver name
-      const receiver = participants.find((p) => p.id === assignmentData.receiver_id);
+      // Fix: Explicitly cast assignmentData to handle potential type inference issues
+      const receiverId = (assignmentData as { receiver_id: string }).receiver_id;
+      const receiver = participants.find((p) => p.id === receiverId);
+
       if (receiver) {
         setAssignment(receiver.name);
         setRevealed(true);
 
         // Update viewed_at
-        await supabase
-          .from('assignments')
+        await (supabase
+          .from('assignments') as any) // eslint-disable-line @typescript-eslint/no-explicit-any
           .update({ viewed_at: new Date().toISOString() })
           .eq('event_id', eventId)
           .eq('giver_id', selectedParticipant);

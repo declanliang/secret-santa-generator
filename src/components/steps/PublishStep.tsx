@@ -107,7 +107,7 @@ export function PublishStep({
       const newEventId = nanoid(10);
 
       // Create event
-      const { error: eventError } = await supabase.from('events').insert({
+      const { error: eventError } = await (supabase.from('events') as any).insert({ // eslint-disable-line @typescript-eslint/no-explicit-any
         id: newEventId,
         group_name: eventDetails.groupName,
         organizer_name: eventDetails.organizerName,
@@ -129,8 +129,8 @@ export function PublishStep({
         token: nanoid(16),
       }));
 
-      const { data: insertedParticipants, error: participantsError } = await supabase
-        .from('participants')
+      const { data: insertedParticipants, error: participantsError } = await (supabase
+        .from('participants') as any) // eslint-disable-line @typescript-eslint/no-explicit-any
         .insert(participantRecords)
         .select('id, name, token');
 
@@ -140,7 +140,7 @@ export function PublishStep({
       // Create a mapping from old frontend IDs to new database IDs
       const idMapping = new Map<string, string>();
       participants.forEach((p, index) => {
-        idMapping.set(p.id, insertedParticipants[index].id);
+        idMapping.set(p.id, (insertedParticipants as any)[index].id); // eslint-disable-line @typescript-eslint/no-explicit-any
       });
 
       // Create restrictions (map old IDs to new database IDs)
@@ -154,8 +154,8 @@ export function PublishStep({
         );
 
         if (restrictionRecords.length > 0) {
-          const { error: restrictionsError } = await supabase
-            .from('restrictions')
+          const { error: restrictionsError } = await (supabase
+            .from('restrictions') as any) // eslint-disable-line @typescript-eslint/no-explicit-any
             .insert(restrictionRecords);
 
           if (restrictionsError) throw restrictionsError;
@@ -169,16 +169,14 @@ export function PublishStep({
         receiver_id: idMapping.get(a.receiverId)!,
       }));
 
-      const { error: assignmentsError } = await supabase
-        .from('assignments')
+      const { error: assignmentsError } = await (supabase
+        .from('assignments') as any) // eslint-disable-line @typescript-eslint/no-explicit-any
         .insert(assignmentRecords);
 
       if (assignmentsError) throw assignmentsError;
 
       // Use the insertedParticipants data (already has id, name, token)
-      console.log('Inserted participants with tokens:', insertedParticipants);
-      setParticipantsWithTokens(insertedParticipants);
-      console.log('Set participantsWithTokens state:', insertedParticipants);
+      setParticipantsWithTokens(insertedParticipants as any); // eslint-disable-line @typescript-eslint/no-explicit-any
 
       setEventId(newEventId);
       setIsCreated(true);
@@ -198,6 +196,7 @@ export function PublishStep({
     if (!isCreated && !eventId) {
       createEvent();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const universalLink = `${window.location.origin}/event/${eventId}/join`;
@@ -353,21 +352,19 @@ export function PublishStep({
         <div className="flex gap-2 mb-6 border-b">
           <button
             onClick={() => setActiveTab('universal')}
-            className={`flex-1 px-6 py-3 font-semibold text-base transition-colors border-b-2 justify-center ${
-              activeTab === 'universal'
-                ? 'border-violet-600 text-violet-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700'
-            }`}
+            className={`flex-1 px-6 py-3 font-semibold text-base transition-colors border-b-2 justify-center ${activeTab === 'universal'
+              ? 'border-violet-600 text-violet-600'
+              : 'border-transparent text-gray-500 hover:text-gray-700'
+              }`}
           >
             Universal Shared Link
           </button>
           <button
             onClick={() => setActiveTab('personalized')}
-            className={`flex-1 px-6 py-3 font-semibold text-base transition-colors border-b-2 justify-center ${
-              activeTab === 'personalized'
-                ? 'border-violet-600 text-violet-600'
-                : 'border-transparent text-gray-500 hover:text-gray-700'
-            }`}
+            className={`flex-1 px-6 py-3 font-semibold text-base transition-colors border-b-2 justify-center ${activeTab === 'personalized'
+              ? 'border-violet-600 text-violet-600'
+              : 'border-transparent text-gray-500 hover:text-gray-700'
+              }`}
           >
             Personalized Links
           </button>
@@ -419,7 +416,6 @@ export function PublishStep({
                 </p>
               </div>
               <div className="space-y-2 max-h-96 overflow-y-auto mb-4">
-                {console.log('Rendering personalized links, participantsWithTokens:', participantsWithTokens)}
                 {participantsWithTokens.length === 0 && (
                   <p className="text-sm text-muted-foreground">Loading personalized links...</p>
                 )}

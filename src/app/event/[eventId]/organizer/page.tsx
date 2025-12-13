@@ -42,46 +42,46 @@ export default function OrganizerPage() {
   const [showAssignments, setShowAssignments] = useState(false);
 
   useEffect(() => {
+    const loadData = async () => {
+      try {
+        // Load event
+        const { data: event, error: eventError } = await supabase
+          .from('events')
+          .select('*')
+          .eq('id', eventId)
+          .single();
+
+        if (eventError) throw eventError;
+        setEventData(event);
+
+        // Load participants
+        const { data: parts, error: partsError } = await supabase
+          .from('participants')
+          .select('*')
+          .eq('event_id', eventId)
+          .order('order_index');
+
+        if (partsError) throw partsError;
+        setParticipants(parts);
+
+        // Load assignments
+        const { data: assigns, error: assignsError } = await supabase
+          .from('assignments')
+          .select('*')
+          .eq('event_id', eventId);
+
+        if (assignsError) throw assignsError;
+        setAssignments(assigns);
+      } catch (error) {
+        console.error('Error loading data:', error);
+        toast.error('Failed to load event data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
     loadData();
   }, [eventId]);
-
-  const loadData = async () => {
-    try {
-      // Load event
-      const { data: event, error: eventError } = await supabase
-        .from('events')
-        .select('*')
-        .eq('id', eventId)
-        .single();
-
-      if (eventError) throw eventError;
-      setEventData(event);
-
-      // Load participants
-      const { data: parts, error: partsError } = await supabase
-        .from('participants')
-        .select('*')
-        .eq('event_id', eventId)
-        .order('order_index');
-
-      if (partsError) throw partsError;
-      setParticipants(parts);
-
-      // Load assignments
-      const { data: assigns, error: assignsError } = await supabase
-        .from('assignments')
-        .select('*')
-        .eq('event_id', eventId);
-
-      if (assignsError) throw assignsError;
-      setAssignments(assigns);
-    } catch (error) {
-      console.error('Error loading data:', error);
-      toast.error('Failed to load event data');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const getParticipantName = (id: string) => {
     return participants.find((p) => p.id === id)?.name || 'Unknown';
