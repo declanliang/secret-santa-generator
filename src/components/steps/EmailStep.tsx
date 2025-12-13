@@ -1,18 +1,20 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { toast } from 'sonner';
 
 type EmailStepProps = {
   eventId: string;
   onNext: () => void;
   onSkip: () => void;
+  setOrganizerEmail: (email: string) => void;
 };
 
-export function EmailStep({ eventId, onNext, onSkip }: EmailStepProps) {
+export function EmailStep({ eventId, onNext, onSkip, setOrganizerEmail }: EmailStepProps) {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -37,6 +39,10 @@ export function EmailStep({ eventId, onNext, onSkip }: EmailStepProps) {
     setError('');
 
     try {
+      // Add timeout to prevent long waits (10 seconds)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
+
       const response = await fetch('/api/send-organizer-email', {
         method: 'POST',
         headers: {
@@ -46,7 +52,10 @@ export function EmailStep({ eventId, onNext, onSkip }: EmailStepProps) {
           eventId,
           email: email.trim(),
         }),
+        signal: controller.signal,
       });
+
+      clearTimeout(timeoutId);
 
       const data = await response.json();
 
@@ -54,11 +63,31 @@ export function EmailStep({ eventId, onNext, onSkip }: EmailStepProps) {
         throw new Error(data.error || 'Failed to send email');
       }
 
+      // Store the email and show success message
+      setOrganizerEmail(email.trim());
+      toast.success('Email sent successfully! 📧');
+
       // Email sent successfully, proceed to next step
       onNext();
     } catch (err) {
       console.error('Error sending email:', err);
-      setError(err instanceof Error ? err.message : 'Failed to send email. Please try again.');
+
+      // Handle different error types gracefully
+      if (err instanceof Error && err.name === 'AbortError') {
+        // Timeout - don't block the user, let them continue
+        toast.warning('Email is taking longer than expected. You can continue and check your inbox later.');
+        setError('Email sending timed out. Don\'t worry, you can find your links on the next page.');
+
+        // Auto-skip after 2 seconds if timeout
+        setTimeout(() => {
+          onSkip();
+        }, 2000);
+      } else {
+        // Other errors - show message but don't block
+        const errorMessage = err instanceof Error ? err.message : 'Failed to send email';
+        setError(errorMessage + '. You can skip and find your links on the next page.');
+        toast.error('Email failed to send. You can still access your links on the next page.');
+      }
     } finally {
       setIsSubmitting(false);
     }

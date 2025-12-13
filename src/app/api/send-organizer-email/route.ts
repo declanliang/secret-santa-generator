@@ -2,7 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { createClient } from '@supabase/supabase-js';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend lazily to avoid build errors if env var is missing
+const getResend = () => {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('Missing RESEND_API_KEY');
+  }
+  return new Resend(apiKey);
+};
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -26,6 +33,28 @@ export async function POST(request: NextRequest) {
         { error: 'Invalid email format' },
         { status: 400 }
       );
+    }
+
+    // Simple rate limiting: Check if organizer email was already sent recently
+    // Get the event to check if organizer_email is already set and when it was updated
+    const { data: existingEvent } = await supabase
+      .from('events')
+      .select('organizer_email, updated_at')
+      .eq('id', eventId)
+      .single();
+
+    if (existingEvent?.organizer_email) {
+      // If email already exists, check if it was updated recently (within last 5 minutes)
+      const updatedAt = new Date(existingEvent.updated_at);
+      const now = new Date();
+      const minutesSinceUpdate = (now.getTime() - updatedAt.getTime()) / 1000 / 60;
+
+      if (minutesSinceUpdate < 5) {
+        return NextResponse.json(
+          { error: 'Email was already sent recently. Please wait a few minutes before sending again.' },
+          { status: 429 } // 429 Too Many Requests
+        );
+      }
     }
 
     // Get event details
@@ -129,6 +158,7 @@ export async function POST(request: NextRequest) {
 `;
 
     // Send email using Resend
+    const resend = getResend();
     const { data, error } = await resend.emails.send({
       from: 'Secret Santa <noreply@secret-santa-generator.net>',
       to: [email],

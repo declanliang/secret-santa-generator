@@ -5,7 +5,9 @@ import { StepIndicator } from '@/components/StepIndicator';
 import { ParticipantsStep } from '@/components/steps/ParticipantsStep';
 import { RestrictionsStep } from '@/components/steps/RestrictionsStep';
 import { DetailsStep } from '@/components/steps/DetailsStep';
+import { EmailStep } from '@/components/steps/EmailStep';
 import { PublishStep } from '@/components/steps/PublishStep';
+import { SuccessStep } from '@/components/steps/SuccessStep';
 import { Snowflakes } from '@/components/Snowflakes';
 
 export type Participant = {
@@ -43,11 +45,13 @@ export default function Home() {
     customMessage: '',
   });
   const [eventId, setEventId] = useState<string>('');
+  const [organizerEmail, setOrganizerEmail] = useState<string>('');
+  const [participantsWithTokens, setParticipantsWithTokens] = useState<Array<{ id: string; name: string; token: string }>>([]);
 
   const handleNext = () => {
     if (currentStep === 2 && skipRestrictions) {
       setCurrentStep(3);
-    } else if (currentStep < 4) {
+    } else if (currentStep < 6) {
       setCurrentStep(currentStep + 1);
     }
   };
@@ -114,6 +118,25 @@ export default function Home() {
                 skipRestrictions={skipRestrictions}
                 eventId={eventId}
                 setEventId={setEventId}
+                organizerEmail={organizerEmail}
+                onEventCreated={handleNext}
+                setParticipantsWithTokens={setParticipantsWithTokens}
+              />
+            )}
+            {currentStep === 5 && (
+              <EmailStep
+                eventId={eventId}
+                onNext={handleNext}
+                onSkip={handleNext}
+                setOrganizerEmail={setOrganizerEmail}
+              />
+            )}
+            {currentStep === 6 && (
+              <SuccessStep
+                eventId={eventId}
+                participants={participants}
+                participantsWithTokens={participantsWithTokens}
+                organizerEmail={organizerEmail}
               />
             )}
           </div>

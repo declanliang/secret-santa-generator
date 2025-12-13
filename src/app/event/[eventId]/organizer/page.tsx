@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Snowflakes } from '@/components/Snowflakes';
 import { supabase } from '@/lib/supabase';
 import { toast } from 'sonner';
-import { Eye, EyeOff, ArrowRight, Calendar, DollarSign, Users } from 'lucide-react';
+import { Eye, EyeOff, ArrowRight, Calendar, DollarSign, Users, Copy, Check, Link } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type Assignment = {
@@ -40,6 +40,7 @@ export default function OrganizerPage() {
   const [participants, setParticipants] = useState<Participant[]>([]);
   const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [showAssignments, setShowAssignments] = useState(false);
+  const [copiedLink, setCopiedLink] = useState('');
 
   useEffect(() => {
     const loadData = async () => {
@@ -87,7 +88,15 @@ export default function OrganizerPage() {
     return participants.find((p) => p.id === id)?.name || 'Unknown';
   };
 
+  const copyToClipboard = (text: string, label: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedLink(label);
+    toast.success('Link copied to clipboard!');
+    setTimeout(() => setCopiedLink(''), 2000);
+  };
+
   const viewedCount = assignments.filter((a) => a.viewed_at).length;
+  const universalLink = `${typeof window !== 'undefined' ? window.location.origin : ''}/event/${eventId}/join`;
 
   if (loading) {
     return (
@@ -189,6 +198,39 @@ export default function OrganizerPage() {
                   </p>
                 </div>
               )}
+            </div>
+          </Card>
+
+          {/* Invitation Links */}
+          <Card className="p-6 mb-6">
+            <div className="flex items-center gap-2 mb-4">
+              <Link className="w-5 h-5 text-violet-600" />
+              <h2 className="text-xl font-bold">Invitation Link</h2>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              Share this universal link with all participants. They can select their name and see who they got.
+            </p>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={universalLink}
+                readOnly
+                className="flex-1 p-3 border rounded-lg bg-gray-50 text-sm"
+              />
+              <Button
+                onClick={() => copyToClipboard(universalLink, 'universal')}
+                className="bg-violet-600 hover:bg-violet-700"
+              >
+                {copiedLink === 'universal' ? (
+                  <>
+                    <Check className="w-4 h-4 mr-2" /> Copied!
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 mr-2" /> Copy
+                  </>
+                )}
+              </Button>
             </div>
           </Card>
 

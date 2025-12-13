@@ -312,18 +312,6 @@ export function DetailsStep({ eventDetails, setEventDetails, onNext, onBack }: D
           )}
         </div>
 
-        {/* Info Box */}
-        <div className="bg-violet-50 border border-violet-200 rounded-lg p-4">
-          <div className="flex items-start gap-2">
-            <span className="text-xl">✨</span>
-            <div className="text-sm">
-              <p className="font-semibold text-violet-900 mb-1">What participants will provide:</p>
-              <p className="text-violet-700">
-                All participants can add their gift preferences to help their Secret Santa choose the perfect gift!
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="flex gap-4 mt-8">
