@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -26,16 +28,16 @@ export function Footer() {
             <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="hover:text-white transition-colors">Home</a>
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
               </li>
               <li>
-                <a href="/about" className="hover:text-white transition-colors">About Us</a>
+                <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
               </li>
               <li>
-                <a href="/contact" className="hover:text-white transition-colors">Contact</a>
+                <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
               </li>
               <li>
-                <a href="/#faq" className="hover:text-white transition-colors">FAQ</a>
+                <Link href="/#faq" className="hover:text-white transition-colors">FAQ</Link>
               </li>
             </ul>
           </div>
@@ -45,10 +47,10 @@ export function Footer() {
             <h3 className="text-white font-semibold text-lg mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+                <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+                <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
               </li>
               <li>
                 <button

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "About Us - Secret Santa Generator",
@@ -124,20 +125,20 @@ export default function AboutPage() {
               Whether you're organizing your first Secret Santa or your fiftieth, we're here to make it smooth and stress-free. Join the thousands of organizers who trust Secret Santa Generator to create memorable gift exchanges.
             </p>
             <div className="mt-6 text-center">
-              <a
+              <Link
                 href="/"
                 className="inline-block bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold px-8 py-3 rounded-lg hover:from-violet-700 hover:to-purple-700 transition-colors"
               >
                 Create Your Secret Santa Now
-              </a>
+              </Link>
             </div>
           </section>
         </div>
 
         <div className="mt-12 pt-6 border-t text-center">
-          <a href="/" className="text-violet-600 hover:text-violet-700 font-medium">
+          <Link href="/" className="text-violet-600 hover:text-violet-700 font-medium">
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

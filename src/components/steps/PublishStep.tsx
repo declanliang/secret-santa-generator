@@ -38,11 +38,9 @@ export function PublishStep({
   eventId,
   setEventId,
   onEventCreated,
-  organizerEmail, // eslint-disable-line @typescript-eslint/no-unused-vars
   setParticipantsWithTokens,
 }: PublishStepProps) {
   const [isCreating, setIsCreating] = useState(false);
-  const [assignments, setAssignments] = useState<Assignment[]>([]); // eslint-disable-line @typescript-eslint/no-unused-vars
 
   // Secret Santa pairing algorithm
   const generateAssignments = (): Assignment[] | null => {

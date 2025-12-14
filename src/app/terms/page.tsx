@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "Terms of Service - Secret Santa Generator",
@@ -224,9 +225,9 @@ export default function TermsPage() {
         </div>
 
         <div className="mt-12 pt-6 border-t text-center">
-          <a href="/" className="text-violet-600 hover:text-violet-700 font-medium">
+          <Link href="/" className="text-violet-600 hover:text-violet-700 font-medium">
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

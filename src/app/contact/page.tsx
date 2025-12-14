@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -70,7 +71,7 @@ export default function ContactPage() {
           <section className="border-t pt-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-gray-700 mb-4">
-              Before reaching out, you might find your answer in our <a href="/#faq" className="text-violet-600 hover:underline">FAQ section</a> on the homepage. We've compiled answers to the most common questions about our Secret Santa generator.
+              Before reaching out, you might find your answer in our <Link href="/#faq" className="text-violet-600 hover:underline">FAQ section</Link> on the homepage. We've compiled answers to the most common questions about our Secret Santa generator.
             </p>
           </section>
 
@@ -123,9 +124,9 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-12 pt-6 border-t text-center">
-          <a href="/" className="text-violet-600 hover:text-violet-700 font-medium">
+          <Link href="/" className="text-violet-600 hover:text-violet-700 font-medium">
             ← Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>
