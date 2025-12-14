@@ -95,8 +95,6 @@ export function PublishStep({
         return;
       }
 
-      setAssignments(generatedAssignments);
-
       const newEventId = nanoid(10);
 
       // Create event
