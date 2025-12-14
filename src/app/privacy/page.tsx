@@ -9,9 +9,23 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50 py-12 px-4">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12">
-        <h1 className="text-4xl font-bold mb-2 text-gray-900">Privacy Policy</h1>
-        <p className="text-sm text-gray-500 mb-8">Last Updated: December 14, 2025</p>
+      <div className="max-w-4xl mx-auto">
+        {/* Back to Home Button */}
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="inline-flex items-center text-violet-600 hover:text-violet-700 font-medium transition-colors"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Home
+          </Link>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+          <h1 className="text-4xl font-bold mb-2 text-gray-900">Privacy Policy</h1>
+          <p className="text-sm text-gray-500 mb-8">Last Updated: December 14, 2025</p>
 
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <section>
@@ -173,10 +187,11 @@ export default function PrivacyPage() {
           </section>
         </div>
 
-        <div className="mt-12 pt-6 border-t text-center">
-          <Link href="/" className="text-violet-600 hover:text-violet-700 font-medium">
-            ← Back to Home
-          </Link>
+          <div className="mt-12 pt-6 border-t text-center">
+            <Link href="/" className="text-violet-600 hover:text-violet-700 font-medium">
+              ← Back to Home
+            </Link>
+          </div>
         </div>
       </div>
     </div>

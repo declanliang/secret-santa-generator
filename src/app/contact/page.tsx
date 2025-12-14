@@ -10,9 +10,23 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-50 to-purple-50 py-12 px-4">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12">
-        <h1 className="text-4xl font-bold mb-2 text-gray-900">Contact Us</h1>
-        <p className="text-gray-600 mb-8">Have questions? We're here to help!</p>
+      <div className="max-w-4xl mx-auto">
+        {/* Back to Home Button */}
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="inline-flex items-center text-violet-600 hover:text-violet-700 font-medium transition-colors"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Home
+          </Link>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+          <h1 className="text-4xl font-bold mb-2 text-gray-900">Contact Us</h1>
+          <p className="text-gray-600 mb-8">Have questions? We're here to help!</p>
 
         <div className="space-y-8">
           <section>
@@ -71,7 +85,7 @@ export default function ContactPage() {
           <section className="border-t pt-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-gray-700 mb-4">
-              Before reaching out, you might find your answer in our <Link href="/#faq" className="text-violet-600 hover:underline">FAQ section</Link> on the homepage. We've compiled answers to the most common questions about our Secret Santa generator.
+              Before reaching out, you might find your answer in our <Link href="/faq" className="text-violet-600 hover:underline">FAQ section</Link>. We've compiled answers to the most common questions about our Secret Santa generator.
             </p>
           </section>
 
@@ -123,10 +137,11 @@ export default function ContactPage() {
           </section>
         </div>
 
-        <div className="mt-12 pt-6 border-t text-center">
-          <Link href="/" className="text-violet-600 hover:text-violet-700 font-medium">
-            ← Back to Home
-          </Link>
+          <div className="mt-12 pt-6 border-t text-center">
+            <Link href="/" className="text-violet-600 hover:text-violet-700 font-medium">
+              ← Back to Home
+            </Link>
+          </div>
         </div>
       </div>
     </div>
