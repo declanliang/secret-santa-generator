@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: "Privacy Policy - Secret Santa Generator",
   description: "Privacy policy for Secret Santa Generator. Learn how we collect, use, and protect your data.",
+  alternates: {
+    canonical: '/privacy',
+  },
 };
 
 export default function PrivacyPage() {

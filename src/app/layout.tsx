@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   title: "Free Secret Santa Generator - No Email Required | 2025",
   description: "Create your Secret Santa gift exchange in minutes. Free online generator with no registration. Perfect for office, family, and friends. Share via WhatsApp, email, or direct link!",
   keywords: "secret santa generator, free secret santa, gift exchange generator, no email required, secret santa online, random name picker, secret santa organizer, secret santa app",
+  metadataBase: new URL('https://secret-santa-generator.net'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Free Secret Santa Generator - No Email Required",
     description: "Create your Secret Santa gift exchange in minutes. Free online generator with no registration.",

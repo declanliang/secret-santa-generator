@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: "About Us - Secret Santa Generator",
   description: "Learn about Secret Santa Generator - the free, easy-to-use platform for organizing gift exchanges.",
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function AboutPage() {

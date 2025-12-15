@@ -5,6 +5,9 @@ import { FAQ } from '@/components/seo/FAQ';
 export const metadata: Metadata = {
   title: "Frequently Asked Questions - Secret Santa Generator",
   description: "Find answers to common questions about using Secret Santa Generator. Learn how to create events, share invitations, and more.",
+  alternates: {
+    canonical: '/faq',
+  },
 };
 
 export default function FAQPage() {

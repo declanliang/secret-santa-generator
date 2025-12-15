@@ -5,6 +5,9 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Contact Us - Secret Santa Generator",
   description: "Get in touch with Secret Santa Generator. We're here to help with any questions or support needs.",
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactPage() {

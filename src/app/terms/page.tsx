@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: "Terms of Service - Secret Santa Generator",
   description: "Terms of Service for Secret Santa Generator. Please read these terms carefully before using our service.",
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 export default function TermsPage() {
