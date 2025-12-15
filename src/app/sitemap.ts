@@ -41,5 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
+    // Blog posts
+    {
+      url: `${baseUrl}/blog/how-to-organize-secret-santa`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
   ];
 }
