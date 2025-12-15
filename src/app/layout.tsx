@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 import ClientBody from "./ClientBody";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3SZZBZ5VZ9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3SZZBZ5VZ9');
+          `}
+        </Script>
+      </head>
       <ClientBody>
         <div className="flex flex-col min-h-screen">
           <main className="flex-grow">
