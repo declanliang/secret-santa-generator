@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
@@ -10,6 +10,14 @@ export function RelatedArticles() {
       tag: "Guide",
       icon: Video,
       readTime: "8 min read",
+    },
+    {
+      title: "7 Best Secret Santa Generator Apps in 2025",
+      description: "Comprehensive comparison of the top Secret Santa generators. Find the perfect tool for your gift exchange!",
+      href: "/blog/best-secret-santa-generator-apps",
+      tag: "Comparison",
+      icon: Award,
+      readTime: "12 min read",
     },
   ];
 
@@ -24,7 +32,7 @@ export function RelatedArticles() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-1 gap-6 max-w-3xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {articles.map((article, index) => {
           const Icon = article.icon;
           return (
