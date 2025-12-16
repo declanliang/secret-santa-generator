@@ -89,7 +89,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. Privacy and Data</h2>
             <p>
-              Your use of the Service is also governed by our <a href="/privacy" className="text-violet-600 hover:underline">Privacy Policy</a>. Please review it to understand how we collect, use, and protect your information.
+              Your use of the Service is also governed by our <Link href="/privacy" className="text-violet-600 hover:underline">Privacy Policy</Link>. Please review it to understand how we collect, use, and protect your information.
             </p>
             <p className="mt-3">
               By using the Service, you consent to the collection and use of information as described in our Privacy Policy.

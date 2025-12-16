@@ -1,9 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { X } from 'lucide-react';
 
 export function CookieConsent() {
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'en';
+
   const [showBanner, setShowBanner] = useState(false);
   const [showCustomize, setShowCustomize] = useState(false);
 
@@ -103,7 +108,7 @@ export function CookieConsent() {
               <p className="text-gray-700 mb-6 leading-relaxed">
                 We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic.
                 By clicking "Accept All", you consent to our use of cookies. Read our{' '}
-                <a href="/privacy" className="text-violet-600 hover:underline font-medium">Privacy Policy</a> for more information.
+                <Link href={`/${locale}/privacy`} className="text-violet-600 hover:underline font-medium">Privacy Policy</Link> for more information.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -214,7 +219,7 @@ export function CookieConsent() {
 
               <p className="text-xs text-gray-500 mt-4 text-center">
                 You can change your preferences at any time. Visit our{' '}
-                <a href="/privacy" className="text-violet-600 hover:underline">Privacy Policy</a> to learn more.
+                <Link href={`/${locale}/privacy`} className="text-violet-600 hover:underline">Privacy Policy</Link> to learn more.
               </p>
             </div>
           )}

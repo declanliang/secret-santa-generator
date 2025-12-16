@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { headers } from 'next/headers';
-import { defaultLocale, locales } from '@/i18n/config';
+import { defaultLocale, locales, type Locale } from '@/i18n/config';
 
 export default async function RootPage() {
   const headersList = await headers();
@@ -19,8 +19,8 @@ export default async function RootPage() {
       .sort((a, b) => b.priority - a.priority);
 
     for (const { code } of languages) {
-      if (locales.includes(code as any)) {
-        detectedLocale = code as any;
+      if (locales.includes(code as Locale)) {
+        detectedLocale = code as Locale;
         break;
       }
     }
