@@ -27,7 +27,10 @@
       "Bash(git pull:*)",
       "Bash(echo.:*)",
       "Bash(del .env.local)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm:*)",
+      "Bash(mkdir:*)"
     ]
   }
 }

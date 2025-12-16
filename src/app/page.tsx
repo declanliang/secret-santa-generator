@@ -1,165 +1,30 @@
-'use client';
+import { redirect } from 'next/navigation';
+import { headers } from 'next/headers';
+import { defaultLocale, locales } from '@/i18n/config';
 
-import { useState } from 'react';
-import { StepIndicator } from '@/components/StepIndicator';
-import { ParticipantsStep } from '@/components/steps/ParticipantsStep';
-import { RestrictionsStep } from '@/components/steps/RestrictionsStep';
-import { DetailsStep } from '@/components/steps/DetailsStep';
-import { EmailStep } from '@/components/steps/EmailStep';
-import { PublishStep } from '@/components/steps/PublishStep';
-import { SuccessStep } from '@/components/steps/SuccessStep';
-import { Snowflakes } from '@/components/Snowflakes';
-import { HowItWorks } from '@/components/seo/HowItWorks';
-import { Features } from '@/components/seo/Features';
-import { UseCases } from '@/components/seo/UseCases';
-import { FAQ } from '@/components/seo/FAQ';
-import { RelatedArticles } from '@/components/seo/RelatedArticles';
-import { StructuredData } from '@/components/seo/StructuredData';
+export default async function RootPage() {
+  const headersList = await headers();
+  const acceptLanguage = headersList.get('accept-language');
 
-export type Participant = {
-  id: string;
-  name: string;
-};
+  // Parse Accept-Language header to find best match
+  let detectedLocale = defaultLocale;
 
-export type Restriction = {
-  participantId: string;
-  cannotDrawIds: string[];
-};
+  if (acceptLanguage) {
+    const languages = acceptLanguage
+      .split(',')
+      .map(lang => {
+        const [code, q = '1'] = lang.trim().split(';q=');
+        return { code: code.split('-')[0].toLowerCase(), priority: parseFloat(q) };
+      })
+      .sort((a, b) => b.priority - a.priority);
 
-export type EventDetails = {
-  eventType: string;
-  organizerName: string;
-  groupName: string;
-  exchangeDate: string;
-  budgetAmount: number;
-  budgetCurrency: string;
-  customMessage: string;
-};
-
-export default function Home() {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [participants, setParticipants] = useState<Participant[]>([]);
-  const [restrictions, setRestrictions] = useState<Restriction[]>([]);
-  const [skipRestrictions, setSkipRestrictions] = useState(true);
-  const [eventDetails, setEventDetails] = useState<EventDetails>({
-    eventType: 'Secret Santa',
-    organizerName: '',
-    groupName: 'Secret Santa 2025',
-    exchangeDate: '',
-    budgetAmount: 0,
-    budgetCurrency: 'USD',
-    customMessage: '',
-  });
-  const [eventId, setEventId] = useState<string>('');
-  const [organizerEmail, setOrganizerEmail] = useState<string>('');
-  const [participantsWithTokens, setParticipantsWithTokens] = useState<Array<{ id: string; name: string; token: string }>>([]);
-
-  const handleNext = () => {
-    if (currentStep === 2 && skipRestrictions) {
-      setCurrentStep(3);
-    } else if (currentStep < 6) {
-      setCurrentStep(currentStep + 1);
+    for (const { code } of languages) {
+      if (locales.includes(code as any)) {
+        detectedLocale = code as any;
+        break;
+      }
     }
-  };
+  }
 
-  const handleBack = () => {
-    if (currentStep === 3 && skipRestrictions) {
-      setCurrentStep(2);
-    } else if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
-
-  return (
-    <div className="christmas-bg relative">
-      <StructuredData />
-      <Snowflakes />
-
-      <div className="container mx-auto px-4 py-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 bg-gradient-to-r from-violet-600 to-pink-600 bg-clip-text text-transparent">
-            Free Secret Santa Generator
-          </h1>
-          <p className="text-center text-muted-foreground mb-8">
-            Create your gift exchange in minutes - no email required! 🎁
-          </p>
-
-          {/* Step Indicator */}
-          <StepIndicator currentStep={currentStep} skipRestrictions={skipRestrictions} />
-
-          {/* Step Content */}
-          <div className="mt-8">
-            {currentStep === 1 && (
-              <>
-                <ParticipantsStep
-                  participants={participants}
-                  setParticipants={setParticipants}
-                  onNext={handleNext}
-                  setOrganizerName={(name) => setEventDetails({...eventDetails, organizerName: name})}
-                />
-
-                {/* SEO Content - Only show on step 1 */}
-                <div className="mt-16">
-                  <HowItWorks />
-                  <Features />
-                  <UseCases />
-                  <FAQ />
-                  <RelatedArticles />
-                </div>
-              </>
-            )}
-            {currentStep === 2 && (
-              <RestrictionsStep
-                participants={participants}
-                restrictions={restrictions}
-                setRestrictions={setRestrictions}
-                skipRestrictions={skipRestrictions}
-                setSkipRestrictions={setSkipRestrictions}
-                onNext={handleNext}
-                onBack={handleBack}
-              />
-            )}
-            {currentStep === 3 && (
-              <DetailsStep
-                eventDetails={eventDetails}
-                setEventDetails={setEventDetails}
-                onNext={handleNext}
-                onBack={handleBack}
-              />
-            )}
-            {currentStep === 4 && (
-              <PublishStep
-                participants={participants}
-                restrictions={restrictions}
-                eventDetails={eventDetails}
-                skipRestrictions={skipRestrictions}
-                eventId={eventId}
-                setEventId={setEventId}
-                organizerEmail={organizerEmail}
-                onEventCreated={handleNext}
-                setParticipantsWithTokens={setParticipantsWithTokens}
-              />
-            )}
-            {currentStep === 5 && (
-              <EmailStep
-                eventId={eventId}
-                onNext={handleNext}
-                onSkip={handleNext}
-                setOrganizerEmail={setOrganizerEmail}
-              />
-            )}
-            {currentStep === 6 && (
-              <SuccessStep
-                eventId={eventId}
-                participants={participants}
-                participantsWithTokens={participantsWithTokens}
-                organizerEmail={organizerEmail}
-              />
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  redirect(`/${detectedLocale}`);
 }

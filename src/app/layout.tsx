@@ -1,11 +1,9 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { locales } from '@/i18n/config';
 import "./globals.css";
-import { Toaster } from "sonner";
-import ClientBody from "./ClientBody";
-import { Footer } from "@/components/Footer";
-import { CookieConsent } from "@/components/CookieConsent";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,53 +15,30 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Free Secret Santa Generator - No Email Required | 2025",
-  description: "Create your Secret Santa gift exchange in minutes. Free online generator with no registration. Perfect for office, family, and friends. Share via WhatsApp, email, or direct link!",
-  keywords: "secret santa generator, free secret santa, gift exchange generator, no email required, secret santa online, random name picker, secret santa organizer, secret santa app",
-  metadataBase: new URL('https://secret-santa-generator.net'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: "Free Secret Santa Generator - No Email Required",
-    description: "Create your Secret Santa gift exchange in minutes. Free online generator with no registration.",
-    type: "website",
-    url: "https://secret-santa-generator.net",
-  },
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params;
+
+  if (!locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // Providing all messages to the client side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-3SZZBZ5VZ9"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-3SZZBZ5VZ9');
-          `}
-        </Script>
-      </head>
-      <ClientBody>
-        <div className="flex flex-col min-h-screen">
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        <CookieConsent />
-        <Toaster position="top-center" richColors />
-      </ClientBody>
+    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

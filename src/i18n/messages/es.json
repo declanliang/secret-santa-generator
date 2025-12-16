@@ -1,0 +1,49 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "backToHome": "Volver al inicio"
+  },
+  "header": {
+    "title": "Generador de Amigo Secreto",
+    "subtitle": "Crea tu intercambio de regalos en minutos"
+  },
+  "footer": {
+    "title": "Generador de Amigo Secreto",
+    "description": "Herramienta en línea gratuita para organizar intercambios de Amigo Secreto. Sin registro requerido.",
+    "quickLinks": "Enlaces rápidos",
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "contact": "Contacto",
+    "contactUs": "Contáctenos",
+    "faq": "Preguntas frecuentes",
+    "legal": "Legal",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
+    "cookieSettings": "Configuración de cookies",
+    "email": "service@secret-santa-generator.net",
+    "phone": "+1 (213) 210-1344",
+    "address": "131 Continental Dr, Suite 305",
+    "addressLine2": "Newark, DE 19713, EE. UU.",
+    "copyright": "© {year} Generador de Amigo Secreto. Todos los derechos reservados.",
+    "madeWith": "Hecho con ❤️ para la temporada navideña"
+  },
+  "home": {
+    "title": "Generador Gratuito de Amigo Secreto",
+    "subtitle": "¡Crea tu intercambio de regalos en minutos - sin correo electrónico requerido! 🎁",
+    "metaTitle": "Generador Gratuito de Amigo Secreto - Sin Correo Electrónico | 2025",
+    "metaDescription": "Crea tu intercambio de Amigo Secreto en minutos. Generador en línea gratuito sin registro. Perfecto para oficina, familia y amigos. ¡Comparte vía WhatsApp, correo electrónico o enlace directo!"
+  },
+  "steps": {
+    "participants": "Participantes",
+    "restrictions": "Restricciones",
+    "details": "Detalles",
+    "publish": "Publicar",
+    "email": "Correo",
+    "success": "Éxito"
+  }
+}

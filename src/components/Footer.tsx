@@ -1,9 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Footer() {
+  const t = useTranslations('footer');
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
+  // Extract locale from pathname
+  const locale = pathname.split('/')[1] || 'en';
 
   const handleManageCookies = () => {
     // Clear cookie consent to show banner again
@@ -17,47 +25,59 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* About Section */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Secret Santa Generator</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('title')}</h3>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Free online tool to organize Secret Santa gift exchanges. No registration required.
+              {t('description')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <Link href={`/${locale}`} className="hover:text-white transition-colors">
+                  {t('home')}
+                </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">About Us</Link>
+                <Link href={`/${locale}/about`} className="hover:text-white transition-colors">
+                  {t('about')}
+                </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+                <Link href={`/${locale}/contact`} className="hover:text-white transition-colors">
+                  {t('contact')}
+                </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
+                <Link href={`/${locale}/faq`} className="hover:text-white transition-colors">
+                  {t('faq')}
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Legal */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Legal</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('legal')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">
+                  {t('privacy')}
+                </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+                <Link href={`/${locale}/terms`} className="hover:text-white transition-colors">
+                  {t('terms')}
+                </Link>
               </li>
               <li>
                 <button
                   onClick={handleManageCookies}
                   className="hover:text-white transition-colors text-left"
                 >
-                  Cookie Settings
+                  {t('cookieSettings')}
                 </button>
               </li>
             </ul>
@@ -65,35 +85,38 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('contactUs')}</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="mailto:service@secret-santa-generator.net" className="hover:text-white transition-colors">
-                  service@secret-santa-generator.net
+                <a href={`mailto:${t('email')}`} className="hover:text-white transition-colors">
+                  {t('email')}
                 </a>
               </li>
               <li>
-                <a href="tel:+12132101344" className="hover:text-white transition-colors">
-                  +1 (213) 210-1344
+                <a href={`tel:${t('phone').replace(/\s/g, '')}`} className="hover:text-white transition-colors">
+                  {t('phone')}
                 </a>
               </li>
               <li className="pt-2">
-                131 Continental Dr, Suite 305<br />
-                Newark, DE 19713, USA
+                {t('address')}<br />
+                {t('addressLine2')}
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar with Language Switcher */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
-              © {currentYear} Secret Santa Generator. All rights reserved.
+              {t('copyright', { year: currentYear })}
             </p>
-            <p className="text-sm text-gray-400">
-              Made with ❤️ for the holiday season
-            </p>
+            <div className="flex items-center gap-4">
+              <p className="text-sm text-gray-400">
+                {t('madeWith')}
+              </p>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>

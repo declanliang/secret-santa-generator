@@ -1,0 +1,49 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "backToHome": "Back to Home"
+  },
+  "header": {
+    "title": "Secret Santa Generator",
+    "subtitle": "Create your gift exchange in minutes"
+  },
+  "footer": {
+    "title": "Secret Santa Generator",
+    "description": "Free online tool to organize Secret Santa gift exchanges. No registration required.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "faq": "FAQ",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookieSettings": "Cookie Settings",
+    "email": "service@secret-santa-generator.net",
+    "phone": "+1 (213) 210-1344",
+    "address": "131 Continental Dr, Suite 305",
+    "addressLine2": "Newark, DE 19713, USA",
+    "copyright": "© {year} Secret Santa Generator. All rights reserved.",
+    "madeWith": "Made with ❤️ for the holiday season"
+  },
+  "home": {
+    "title": "Free Secret Santa Generator",
+    "subtitle": "Create your gift exchange in minutes - no email required! 🎁",
+    "metaTitle": "Free Secret Santa Generator - No Email Required | 2025",
+    "metaDescription": "Create your Secret Santa gift exchange in minutes. Free online generator with no registration. Perfect for office, family, and friends. Share via WhatsApp, email, or direct link!"
+  },
+  "steps": {
+    "participants": "Participants",
+    "restrictions": "Restrictions",
+    "details": "Details",
+    "publish": "Publish",
+    "email": "Email",
+    "success": "Success"
+  }
+}
