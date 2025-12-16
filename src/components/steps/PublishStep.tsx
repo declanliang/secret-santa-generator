@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { toast } from 'sonner';
 import { supabase } from '@/lib/supabase';
 import { nanoid } from 'nanoid';
-import type { Participant, Restriction, EventDetails } from '@/app/page';
+import type { Participant, Restriction, EventDetails } from '@/app/[locale]/page';
 
 type PublishStepProps = {
   participants: Participant[];

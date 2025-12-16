@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import type { EventDetails } from '@/app/page';
+import type { EventDetails } from '@/app/[locale]/page';
 
 type DetailsStepProps = {
   eventDetails: EventDetails;

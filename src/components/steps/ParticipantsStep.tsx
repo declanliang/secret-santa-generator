@@ -8,7 +8,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { X, Plus } from 'lucide-react';
 import { nanoid } from 'nanoid';
-import type { Participant } from '@/app/page';
+import type { Participant } from '@/app/[locale]/page';
 
 type ParticipantsStepProps = {
   participants: Participant[];

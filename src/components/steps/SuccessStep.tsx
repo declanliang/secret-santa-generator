@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Copy, Check, Eye, Gift, Mail } from 'lucide-react';
 import { toast } from 'sonner';
-import type { Participant } from '@/app/page';
+import type { Participant } from '@/app/[locale]/page';
 
 type SuccessStepProps = {
   eventId: string;

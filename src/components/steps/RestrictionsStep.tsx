@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
 import { Edit, X } from 'lucide-react';
-import type { Participant, Restriction } from '@/app/page';
+import type { Participant, Restriction } from '@/app/[locale]/page';
 
 type RestrictionsStepProps = {
   participants: Participant[];
