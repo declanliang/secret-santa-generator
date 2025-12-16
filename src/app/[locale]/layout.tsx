@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations } from 'next-intl/server';
 import ClientBody from "../ClientBody";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
 import Script from "next/script";
-import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -36,9 +37,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function LocaleLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  const messages = await getMessages();
+
   return (
     <>
       <head>
@@ -55,17 +61,19 @@ export default async function LocaleLayout({
           `}
         </Script>
       </head>
-      <ClientBody>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        <CookieConsent />
-        <Toaster position="top-center" richColors />
-      </ClientBody>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <ClientBody>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </div>
+          <CookieConsent />
+          <Toaster position="top-center" richColors />
+        </ClientBody>
+      </NextIntlClientProvider>
     </>
   );
 }
