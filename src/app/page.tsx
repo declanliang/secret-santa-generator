@@ -13,6 +13,7 @@ import { HowItWorks } from '@/components/seo/HowItWorks';
 import { Features } from '@/components/seo/Features';
 import { UseCases } from '@/components/seo/UseCases';
 import { FAQ } from '@/components/seo/FAQ';
+import { RelatedArticles } from '@/components/seo/RelatedArticles';
 import { StructuredData } from '@/components/seo/StructuredData';
 
 export type Participant = {
@@ -104,6 +105,7 @@ export default function Home() {
                   <Features />
                   <UseCases />
                   <FAQ />
+                  <RelatedArticles />
                 </div>
               </>
             )}
