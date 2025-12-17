@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { GitFork, Video } from 'lucide-react';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -105,8 +106,35 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Social Links */}
+        <div className="border-t border-gray-800 pt-8 pb-6">
+          <div className="flex justify-center items-center gap-6">
+            <a
+              href="https://github.com/declanliang/secret-santa-generator"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors group"
+              aria-label="GitHub Repository"
+            >
+              <GitFork className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span className="text-sm font-medium">Open Source on GitHub</span>
+            </a>
+            <span className="text-gray-600">|</span>
+            <a
+              href="https://www.youtube.com/@secret-santa-p3p"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-red-500 transition-colors group"
+              aria-label="YouTube Channel"
+            >
+              <Video className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span className="text-sm font-medium">Watch Tutorials</span>
+            </a>
+          </div>
+        </div>
+
         {/* Bottom Bar with Language Switcher */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-800 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
               {t('copyright', { year: currentYear })}
