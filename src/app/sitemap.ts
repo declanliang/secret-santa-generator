@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = [
     { path: '/blog/how-to-organize-secret-santa', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/blog/best-secret-santa-generator-apps', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/blog/secret-santa-gifts-under-20', priority: 0.95, changeFrequency: 'monthly' as const },
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];

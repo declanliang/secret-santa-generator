@@ -1,8 +1,16 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
+    {
+      title: "Secret Santa Gifts Under $20: 50+ Ideas",
+      description: "Discover budget-friendly gift ideas that are creative, funny, and practical. Perfect for any Secret Santa exchange!",
+      href: "/blog/secret-santa-gifts-under-20",
+      tag: "Gift Ideas",
+      icon: Gift,
+      readTime: "10 min read",
+    },
     {
       title: "How to Organize a Secret Santa Gift Exchange",
       description: "Complete step-by-step guide with video tutorial on organizing the perfect Secret Santa",
@@ -32,7 +40,7 @@ export function RelatedArticles() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {articles.map((article, index) => {
           const Icon = article.icon;
           return (
