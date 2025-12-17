@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎁 Secret Santa Generator - The Easiest Way to Organize Your Gift Exchange
 
-## Getting Started
+[![Website](https://img.shields.io/badge/Website-secret--santa--generator.net-blue?style=for-the-badge)](https://secret-santa-generator.net/)
 
-First, run the development server:
+Looking for a hassle-free way to organize a **Secret Santa** gift exchange? Whether it's for your office, family, or a group of friends, our **[Secret Santa Generator](https://secret-santa-generator.net/)** makes it fast, fun, and 100% anonymous.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Visit the Live App
+The official web application is available at:  
+👉 **[https://secret-santa-generator.net/](https://secret-santa-generator.net/)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Features
+Our online tool is designed to take the stress out of holiday planning:
 
-## Learn More
+* **Fast & Simple:** Set up your group and send invitations in less than 2 minutes.
+* **100% Online:** No need to draw names from a physical hat.
+* **Exclusion Rules:** Prevent partners or family members from drawing each other's names.
+* **Wishlists:** Let participants add their gift preferences so their Santa knows exactly what to buy.
+* **Privacy First:** We value your data privacy and ensure all gift assignments remain secret.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ How It Works
+1.  **Enter Participants:** Add the names and emails of everyone joining the exchange.
+2.  **Set Constraints:** (Optional) Add rules for who cannot be paired together.
+3.  **Send Invites:** Our system sends out the secret assignments automatically.
+4.  **Enjoy!** Everyone receives their pick and can start shopping.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Why Use Our Generator?
+Managing a gift exchange manually can be messy, especially with remote teams or large families. **[Secret-Santa-Generator.net](https://secret-santa-generator.net/)** provides a reliable, automated platform to ensure the process is fair and organized.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📬 Support & Feedback
+If you have any questions or suggestions for the generator, please feel free to:
+- Visit our **[website](https://secret-santa-generator.net/)**
+- Open an **Issue** here on GitHub
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Happy Gifting! 🎄*
