@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award, Gift } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift, Users } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
@@ -27,6 +27,14 @@ export function RelatedArticles() {
       icon: Award,
       readTime: "12 min read",
     },
+    {
+      title: "White Elephant vs Secret Santa: What's the Difference?",
+      description: "Confused about these two popular gift exchange games? Learn the key differences and decide which one is right for your party!",
+      href: "/blog/white-elephant-vs-secret-santa",
+      tag: "Comparison",
+      icon: Users,
+      readTime: "9 min read",
+    },
   ];
 
   return (
@@ -40,7 +48,7 @@ export function RelatedArticles() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
         {articles.map((article, index) => {
           const Icon = article.icon;
           return (
