@@ -1,8 +1,16 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award, Gift, Users } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
+    {
+      title: "Secret Santa Gifts for Men: 40+ Ideas Guys Actually Want",
+      description: "Comprehensive gift guide for men with tech, accessories, and practical items guys will genuinely love. Organized by budget!",
+      href: "/blog/secret-santa-gifts-for-men",
+      tag: "Gift Ideas",
+      icon: UserCircle,
+      readTime: "12 min read",
+    },
     {
       title: "Secret Santa Gifts Under $20: 50+ Ideas",
       description: "Discover budget-friendly gift ideas that are creative, funny, and practical. Perfect for any Secret Santa exchange!",
@@ -12,28 +20,20 @@ export function RelatedArticles() {
       readTime: "10 min read",
     },
     {
-      title: "How to Organize a Secret Santa Gift Exchange",
-      description: "Complete step-by-step guide with video tutorial on organizing the perfect Secret Santa",
-      href: "/blog/how-to-organize-secret-santa",
-      tag: "Guide",
-      icon: Video,
-      readTime: "8 min read",
-    },
-    {
-      title: "7 Best Secret Santa Generator Apps in 2025",
-      description: "Comprehensive comparison of the top Secret Santa generators. Find the perfect tool for your gift exchange!",
-      href: "/blog/best-secret-santa-generator-apps",
-      tag: "Comparison",
-      icon: Award,
-      readTime: "12 min read",
-    },
-    {
       title: "White Elephant vs Secret Santa: What's the Difference?",
       description: "Confused about these two popular gift exchange games? Learn the key differences and decide which one is right for your party!",
       href: "/blog/white-elephant-vs-secret-santa",
       tag: "Comparison",
       icon: Users,
       readTime: "9 min read",
+    },
+    {
+      title: "How to Organize a Secret Santa Gift Exchange",
+      description: "Complete step-by-step guide with video tutorial on organizing the perfect Secret Santa",
+      href: "/blog/how-to-organize-secret-santa",
+      tag: "Guide",
+      icon: Video,
+      readTime: "8 min read",
     },
   ];
 

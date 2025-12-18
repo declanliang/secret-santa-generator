@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog/best-secret-santa-generator-apps', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/blog/secret-santa-gifts-under-20', priority: 0.95, changeFrequency: 'monthly' as const },
     { path: '/blog/white-elephant-vs-secret-santa', priority: 0.95, changeFrequency: 'monthly' as const },
+    { path: '/blog/secret-santa-gifts-for-men', priority: 0.95, changeFrequency: 'monthly' as const },
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
