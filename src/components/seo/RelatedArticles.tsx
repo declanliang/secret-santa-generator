@@ -1,8 +1,16 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
+    {
+      title: "Funny Secret Santa Gifts That Will Make Everyone Laugh",
+      description: "50+ hilarious gift ideas from office-safe humor to outrageous gag gifts. Make your Secret Santa unforgettable!",
+      href: "/blog/funny-secret-santa-gifts",
+      tag: "Funny Gifts",
+      icon: Laugh,
+      readTime: "11 min read",
+    },
     {
       title: "Secret Santa Gifts for Men: 40+ Ideas Guys Actually Want",
       description: "Comprehensive gift guide for men with tech, accessories, and practical items guys will genuinely love. Organized by budget!",
@@ -26,14 +34,6 @@ export function RelatedArticles() {
       tag: "Comparison",
       icon: Users,
       readTime: "9 min read",
-    },
-    {
-      title: "How to Organize a Secret Santa Gift Exchange",
-      description: "Complete step-by-step guide with video tutorial on organizing the perfect Secret Santa",
-      href: "/blog/how-to-organize-secret-santa",
-      tag: "Guide",
-      icon: Video,
-      readTime: "8 min read",
     },
   ];
 
