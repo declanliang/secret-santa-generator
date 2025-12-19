@@ -1,8 +1,16 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
+    {
+      title: "Secret Santa Gifts for Coworkers: 45+ Professional & Fun Ideas",
+      description: "Office-appropriate gift ideas that balance professionalism with personality. Perfect for workplace exchanges!",
+      href: "/blog/secret-santa-gifts-for-coworkers",
+      tag: "Office Gifts",
+      icon: Briefcase,
+      readTime: "13 min read",
+    },
     {
       title: "Funny Secret Santa Gifts That Will Make Everyone Laugh",
       description: "50+ hilarious gift ideas from office-safe humor to outrageous gag gifts. Make your Secret Santa unforgettable!",
@@ -26,14 +34,6 @@ export function RelatedArticles() {
       tag: "Gift Ideas",
       icon: Gift,
       readTime: "10 min read",
-    },
-    {
-      title: "White Elephant vs Secret Santa: What's the Difference?",
-      description: "Confused about these two popular gift exchange games? Learn the key differences and decide which one is right for your party!",
-      href: "/blog/white-elephant-vs-secret-santa",
-      tag: "Comparison",
-      icon: Users,
-      readTime: "9 min read",
     },
   ];
 
