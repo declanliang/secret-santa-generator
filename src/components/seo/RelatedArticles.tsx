@@ -1,8 +1,16 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase, HelpCircle } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
+    {
+      title: "How Does Secret Santa Work? Complete Beginner's Guide",
+      description: "Learn everything about Secret Santa - from basic rules to expert tips. Perfect for first-timers and experienced organizers!",
+      href: "/blog/how-does-secret-santa-work",
+      tag: "Complete Guide",
+      icon: HelpCircle,
+      readTime: "15 min read",
+    },
     {
       title: "Secret Santa Gifts for Coworkers: 45+ Professional & Fun Ideas",
       description: "Office-appropriate gift ideas that balance professionalism with personality. Perfect for workplace exchanges!",
@@ -26,14 +34,6 @@ export function RelatedArticles() {
       tag: "Gift Ideas",
       icon: UserCircle,
       readTime: "12 min read",
-    },
-    {
-      title: "Secret Santa Gifts Under $20: 50+ Ideas",
-      description: "Discover budget-friendly gift ideas that are creative, funny, and practical. Perfect for any Secret Santa exchange!",
-      href: "/blog/secret-santa-gifts-under-20",
-      tag: "Gift Ideas",
-      icon: Gift,
-      readTime: "10 min read",
     },
   ];
 
