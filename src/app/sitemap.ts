@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog/secret-santa-gifts-for-coworkers', priority: 0.95, changeFrequency: 'monthly' as const },
     { path: '/blog/how-does-secret-santa-work', priority: 0.95, changeFrequency: 'monthly' as const },
     { path: '/blog/secret-santa-gifts-for-women', priority: 0.95, changeFrequency: 'monthly' as const },
+    { path: '/blog/secret-santa-gifts-under-10', priority: 0.95, changeFrequency: 'monthly' as const },
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];

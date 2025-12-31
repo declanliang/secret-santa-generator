@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase, HelpCircle, Heart } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase, HelpCircle, Heart, DollarSign } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
     {
-      title: "How Does Secret Santa Work? Complete Beginner's Guide",
-      description: "Learn everything about Secret Santa - from basic rules to expert tips. Perfect for first-timers and experienced organizers!",
-      href: "/blog/how-does-secret-santa-work",
-      tag: "Complete Guide",
-      icon: HelpCircle,
+      title: "Secret Santa Gifts Under $10: 60+ Budget-Friendly Ideas",
+      description: "Amazing gifts under $10 that don't feel cheap. Perfect for students, large groups, and budget-conscious exchanges!",
+      href: "/blog/secret-santa-gifts-under-10",
+      tag: "Budget Guide",
+      icon: DollarSign,
       readTime: "15 min read",
     },
     {
@@ -28,12 +28,12 @@ export function RelatedArticles() {
       readTime: "13 min read",
     },
     {
-      title: "Secret Santa Gifts for Men: 40+ Ideas Guys Actually Want",
-      description: "Comprehensive gift guide for men with tech, accessories, and practical items guys will genuinely love. Organized by budget!",
-      href: "/blog/secret-santa-gifts-for-men",
-      tag: "Gift Ideas",
-      icon: UserCircle,
-      readTime: "12 min read",
+      title: "How Does Secret Santa Work? Complete Beginner's Guide",
+      description: "Learn everything about Secret Santa - from basic rules to expert tips. Perfect for first-timers and experienced organizers!",
+      href: "/blog/how-does-secret-santa-work",
+      tag: "Complete Guide",
+      icon: HelpCircle,
+      readTime: "15 min read",
     },
   ];
 
