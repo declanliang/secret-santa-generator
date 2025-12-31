@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase, HelpCircle } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase, HelpCircle, Heart } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
@@ -12,20 +12,20 @@ export function RelatedArticles() {
       readTime: "15 min read",
     },
     {
+      title: "Secret Santa Gifts for Women: 45+ Thoughtful Ideas She'll Love",
+      description: "Perfect gift ideas for women from beauty & self-care to accessories. Organized by budget and personality type!",
+      href: "/blog/secret-santa-gifts-for-women",
+      tag: "Gift Ideas",
+      icon: Heart,
+      readTime: "14 min read",
+    },
+    {
       title: "Secret Santa Gifts for Coworkers: 45+ Professional & Fun Ideas",
       description: "Office-appropriate gift ideas that balance professionalism with personality. Perfect for workplace exchanges!",
       href: "/blog/secret-santa-gifts-for-coworkers",
       tag: "Office Gifts",
       icon: Briefcase,
       readTime: "13 min read",
-    },
-    {
-      title: "Funny Secret Santa Gifts That Will Make Everyone Laugh",
-      description: "50+ hilarious gift ideas from office-safe humor to outrageous gag gifts. Make your Secret Santa unforgettable!",
-      href: "/blog/funny-secret-santa-gifts",
-      tag: "Funny Gifts",
-      icon: Laugh,
-      readTime: "11 min read",
     },
     {
       title: "Secret Santa Gifts for Men: 40+ Ideas Guys Actually Want",
