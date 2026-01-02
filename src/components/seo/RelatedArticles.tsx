@@ -1,8 +1,16 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase, HelpCircle, Heart, DollarSign } from 'lucide-react';
+import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Briefcase, HelpCircle, Heart, DollarSign, Laptop } from 'lucide-react';
 
 export function RelatedArticles() {
   const articles = [
+    {
+      title: "Virtual Secret Santa: How to Organize Remote Gift Exchange",
+      description: "Complete guide for remote teams - online tools, shipping logistics, and creative virtual reveal ideas!",
+      href: "/blog/virtual-secret-santa",
+      tag: "Remote Teams",
+      icon: Laptop,
+      readTime: "16 min read",
+    },
     {
       title: "Secret Santa Gifts Under $10: 60+ Budget-Friendly Ideas",
       description: "Amazing gifts under $10 that don't feel cheap. Perfect for students, large groups, and budget-conscious exchanges!",
@@ -10,14 +18,6 @@ export function RelatedArticles() {
       tag: "Budget Guide",
       icon: DollarSign,
       readTime: "15 min read",
-    },
-    {
-      title: "Secret Santa Gifts for Women: 45+ Thoughtful Ideas She'll Love",
-      description: "Perfect gift ideas for women from beauty & self-care to accessories. Organized by budget and personality type!",
-      href: "/blog/secret-santa-gifts-for-women",
-      tag: "Gift Ideas",
-      icon: Heart,
-      readTime: "14 min read",
     },
     {
       title: "Secret Santa Gifts for Coworkers: 45+ Professional & Fun Ideas",
