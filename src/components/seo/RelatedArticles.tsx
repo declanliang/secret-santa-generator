@@ -4,6 +4,14 @@ import { ArrowRight, BookOpen, Video, Award, Gift, Users, UserCircle, Laugh, Bri
 export function RelatedArticles() {
   const articles = [
     {
+      title: "Secret Santa Questionnaire: 30+ Questions to Ask",
+      description: "Essential questions template to help gift-givers choose perfect presents. Includes ready-to-use questionnaire!",
+      href: "/blog/secret-santa-questionnaire",
+      tag: "Questionnaire",
+      icon: Gift,
+      readTime: "12 min read",
+    },
+    {
       title: "Virtual Secret Santa: How to Organize Remote Gift Exchange",
       description: "Complete guide for remote teams - online tools, shipping logistics, and creative virtual reveal ideas!",
       href: "/blog/virtual-secret-santa",
@@ -18,14 +26,6 @@ export function RelatedArticles() {
       tag: "Budget Guide",
       icon: DollarSign,
       readTime: "15 min read",
-    },
-    {
-      title: "Secret Santa Gifts for Coworkers: 45+ Professional & Fun Ideas",
-      description: "Office-appropriate gift ideas that balance professionalism with personality. Perfect for workplace exchanges!",
-      href: "/blog/secret-santa-gifts-for-coworkers",
-      tag: "Office Gifts",
-      icon: Briefcase,
-      readTime: "13 min read",
     },
     {
       title: "How Does Secret Santa Work? Complete Beginner's Guide",
