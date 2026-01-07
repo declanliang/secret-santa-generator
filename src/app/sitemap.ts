@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog/secret-santa-gifts-under-10', priority: 0.95, changeFrequency: 'monthly' as const },
     { path: '/blog/virtual-secret-santa', priority: 0.95, changeFrequency: 'monthly' as const },
     { path: '/blog/secret-santa-questionnaire', priority: 0.95, changeFrequency: 'monthly' as const },
+    { path: '/blog/diy-secret-santa-gifts', priority: 0.95, changeFrequency: 'monthly' as const },
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];

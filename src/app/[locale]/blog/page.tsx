@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList } from 'lucide-react';
+import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList, Scissors } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Secret Santa Blog - Guides, Tips & Gift Ideas | Secret Santa Generator',
@@ -10,6 +10,15 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const articles = [
+    {
+      title: "DIY Secret Santa Gifts: 40+ Handmade & Homemade Ideas",
+      description: "Creative DIY gift ideas you can make yourself. From edible treats to crafts, find handmade gifts that feel personal and thoughtful.",
+      href: "/blog/diy-secret-santa-gifts",
+      category: "Gift Ideas",
+      icon: Scissors,
+      color: "from-pink-500 to-rose-500",
+      readTime: "18 min",
+    },
     {
       title: "Secret Santa Questionnaire: 30+ Questions to Ask",
       description: "Essential questions template to help gift-givers choose perfect presents. Includes ready-to-use questionnaire with 30+ questions organized by category.",
@@ -121,10 +130,10 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: "All Articles", count: articles.length, color: "bg-purple-100 text-purple-700" },
-    { name: "Gift Ideas", count: articles.filter(a => a.category === "Gift Ideas").length, color: "bg-pink-100 text-pink-700" },
-    { name: "Organization Guides", count: articles.filter(a => a.category === "Organization Guides").length, color: "bg-blue-100 text-blue-700" },
-    { name: "Tools & Templates", count: articles.filter(a => a.category === "Tools & Templates").length, color: "bg-green-100 text-green-700" },
+    { name: "All Articles", count: 13, color: "bg-purple-100 text-purple-700" },
+    { name: "Gift Ideas", count: 7, color: "bg-pink-100 text-pink-700" },
+    { name: "Organization Guides", count: 2, color: "bg-blue-100 text-blue-700" },
+    { name: "Tools & Templates", count: 2, color: "bg-green-100 text-green-700" },
   ];
 
   return (
