@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList, Scissors } from 'lucide-react';
+import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList, Scissors, Calendar } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Secret Santa Blog - Guides, Tips & Gift Ideas | Secret Santa Generator',
@@ -10,6 +10,15 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const articles = [
+    {
+      title: "Christmas Secret Santa 2025: Complete Planning Guide",
+      description: "Your complete guide to planning Secret Santa for Christmas 2025. Timeline, budget tips, themes, gift ideas, and party planning.",
+      href: "/blog/christmas-secret-santa-2025",
+      category: "Organization Guides",
+      icon: Calendar,
+      color: "from-red-500 to-green-500",
+      readTime: "20 min",
+    },
     {
       title: "DIY Secret Santa Gifts: 40+ Handmade & Homemade Ideas",
       description: "Creative DIY gift ideas you can make yourself. From edible treats to crafts, find handmade gifts that feel personal and thoughtful.",
@@ -130,9 +139,9 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: "All Articles", count: 13, color: "bg-purple-100 text-purple-700" },
+    { name: "All Articles", count: 14, color: "bg-purple-100 text-purple-700" },
     { name: "Gift Ideas", count: 7, color: "bg-pink-100 text-pink-700" },
-    { name: "Organization Guides", count: 2, color: "bg-blue-100 text-blue-700" },
+    { name: "Organization Guides", count: 3, color: "bg-blue-100 text-blue-700" },
     { name: "Tools & Templates", count: 2, color: "bg-green-100 text-green-700" },
   ];
 
