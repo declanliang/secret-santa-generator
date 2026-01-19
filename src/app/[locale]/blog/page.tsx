@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList, Scissors, Calendar } from 'lucide-react';
+import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList, Scissors, Calendar, Home } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Secret Santa Blog - Guides, Tips & Gift Ideas | Secret Santa Generator',
@@ -10,6 +10,24 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const articles = [
+    {
+      title: "Family Secret Santa: Complete Guide for All Ages",
+      description: "Plan the perfect family gift exchange. Age-appropriate ideas for kids, teens, adults & grandparents, plus tips for large families.",
+      href: "/blog/family-secret-santa",
+      category: "Organization Guides",
+      icon: Home,
+      color: "from-rose-500 to-pink-500",
+      readTime: "16 min",
+    },
+    {
+      title: "Secret Santa Gifts Under $25, $30 & $50: Premium Ideas",
+      description: "80+ premium gift ideas at three popular price points. Quality gifts that impress without breaking the bank.",
+      href: "/blog/secret-santa-gifts-under-25-30-50",
+      category: "Gift Ideas",
+      icon: DollarSign,
+      color: "from-green-500 to-emerald-500",
+      readTime: "18 min",
+    },
     {
       title: "Christmas Secret Santa 2025: Complete Planning Guide",
       description: "Your complete guide to planning Secret Santa for Christmas 2025. Timeline, budget tips, themes, gift ideas, and party planning.",
@@ -139,9 +157,9 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: "All Articles", count: 14, color: "bg-purple-100 text-purple-700" },
-    { name: "Gift Ideas", count: 7, color: "bg-pink-100 text-pink-700" },
-    { name: "Organization Guides", count: 3, color: "bg-blue-100 text-blue-700" },
+    { name: "All Articles", count: 16, color: "bg-purple-100 text-purple-700" },
+    { name: "Gift Ideas", count: 8, color: "bg-pink-100 text-pink-700" },
+    { name: "Organization Guides", count: 4, color: "bg-blue-100 text-blue-700" },
     { name: "Tools & Templates", count: 2, color: "bg-green-100 text-green-700" },
   ];
 
