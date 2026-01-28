@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList, Scissors, Calendar, Home } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Secret Santa Blog - Guides, Tips & Gift Ideas | Secret Santa Generator',
@@ -10,10 +9,9 @@ export const metadata: Metadata = {
   keywords: 'secret santa blog, secret santa guides, secret santa tips, gift exchange ideas',
 };
 
-export default function BlogPage() {
+export default function BlogPage({ params }: { params: { locale: string } }) {
   const t = useTranslations('blog');
-  const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en';
+  const locale = params.locale || 'en';
 
   const articles = [
     {
