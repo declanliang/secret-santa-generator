@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList, Scissors, Calendar, Home } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Secret Santa Blog - Guides, Tips & Gift Ideas | Secret Santa Generator',
@@ -9,158 +11,180 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const t = useTranslations('blog');
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'en';
+
   const articles = [
     {
-      title: "Family Secret Santa: Complete Guide for All Ages",
-      description: "Plan the perfect family gift exchange. Age-appropriate ideas for kids, teens, adults & grandparents, plus tips for large families.",
-      href: "/blog/family-secret-santa",
-      category: "Organization Guides",
+      title: t('articles.familySecretSanta.title'),
+      description: t('articles.familySecretSanta.description'),
+      href: `/${locale}/blog/family-secret-santa`,
+      category: t('articles.familySecretSanta.category'),
       icon: Home,
       color: "from-rose-500 to-pink-500",
-      readTime: "16 min",
+      readTime: t('articles.familySecretSanta.readTime'),
     },
     {
-      title: "Secret Santa Gifts Under $25, $30 & $50: Premium Ideas",
-      description: "80+ premium gift ideas at three popular price points. Quality gifts that impress without breaking the bank.",
-      href: "/blog/secret-santa-gifts-under-25-30-50",
-      category: "Gift Ideas",
+      title: t('articles.giftsUnder25.title'),
+      description: t('articles.giftsUnder25.description'),
+      href: `/${locale}/blog/secret-santa-gifts-under-25-30-50`,
+      category: t('articles.giftsUnder25.category'),
       icon: DollarSign,
       color: "from-green-500 to-emerald-500",
-      readTime: "18 min",
+      readTime: t('articles.giftsUnder25.readTime'),
     },
     {
-      title: "Christmas Secret Santa 2025: Complete Planning Guide",
-      description: "Your complete guide to planning Secret Santa for Christmas 2025. Timeline, budget tips, themes, gift ideas, and party planning.",
-      href: "/blog/christmas-secret-santa-2025",
-      category: "Organization Guides",
+      title: t('articles.christmas2025.title'),
+      description: t('articles.christmas2025.description'),
+      href: `/${locale}/blog/christmas-secret-santa-2025`,
+      category: t('articles.christmas2025.category'),
       icon: Calendar,
       color: "from-red-500 to-green-500",
-      readTime: "20 min",
+      readTime: t('articles.christmas2025.readTime'),
     },
     {
-      title: "DIY Secret Santa Gifts: 40+ Handmade & Homemade Ideas",
-      description: "Creative DIY gift ideas you can make yourself. From edible treats to crafts, find handmade gifts that feel personal and thoughtful.",
-      href: "/blog/diy-secret-santa-gifts",
-      category: "Gift Ideas",
+      title: t('articles.diyGifts.title'),
+      description: t('articles.diyGifts.description'),
+      href: `/${locale}/blog/diy-secret-santa-gifts`,
+      category: t('articles.diyGifts.category'),
       icon: Scissors,
       color: "from-pink-500 to-rose-500",
-      readTime: "18 min",
+      readTime: t('articles.diyGifts.readTime'),
     },
     {
-      title: "Secret Santa Questionnaire: 30+ Questions to Ask",
-      description: "Essential questions template to help gift-givers choose perfect presents. Includes ready-to-use questionnaire with 30+ questions organized by category.",
-      href: "/blog/secret-santa-questionnaire",
-      category: "Tools & Templates",
+      title: t('articles.questionnaire.title'),
+      description: t('articles.questionnaire.description'),
+      href: `/${locale}/blog/secret-santa-questionnaire`,
+      category: t('articles.questionnaire.category'),
       icon: ClipboardList,
       color: "from-purple-500 to-pink-500",
-      readTime: "12 min",
+      readTime: t('articles.questionnaire.readTime'),
     },
     {
-      title: "Virtual Secret Santa: How to Organize Remote Gift Exchange",
-      description: "Complete guide for remote teams - online tools, shipping logistics, and creative virtual reveal ideas for distributed teams.",
-      href: "/blog/virtual-secret-santa",
-      category: "Organization Guides",
+      title: t('articles.virtual.title'),
+      description: t('articles.virtual.description'),
+      href: `/${locale}/blog/virtual-secret-santa`,
+      category: t('articles.virtual.category'),
       icon: Laptop,
       color: "from-blue-500 to-indigo-500",
-      readTime: "16 min",
+      readTime: t('articles.virtual.readTime'),
     },
     {
-      title: "Secret Santa Gifts Under $10: 60+ Budget-Friendly Ideas",
-      description: "Amazing gifts under $10 that don't feel cheap. Perfect for students, large groups, and budget-conscious exchanges.",
-      href: "/blog/secret-santa-gifts-under-10",
-      category: "Gift Ideas",
+      title: t('articles.giftsUnder10.title'),
+      description: t('articles.giftsUnder10.description'),
+      href: `/${locale}/blog/secret-santa-gifts-under-10`,
+      category: t('articles.giftsUnder10.category'),
       icon: DollarSign,
       color: "from-green-500 to-emerald-500",
-      readTime: "15 min",
+      readTime: t('articles.giftsUnder10.readTime'),
     },
     {
-      title: "Secret Santa Gifts for Women: 45+ Thoughtful Ideas",
-      description: "Perfect gift ideas for women from beauty & self-care to accessories. Organized by budget and personality type.",
-      href: "/blog/secret-santa-gifts-for-women",
-      category: "Gift Ideas",
+      title: t('articles.giftsForWomen.title'),
+      description: t('articles.giftsForWomen.description'),
+      href: `/${locale}/blog/secret-santa-gifts-for-women`,
+      category: t('articles.giftsForWomen.category'),
       icon: Heart,
       color: "from-pink-500 to-rose-500",
-      readTime: "14 min",
+      readTime: t('articles.giftsForWomen.readTime'),
     },
     {
-      title: "Secret Santa Gifts for Men: 40+ Ideas Guys Actually Want",
-      description: "Comprehensive gift guide for men with tech, accessories, and practical items guys will genuinely love.",
-      href: "/blog/secret-santa-gifts-for-men",
-      category: "Gift Ideas",
+      title: t('articles.giftsForMen.title'),
+      description: t('articles.giftsForMen.description'),
+      href: `/${locale}/blog/secret-santa-gifts-for-men`,
+      category: t('articles.giftsForMen.category'),
       icon: Users,
       color: "from-blue-500 to-cyan-500",
-      readTime: "12 min",
+      readTime: t('articles.giftsForMen.readTime'),
     },
     {
-      title: "Secret Santa Gifts for Coworkers: 45+ Professional & Fun Ideas",
-      description: "Office-appropriate gift ideas that balance professionalism with personality. Perfect for workplace exchanges.",
-      href: "/blog/secret-santa-gifts-for-coworkers",
-      category: "Gift Ideas",
+      title: t('articles.giftsForCoworkers.title'),
+      description: t('articles.giftsForCoworkers.description'),
+      href: `/${locale}/blog/secret-santa-gifts-for-coworkers`,
+      category: t('articles.giftsForCoworkers.category'),
       icon: Briefcase,
       color: "from-indigo-500 to-purple-500",
-      readTime: "13 min",
+      readTime: t('articles.giftsForCoworkers.readTime'),
     },
     {
-      title: "Funny Secret Santa Gifts That Will Make Everyone Laugh",
-      description: "50+ hilarious gift ideas from office-safe humor to outrageous gag gifts. Make your Secret Santa unforgettable.",
-      href: "/blog/funny-secret-santa-gifts",
-      category: "Gift Ideas",
+      title: t('articles.funnyGifts.title'),
+      description: t('articles.funnyGifts.description'),
+      href: `/${locale}/blog/funny-secret-santa-gifts`,
+      category: t('articles.funnyGifts.category'),
       icon: Laugh,
       color: "from-orange-500 to-red-500",
-      readTime: "11 min",
+      readTime: t('articles.funnyGifts.readTime'),
     },
     {
-      title: "Secret Santa Gifts Under $20: 50+ Best Ideas",
-      description: "Budget-friendly gift ideas organized by category. Find thoughtful presents without breaking the bank.",
-      href: "/blog/secret-santa-gifts-under-20",
-      category: "Gift Ideas",
+      title: t('articles.giftsUnder20.title'),
+      description: t('articles.giftsUnder20.description'),
+      href: `/${locale}/blog/secret-santa-gifts-under-20`,
+      category: t('articles.giftsUnder20.category'),
       icon: DollarSign,
       color: "from-green-500 to-teal-500",
-      readTime: "14 min",
+      readTime: t('articles.giftsUnder20.readTime'),
     },
     {
-      title: "How Does Secret Santa Work? Complete Beginner's Guide",
-      description: "Learn everything about Secret Santa - from basic rules to expert tips. Perfect for first-timers and experienced organizers.",
-      href: "/blog/how-does-secret-santa-work",
-      category: "Getting Started",
+      title: t('articles.uniqueQuirky.title'),
+      description: t('articles.uniqueQuirky.description'),
+      href: `/${locale}/blog/unique-quirky-secret-santa-gifts`,
+      category: t('articles.uniqueQuirky.category'),
+      icon: Sparkles,
+      color: "from-amber-500 to-purple-500",
+      readTime: t('articles.uniqueQuirky.readTime'),
+    },
+    {
+      title: t('articles.printableForms.title'),
+      description: t('articles.printableForms.description'),
+      href: `/${locale}/blog/printable-secret-santa-forms`,
+      category: t('articles.printableForms.category'),
+      icon: ClipboardList,
+      color: "from-emerald-500 to-blue-500",
+      readTime: t('articles.printableForms.readTime'),
+    },
+    {
+      title: t('articles.howItWorks.title'),
+      description: t('articles.howItWorks.description'),
+      href: `/${locale}/blog/how-does-secret-santa-work`,
+      category: t('articles.howItWorks.category'),
       icon: HelpCircle,
       color: "from-violet-500 to-purple-500",
-      readTime: "15 min",
+      readTime: t('articles.howItWorks.readTime'),
     },
     {
-      title: "How to Organize a Secret Santa Gift Exchange",
-      description: "Complete guide to planning and running the perfect Secret Santa exchange for any group size or setting.",
-      href: "/blog/how-to-organize-secret-santa",
-      category: "Organization Guides",
+      title: t('articles.howToOrganize.title'),
+      description: t('articles.howToOrganize.description'),
+      href: `/${locale}/blog/how-to-organize-secret-santa`,
+      category: t('articles.howToOrganize.category'),
       icon: Gift,
       color: "from-red-500 to-pink-500",
-      readTime: "13 min",
+      readTime: t('articles.howToOrganize.readTime'),
     },
     {
-      title: "White Elephant vs Secret Santa: What's the Difference?",
-      description: "Comprehensive comparison of two popular gift exchange games. Learn rules, differences, and which is right for your group.",
-      href: "/blog/white-elephant-vs-secret-santa",
-      category: "Comparisons",
+      title: t('articles.whiteElephant.title'),
+      description: t('articles.whiteElephant.description'),
+      href: `/${locale}/blog/white-elephant-vs-secret-santa`,
+      category: t('articles.whiteElephant.category'),
       icon: Scale,
       color: "from-amber-500 to-orange-500",
-      readTime: "10 min",
+      readTime: t('articles.whiteElephant.readTime'),
     },
     {
-      title: "7 Best Secret Santa Generator Apps in 2025",
-      description: "Compare the top Secret Santa generators and apps. Find the perfect tool for organizing your gift exchange.",
-      href: "/blog/best-secret-santa-generator-apps",
-      category: "Tools & Templates",
+      title: t('articles.bestApps.title'),
+      description: t('articles.bestApps.description'),
+      href: `/${locale}/blog/best-secret-santa-generator-apps`,
+      category: t('articles.bestApps.category'),
       icon: Sparkles,
       color: "from-cyan-500 to-blue-500",
-      readTime: "11 min",
+      readTime: t('articles.bestApps.readTime'),
     },
   ];
 
   const categories = [
-    { name: "All Articles", count: 16, color: "bg-purple-100 text-purple-700" },
-    { name: "Gift Ideas", count: 8, color: "bg-pink-100 text-pink-700" },
-    { name: "Organization Guides", count: 4, color: "bg-blue-100 text-blue-700" },
-    { name: "Tools & Templates", count: 2, color: "bg-green-100 text-green-700" },
+    { name: t('categories.all'), count: 18, color: "bg-purple-100 text-purple-700" },
+    { name: t('categories.giftIdeas'), count: 10, color: "bg-pink-100 text-pink-700" },
+    { name: t('categories.organizationGuides'), count: 4, color: "bg-blue-100 text-blue-700" },
+    { name: t('categories.toolsTemplates'), count: 3, color: "bg-green-100 text-green-700" },
   ];
 
   return (
@@ -170,15 +194,15 @@ export default function BlogPage() {
         <header className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
             <Gift className="w-4 h-4" />
-            Secret Santa Blog
+            {t('header')}
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Secret Santa Guides & Resources
+            {t('guidesResources')}
           </h1>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Everything you need to know about organizing perfect Secret Santa gift exchanges. From gift ideas to organization tips, questionnaires, and more.
+            {t('description')}
           </p>
         </header>
 
@@ -198,15 +222,15 @@ export default function BlogPage() {
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
             <div className="text-4xl font-bold text-purple-600 mb-2">{articles.length}</div>
-            <div className="text-gray-600">Comprehensive Guides</div>
+            <div className="text-gray-600">{t('stats.guides')}</div>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
             <div className="text-4xl font-bold text-pink-600 mb-2">200+</div>
-            <div className="text-gray-600">Gift Ideas Covered</div>
+            <div className="text-gray-600">{t('stats.gifts')}</div>
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
             <div className="text-4xl font-bold text-blue-600 mb-2">100%</div>
-            <div className="text-gray-600">Free Resources</div>
+            <div className="text-gray-600">{t('stats.resources')}</div>
           </div>
         </div>
 
@@ -247,7 +271,7 @@ export default function BlogPage() {
                     </div>
 
                     <div className="flex items-center gap-2 text-purple-600 font-semibold group-hover:gap-3 transition-all">
-                      <span className="text-sm">Read More</span>
+                      <span className="text-sm">{t('readMore')}</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -261,16 +285,16 @@ export default function BlogPage() {
         <div className="mt-20 bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 rounded-3xl p-12 text-center text-white">
           <Gift className="w-16 h-16 mx-auto mb-6 opacity-90" />
           <h2 className="text-4xl font-bold mb-4">
-            Ready to Organize Your Secret Santa?
+            {t('cta.title')}
           </h2>
           <p className="text-xl mb-8 text-purple-50 max-w-2xl mx-auto">
-            Use our free Secret Santa generator to organize your gift exchange in minutes. No email required, completely private!
+            {t('cta.description')}
           </p>
           <Link
-            href="/en"
+            href={`/${locale}`}
             className="inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-50 transition-colors shadow-lg"
           >
-            Try Free Generator
+            {t('cta.button')}
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
@@ -278,17 +302,17 @@ export default function BlogPage() {
         {/* Newsletter Section (Optional) */}
         <div className="mt-12 bg-white rounded-2xl p-8 border border-gray-200 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            More Guides Coming Soon!
+            {t('newsletter.title')}
           </h3>
           <p className="text-gray-600 mb-6">
-            We're creating more helpful guides about Secret Santa. Bookmark this page to stay updated.
+            {t('newsletter.description')}
           </p>
           <div className="flex gap-4 justify-center text-sm text-gray-500">
-            <span>📝 DIY Gift Ideas</span>
+            <span>📝 {t('newsletter.items.diy')}</span>
             <span>•</span>
-            <span>🎄 Christmas Planning</span>
+            <span>🎄 {t('newsletter.items.christmas')}</span>
             <span>•</span>
-            <span>✉️ Email Templates</span>
+            <span>✉️ {t('newsletter.items.email')}</span>
           </div>
         </div>
       </div>

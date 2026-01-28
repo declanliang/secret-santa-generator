@@ -1,0 +1,880 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "continue": "Continuer",
+    "next": "Suivant",
+    "skip": "Ignorer",
+    "submit": "Envoyer",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "email": "Email",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "backToHome": "Retour à l’accueil"
+  },
+  "header": {
+    "title": "Générateur de Secret Santa",
+    "subtitle": "Créez votre échange de cadeaux en quelques minutes"
+  },
+  "footer": {
+    "title": "Générateur de Secret Santa",
+    "description": "Outil en ligne gratuit pour organiser des échanges de cadeaux Secret Santa. Aucune inscription requise.",
+    "quickLinks": "Liens rapides",
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "contactUs": "Nous contacter",
+    "faq": "FAQ",
+    "legal": "Juridique",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d’utilisation",
+    "cookieSettings": "Paramètres des cookies",
+    "email": "service@secret-santa-generator.net",
+    "phone": "+1 (213) 210-1344",
+    "address": "131 Continental Dr, Suite 305",
+    "addressLine2": "Newark, DE 19713, États-Unis",
+    "copyright": "© {year} Secret Santa Generator. Tous droits réservés.",
+    "madeWith": "Fait avec ❤️ pour la saison des fêtes",
+    "openSource": "Open source sur GitHub",
+    "watchTutorials": "Voir les tutoriels"
+  },
+  "home": {
+    "title": "Générateur Secret Santa Gratuit",
+    "subtitle": "Créez votre échange de cadeaux en quelques minutes - aucun e-mail requis ! 🎁",
+    "metaTitle": "Générateur Secret Santa Gratuit - Sans Email | 2025",
+    "metaDescription": "Créez votre échange de cadeaux Secret Santa en quelques minutes. Générateur en ligne gratuit sans inscription. Parfait pour le bureau, la famille et les amis. Partagez via WhatsApp, email ou lien direct !"
+  },
+  "steps": {
+    "participants": "Participants",
+    "restrictions": "Restrictions",
+    "details": "Détails",
+    "publish": "Publier",
+    "email": "Email",
+    "success": "Succès"
+  },
+  "participantsStep": {
+    "title": "Quel est votre nom ?",
+    "subtitle": "Avec qui tirez-vous au sort ?",
+    "placeholder": "Entrez votre nom",
+    "includeMe": "M’inclure (l’organisateur) dans le tirage",
+    "addName": "Ajouter le nom {number}",
+    "addMore": "Ajouter le nom {number}",
+    "atLeast": "Ajoutez au moins {count} {count, plural, one {personne} other {personnes}} pour continuer",
+    "continue": "Continuer →"
+  },
+  "restrictionsStep": {
+    "title": "Définir des restrictions de tirage (optionnel)",
+    "description": "Évitez que certaines personnes se tirent mutuellement (par ex. couples, colocataires ou personnes qui savent déjà quoi offrir).",
+    "yesSet": "Oui, je veux définir des restrictions",
+    "noSkip": "Non, passer cette étape",
+    "selectParticipants": "Sélectionnez les participants pour définir des restrictions :",
+    "bidirectionalNotice": "Note : restrictions bidirectionnelles",
+    "bidirectionalDescription": "Toutes les restrictions sont à double sens. Si Tom ne peut pas tirer Kevin, alors Kevin ne peut pas tirer Tom. Ajouter ou supprimer une restriction affecte les deux participants.",
+    "cannotDraw": "{name} ne peut pas tirer :",
+    "noRestrictions": "Aucune restriction",
+    "restrictionCount": "{count} {count, plural, one {restriction} other {restrictions}}",
+    "clear": "Effacer"
+  },
+  "detailsStep": {
+    "title": "Détails de l’événement",
+    "eventNameLabel": "Pour quel événement tirez-vous au sort ?",
+    "suggestion1": "Secret Santa 2025",
+    "suggestion2": "Noël 2025",
+    "suggestion3": "Échange de cadeaux des fêtes",
+    "suggestion4": "Nouvel An 2026",
+    "suggestion5": "Secret Santa au bureau",
+    "exchangeDateLabel": "Date de l’échange",
+    "date1": "Samedi 20 décembre 2025",
+    "date2": "Mercredi 24 décembre 2025",
+    "date3": "Jeudi 25 décembre 2025",
+    "budgetLabel": "Budget cadeau",
+    "budgetDescription": "Montant suggéré par cadeau",
+    "budget1": "$10",
+    "budget2": "$20",
+    "budget3": "$50",
+    "enterAmount": "Saisir un montant",
+    "maxBudgetError": "Le budget maximal est de $999",
+    "addCustomMessage": "Ajouter un message personnalisé",
+    "customMessagePlaceholder": "Ajoutez des instructions spéciales ou un message aux participants...",
+    "defaultGroupName": "Secret Santa 2025",
+    "defaultMessage": "Vous êtes invité à rejoindre {groupName} ! Faites votre liste de souhaits, tirez un nom et laissez la magie opérer."
+  },
+  "emailStep": {
+    "title": "Une dernière étape !",
+    "description": "Sauvegardez vos liens par email (optionnel)",
+    "whyProvide": "Pourquoi fournir votre email ?",
+    "whyProvideDescription": "Nous vous enverrons tous les liens de l’événement dans un seul email pratique :",
+    "linkList": {
+      "universal": "Lien universel à partager avec les participants",
+      "personalized": "Liens personnalisés individuels pour chaque participant",
+      "organizer": "Lien du tableau de bord organisateur pour gérer l’événement"
+    },
+    "neverLose": "Ne perdez plus jamais vos liens !",
+    "yourEmail": "Votre adresse email",
+    "emailPlaceholder": "vous@exemple.com",
+    "privacy": "🔒 Confidentialité : nous utilisons votre email uniquement pour envoyer les liens de l’événement. Pas de spam, jamais.",
+    "skipForNow": "Ignorer pour l’instant",
+    "sendEmail": "Envoyer l’email →",
+    "sending": "Envoi...",
+    "skipNote": "Vous pourrez toujours accéder à vos liens sur la page suivante, même si vous ignorez cette étape"
+  },
+  "successStep": {
+    "eventCreated": "Événement créé avec succès",
+    "readyTitle": "Votre Secret Santa est prêt !",
+    "howItWorks": "Comment ça marche",
+    "step1": "Choisissez votre méthode de partage ci-dessous (lien universel ou liens personnalisés)",
+    "step2": "Envoyez les liens à vos {count} participants via WhatsApp, email ou copier/coller",
+    "step3": "Chaque personne clique sur son lien pour révéler pour qui elle achète un cadeau",
+    "shareInvitations": "Partagez vos invitations",
+    "chooseDistribution": "Choisissez comment distribuer les liens à vos participants",
+    "universalSharedLink": "Lien universel partagé",
+    "personalizedLinks": "Liens personnalisés",
+    "universalDescription": "Parfait pour les groupes WhatsApp, Slack ou Discord. Partagez un lien unique, chacun revendique son nom.",
+    "bestForGroupChats": "Idéal pour les discussions de groupe",
+    "groupChatsDescription": "Partagez un lien unique : chacun clique, sélectionne son nom et voit instantanément à qui il doit offrir un cadeau. Rapide et simple !",
+    "moreSecure": "Plus sécurisé",
+    "secureDescription": "Chaque participant reçoit son propre lien unique. Plus sûr et évite que d’autres voient qui ne participe pas.",
+    "bestForDirectMessaging": "Idéal pour la messagerie directe",
+    "directMessagingDescription": "Chaque lien est unique et affiche automatiquement la personne attribuée. Aucune sélection de nom nécessaire !",
+    "loadingLinks": "Chargement des liens personnalisés...",
+    "linkCopied": "Lien copié dans le presse-papiers !",
+    "copied": "Copié !",
+    "copy": "Copier",
+    "organizerView": "Vue organisateur",
+    "organizerViewDescription": "Voir toutes les correspondances pour suivre qui offre un cadeau à qui (gardez cela secret !)",
+    "viewPairings": "Voir toutes les correspondances (vue organisateur)",
+    "saveLinksEmail": "Sauvegarder vos liens par email",
+    "saveLinksDescription": "Recevez tous les liens de votre événement par email pour les conserver. Nous enverrons le lien universel, les liens personnalisés pour chaque participant et votre lien d’organisateur.",
+    "emailPlaceholder": "vous@exemple.com",
+    "sendEmail": "Envoyer l’email",
+    "sending": "Envoi...",
+    "emailPrivacy": "Nous utilisons votre email uniquement pour envoyer les liens de l’événement. Pas de spam, jamais.",
+    "emailSentSuccess": "Email envoyé avec succès !",
+    "emailSentSuccessMessage": "Email envoyé avec succès ! Vérifiez votre boîte de réception pour tous les liens de l’événement.",
+    "linksAvailableAbove": "Pas d’inquiétude, vos liens sont déjà disponibles ci-dessus !",
+    "enterEmailError": "Veuillez saisir une adresse email",
+    "validEmailError": "Veuillez saisir une adresse email valide",
+    "sendEmailError": "Échec de l’envoi de l’email",
+    "emailTimeoutWarning": "L’email met plus de temps que prévu. Veuillez vérifier votre boîte de réception dans quelques minutes.",
+    "allSetTitle": "Tout est prêt !",
+    "allSetDescription": "Votre événement Secret Santa a été créé. Partagez le lien et que l’échange commence !",
+    "createAnother": "Créer un autre Secret Santa"
+  },
+  "event": {
+    "join": {
+      "selectName": "Sélectionnez votre nom pour révéler votre attribution Secret Santa",
+      "eventType": "Type d’événement",
+      "exchangeDate": "Date de l’échange",
+      "budget": "Budget",
+      "messageFromOrganizer": "Message de l’organisateur :",
+      "selectYourName": "Sélectionnez votre nom :",
+      "chooseName": "Choisissez votre nom...",
+      "continue": "Continuer",
+      "participants": "Participants : {names}",
+      "confirmIdentity": "Confirmez votre identité",
+      "pleaseConfirm": "Veuillez confirmer que vous êtes",
+      "onceReveal": "Une fois révélé, vous ne pouvez pas changer votre sélection",
+      "yesIm": "Oui, je suis {name}",
+      "back": "Retour",
+      "saveAssignment": "Sauvegardez votre attribution",
+      "saveDescription": "Recevez votre attribution Secret Santa par email (optionnel)",
+      "whyProvideEmail": "Pourquoi fournir votre email ?",
+      "whyProvideEmailDescription": "Nous vous enverrons un rappel avec les détails de votre attribution, incluant la personne à qui vous offrez, le budget et la date de l’échange. Ne perdez plus votre Secret Santa !",
+      "privacy": "🔒 Confidentialité : nous utilisons votre email uniquement pour envoyer votre attribution. Pas de spam, jamais.",
+      "yourEmailAddress": "Votre adresse email",
+      "sendEmailReveal": "Envoyer l’email et révéler",
+      "skipReveal": "Ignorer et révéler maintenant",
+      "sending": "Envoi...",
+      "buyingFor": "Vous achetez un cadeau pour :",
+      "remember": "Rappelez-vous :",
+      "budgetLabel": "Budget : {currency} {amount}",
+      "exchangeDateLabel": "Date de l’échange : {date}",
+      "keepSecret": "Gardez-le secret ! Ne dites à personne qui vous avez tiré 🤫",
+      "bookmark": "Ajoutez cette page aux favoris pour retrouver votre attribution à tout moment",
+      "assignmentViewed": "✅ Attribution vue ! Vous pouvez fermer cette page ou l’ajouter aux favoris pour plus tard.",
+      "loading": "Chargement de l’événement...",
+      "eventNotFound": "Événement introuvable",
+      "eventNotFoundDescription": "Cet événement n’existe pas ou le lien est incorrect.",
+      "invalidLink": "Lien personnalisé invalide. Veuillez utiliser le lien correct qui vous a été envoyé.",
+      "selectNameFirst": "Veuillez d’abord sélectionner votre nom",
+      "loadEventError": "Échec du chargement de l’événement. Veuillez vérifier le lien.",
+      "failedReveal": "Échec de la révélation de l’attribution. Veuillez réessayer.",
+      "enterEmailError": "Veuillez saisir une adresse email",
+      "validEmailError": "Veuillez saisir une adresse email valide",
+      "sendEmailError": "Échec de l’envoi de l’email",
+      "emailSentSuccess": "Email envoyé avec succès !"
+    },
+    "organizer": {
+      "organizerView": "Vue organisateur",
+      "organizedBy": "Organisé par {name}",
+      "participants": "Participants",
+      "viewed": "Vus",
+      "notViewed": "Non vus",
+      "exchangeDate": "Date de l’échange",
+      "eventDetails": "Détails de l’événement",
+      "eventType": "Type d’événement",
+      "budget": "Budget",
+      "customMessage": "Message personnalisé",
+      "invitationLink": "Lien d’invitation",
+      "invitationDescription": "Partagez ce lien universel avec tous les participants. Ils peuvent sélectionner leur nom et voir qui ils ont tiré.",
+      "allPairings": "Toutes les correspondances",
+      "showAssignments": "Afficher les attributions",
+      "hideAssignments": "Masquer les attributions",
+      "clickReveal": "Cliquez sur « Afficher les attributions » pour révéler toutes les correspondances",
+      "keepSecret": "(Gardez ces informations secrètes pour les participants !)",
+      "participantsList": "Liste des participants",
+      "loading": "Chargement de la vue organisateur...",
+      "eventNotFound": "Événement introuvable",
+      "eventNotFoundDescription": "Cet événement n’existe pas ou le lien est incorrect.",
+      "failedLoad": "Échec du chargement des données de l’événement"
+    }
+  },
+  "pages": {
+    "about": {
+      "title": "À propos",
+      "subtitle": "Rendre les échanges de cadeaux simples et amusants",
+      "ourMission": "Notre mission",
+      "mission1": "Secret Santa Generator a été créé pour rendre l’organisation des échanges de cadeaux simple et agréable pour tous. Nous pensons que l’esprit des fêtes doit rassembler les gens, pas stresser avec des logistiques compliquées.",
+      "mission2": "Notre plateforme élimine le casse-tête du tirage manuel, du suivi des exclusions et de la coordination des participants. Que vous organisiez un Secret Santa pour votre bureau, votre famille, vos amis ou un groupe communautaire, nous sommes là pour vous.",
+      "whatWeDo": "Ce que nous faisons",
+      "whatWeDoIntro": "Nous proposons un générateur de Secret Santa gratuit et sans inscription qui vous aide à :",
+      "do1": "Créer des événements Secret Santa illimités en quelques minutes",
+      "do2": "Attribuer les participants aléatoirement en toute confidentialité",
+      "do3": "Définir des règles d’exclusion pour éviter certains appariements",
+      "do4": "Partager des invitations via WhatsApp, email ou liens directs",
+      "do5": "Garantir l’équité avec notre système anti-triche",
+      "do6": "Organiser des événements sans exiger d’adresses email",
+      "whyChooseUs": "Pourquoi nous choisir ?",
+      "free": "100 % gratuit",
+      "freeDesc": "Pas de frais cachés, pas d’abonnements premium. Tout le monde mérite un accès facile à de bons outils.",
+      "privacy": "Priorité à la confidentialité",
+      "privacyDesc": "Nous protégeons vos données et garantissons l’anonymat des attributions Secret Santa.",
+      "noRegistration": "Sans inscription",
+      "noRegistrationDesc": "Commencez immédiatement sans vous inscrire ni fournir d’informations personnelles.",
+      "mobileFriendly": "Compatible mobile",
+      "mobileFriendlyDesc": "Fonctionne parfaitement sur tous les appareils : téléphones, tablettes et ordinateurs.",
+      "ourValues": "Nos valeurs",
+      "simplicity": "Simplicité :",
+      "simplicityDesc": "Nous pensons que de bons outils doivent être faciles à utiliser, sans instructions compliquées ni courbe d’apprentissage.",
+      "accessibility": "Accessibilité :",
+      "accessibilityDesc": "Tout le monde doit avoir accès à des outils de qualité, quel que soit le budget ou l’expertise technique.",
+      "privacyValue": "Confidentialité :",
+      "privacyValueDesc": "Nous respectons la confidentialité et ne collectons que le minimum de données nécessaires pour fournir notre service.",
+      "reliability": "Fiabilité :",
+      "reliabilityDesc": "Notre plateforme est conçue pour fonctionner parfaitement lorsque vous en avez le plus besoin.",
+      "ourStory": "Notre histoire",
+      "story1": "Secret Santa Generator est né d’un besoin simple : organiser un échange de cadeaux équitable et amusant sans les tracas habituels. Après des années à gérer des événements Secret Santa manuellement avec des papiers et des tableurs, nous savions qu’il devait y avoir une meilleure façon de faire.",
+      "story2": "Nous avons construit cette plateforme pour résoudre des problèmes réels que nous avons rencontrés nous-mêmes. Aujourd’hui, des milliers d’utilisateurs nous font confiance pour organiser leurs événements Secret Santa, des petits rassemblements familiaux aux grandes fêtes d’entreprise.",
+      "perfectFor": "Parfait pour chaque occasion",
+      "perfectForIntro": "Bien que nous ayons commencé avec le Secret Santa de Noël, notre plateforme fonctionne pour toutes les occasions d’échange de cadeaux :",
+      "occasion1": "Fêtes de bureau et événements de team building",
+      "occasion2": "Réunions familiales et fêtes de Noël",
+      "occasion3": "Célébrations entre amis et fêtes",
+      "occasion4": "Classes scolaires et activités de clubs",
+      "occasion5": "Secret Santa virtuel pour équipes à distance",
+      "occasion6": "Hanoucca, Nouvel An, échanges d’anniversaire, et plus encore",
+      "contactInfo": "Informations de contact",
+      "contactIntro": "Des questions, des commentaires ou besoin d’aide ? Nous serions ravis de vous entendre !",
+      "joinThousands": "Rejoignez des milliers d’organisateurs satisfaits",
+      "joinThousandsDesc": "Que vous organisiez votre premier Secret Santa ou votre cinquantième, nous sommes là pour que tout se passe en douceur. Rejoignez les milliers d’organisateurs qui font confiance à Secret Santa Generator pour créer des échanges de cadeaux mémorables.",
+      "createNow": "Créez votre Secret Santa maintenant",
+      "contactAddressLine1": "131 Continental Dr",
+      "contactAddressLine2": "Suite 305",
+      "contactAddressLine3": "Newark, Delaware 19713",
+      "contactAddressLine4": "?tats-Unis"
+    },
+    "contact": {
+      "title": "Nous contacter",
+      "subtitle": "Des questions ? Nous sommes là pour vous aider !",
+      "getInTouch": "Contactez-nous",
+      "getInTouchDesc": "Que vous ayez une question sur les fonctionnalités, besoin d’assistance technique ou souhaitiez partager un commentaire, notre équipe est prête à vous répondre.",
+      "email": "Email",
+      "emailResponse": "Nous répondons généralement sous 24 heures",
+      "phone": "Téléphone",
+      "phoneHours": "Lundi - Vendredi, 9h - 17h (EST)",
+      "address": "Adresse",
+      "faq": "Avant de nous contacter, vous trouverez peut-être votre réponse dans notre FAQ. Nous avons rassemblé les réponses aux questions les plus courantes sur notre générateur Secret Santa.",
+      "supportTopics": "Sujets d’assistance",
+      "technicalSupport": "Support technique",
+      "technicalSupportDesc": "Problèmes de création d’événements, partage de liens ou accès aux attributions des participants",
+      "featureRequests": "Demandes de fonctionnalités",
+      "featureRequestsDesc": "Suggestions de nouvelles fonctionnalités ou améliorations",
+      "privacyData": "Confidentialité et données",
+      "privacyDataDesc": "Questions sur la gestion des données, politique de confidentialité ou demandes de suppression",
+      "generalInquiries": "Questions générales",
+      "generalInquiriesDesc": "Questions générales sur notre service ou partenariats",
+      "sendMessage": "Envoyez-nous un message",
+      "sendMessageDesc": "Nous aimons recevoir vos retours et répondons dès que possible.",
+      "viewFAQ": "Voir la FAQ",
+      "startNew": "Créer un nouveau Secret Santa",
+      "addressLine1": "131 Continental Dr",
+      "addressLine2": "Suite 305",
+      "addressLine3": "Newark, Delaware 19713",
+      "addressLine4": "?tats-Unis",
+      "faqTitle": "Questions fr?quentes",
+      "businessInquiries": "Business Inquiries",
+      "businessInquiriesDesc": "Interested in partnering or using Secret Santa Generator for your organization? Reach out to discuss enterprise solutions and support.",
+      "quickTips": "Quick Tips",
+      "tip1": "Include a clear budget to keep the exchange fair for everyone.",
+      "tip2": "Set a deadline for the gift exchange and reminders.",
+      "tip3": "Use exclusion rules to avoid awkward pairings.",
+      "tip4": "Share the universal link in a group chat for easy access."
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Questions fréquentes sur le Secret Santa",
+      "stillQuestions": "Vous avez encore des questions ?",
+      "contactUs": "Contactez-nous",
+      "createNow": "Créez votre Secret Santa maintenant"
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "subtitle": "Votre confidentialité est importante pour nous",
+      "introduction": "Introduction",
+      "introText": "Cette politique de confidentialité explique comment Secret Santa Generator collecte, utilise et protège vos informations lorsque vous utilisez notre site et nos services.",
+      "informationWeCollect": "Informations que nous collectons",
+      "collect1": "Informations d’événement (noms des participants, budget, date d’échange, message personnalisé)",
+      "collect2": "Informations de contact (email optionnel pour envoyer des liens ou attributions)",
+      "collect3": "Données d’utilisation de base (type de navigateur, informations de connexion anonymisées)",
+      "howWeUse": "Comment nous utilisons vos informations",
+      "use1": "Créer et gérer votre événement Secret Santa",
+      "use2": "Envoyer les liens d’événement et attributions par email (si fourni)",
+      "use3": "Améliorer notre service et l’expérience utilisateur",
+      "dataSecurity": "Sécurité des données",
+      "dataSecurityText": "Nous mettons en œuvre des mesures de sécurité raisonnables pour protéger vos données. Les données d’événements sont stockées de manière sécurisée et accessibles uniquement aux participants concernés.",
+      "dataRetention": "Conservation des données",
+      "dataRetentionText": "Nous conservons les données d’événements pendant une durée limitée pour assurer l’accès aux liens d’attribution. Vous pouvez demander la suppression à tout moment.",
+      "thirdParties": "Services tiers",
+      "thirdPartiesText": "Nous pouvons utiliser des services tiers fiables (par ex. fournisseurs d’email) pour faire fonctionner nos services. Ces fournisseurs ne peuvent utiliser vos données que pour fournir leurs services.",
+      "cookies": "Cookies",
+      "cookiesText": "Nous utilisons des cookies essentiels pour le fonctionnement du site et des analyses basiques pour améliorer l’expérience. Vous pouvez gérer les cookies dans les paramètres de votre navigateur.",
+      "yourRights": "Vos droits",
+      "rightsText": "Vous pouvez demander l’accès, la correction ou la suppression de vos données personnelles à tout moment.",
+      "changes": "Modifications de cette politique",
+      "changesText": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page avec une date mise à jour.",
+      "contactUs": "Nous contacter",
+      "contactUsDesc": "Si vous avez des questions sur cette politique de confidentialité, veuillez nous contacter :",
+      "lastUpdated": "Last Updated: December 14, 2025",
+      "informationYouProvide": "Information You Provide",
+      "youProvideIntro": "We collect information you provide when creating or managing an event, including:",
+      "participantNames": "Participant names:",
+      "participantNamesDesc": "Names of people participating in your Secret Santa event.",
+      "eventDetails": "Event details:",
+      "eventDetailsDesc": "Event name, date, budget, and optional message.",
+      "emailAddress": "Email address:",
+      "emailAddressDesc": "Optional email used to send event links or assignments.",
+      "exclusionRules": "Exclusion rules:",
+      "exclusionRulesDesc": "Pairing restrictions to prevent specific matches.",
+      "automaticallyCollected": "Information Collected Automatically",
+      "autoCollectedIntro": "We also collect limited information automatically, including:",
+      "usageData": "Usage data:",
+      "usageDataDesc": "Basic analytics about pages visited and features used.",
+      "cookiesDesc": "Small files used to remember preferences and improve the experience.",
+      "howWeUseIntro": "We use your information to:",
+      "use4": "Maintain and improve the service",
+      "use5": "Prevent abuse and fraud",
+      "use6": "Analyze usage trends and performance",
+      "use7": "Comply with legal obligations",
+      "use8": "Communicate important service updates",
+      "thirdPartyServices": "Third-Party Services",
+      "thirdPartyIntro": "We use trusted third-party services to operate our platform:",
+      "supabase": "Supabase",
+      "supabaseDesc": "Database and event storage provider.",
+      "resend": "Resend",
+      "resendDesc": "Email delivery provider for optional notifications.",
+      "vercel": "Vercel",
+      "vercelDesc": "Hosting and deployment platform.",
+      "googleAdSense": "Google AdSense",
+      "googleAdSenseDesc": "Advertising services that may personalize ads.",
+      "cookiesTracking": "Cookies & Tracking Technologies",
+      "cookiesIntro": "We use cookies to provide core functionality and improve the service:",
+      "essentialCookies": "Essential cookies:",
+      "essentialCookiesDesc": "Required for the site to function correctly.",
+      "analyticsCookies": "Analytics cookies:",
+      "analyticsCookiesDesc": "Help us understand usage and improve performance.",
+      "advertisingCookies": "Advertising cookies:",
+      "advertisingCookiesDesc": "Used to deliver and measure ads if enabled.",
+      "preferenceCookies": "Preference cookies:",
+      "preferenceCookiesDesc": "Remember your language and settings.",
+      "cookiesControl": "You can control cookies through your browser settings.",
+      "dataRetentionDesc": "We retain event data only as long as necessary to provide the service. You may request deletion at any time.",
+      "yourRightsIntro": "Depending on your location, you may have the right to:",
+      "rightAccess": "Access:",
+      "rightAccessDesc": "Request a copy of your personal data.",
+      "rightCorrection": "Correction:",
+      "rightCorrectionDesc": "Request corrections to inaccurate data.",
+      "rightDeletion": "Deletion:",
+      "rightDeletionDesc": "Request deletion of your data.",
+      "rightObjection": "Objection:",
+      "rightObjectionDesc": "Object to certain processing activities.",
+      "rightPortability": "Portability:",
+      "rightPortabilityDesc": "Request a portable copy of your data.",
+      "rightWithdraw": "Withdraw consent:",
+      "rightWithdrawDesc": "Withdraw consent where processing is based on consent.",
+      "exerciseRights": "To exercise your rights, contact us at service@secret-santa-generator.net.",
+      "childrenPrivacy": "Children's Privacy",
+      "childrenPrivacyDesc": "Our service is not intended for children under 13. We do not knowingly collect personal information from children.",
+      "internationalTransfers": "International Transfers",
+      "internationalTransfersDesc": "Your information may be processed in countries other than your own, including the United States.",
+      "security": "Security",
+      "securityDesc": "We implement reasonable safeguards to protect your data, but no system is 100% secure.",
+      "changesToPolicy": "Changes to This Policy",
+      "changesToPolicyDesc": "We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised date.",
+      "contactAddress": "131 Continental Dr, Suite 305, Newark, Delaware 19713, ?tats-Unis",
+      "gdpr": "GDPR (European Union)",
+      "gdprDesc": "If you are located in the EU, you have rights under the GDPR.",
+      "gdprConsent": "Consent:",
+      "gdprConsentDesc": "We process data based on your consent when required.",
+      "gdprContract": "Contract:",
+      "gdprContractDesc": "Processing is necessary to provide the service.",
+      "gdprLegal": "Legal obligation:",
+      "gdprLegalDesc": "We may process data to comply with legal requirements.",
+      "gdprLegitimate": "Legitimate interests:",
+      "gdprLegitimateDesc": "We process data to improve and secure the service.",
+      "ccpa": "CCPA (California, USA)",
+      "ccpaDesc": "If you are a California resident, you have rights under the CCPA, including:",
+      "ccpa1": "The right to know what personal information is collected",
+      "ccpa2": "The right to request deletion of personal information",
+      "ccpa3": "The right to opt out of the sale of personal information",
+      "ccpa4": "The right to non-discrimination for exercising your rights",
+      "ccpa5": "The right to access specific pieces of personal information",
+      "ccpaNote": "We do not sell personal information."
+    },
+    "terms": {
+      "title": "Conditions d’utilisation",
+      "subtitle": "Veuillez lire attentivement ces conditions avant d’utiliser notre service",
+      "acceptance": "Acceptation des conditions",
+      "acceptanceDesc": "En accédant ou en utilisant le service, vous acceptez d’être lié par ces conditions. Si vous n’acceptez pas ces conditions, veuillez ne pas utiliser le service.",
+      "serviceDescription": "Description du service",
+      "serviceDescriptionDesc": "Secret Santa Generator fournit une plateforme pour organiser des échanges de cadeaux et des attributions aléatoires entre participants.",
+      "userResponsibilities": "Responsabilités de l’utilisateur",
+      "userResponsibilitiesDesc": "Vous êtes responsable de l’exactitude des informations que vous fournissez et de l’utilisation du service conformément à la loi.",
+      "prohibitedUses": "Utilisations interdites",
+      "prohibitedUsesDesc": "Vous ne devez pas utiliser le service pour des activités illégales, frauduleuses ou nuisibles.",
+      "limitationLiability": "Limitation de responsabilité",
+      "limitationLiabilityDesc": "Secret Santa Generator n’est pas responsable des dommages indirects ou consécutifs résultant de l’utilisation du service.",
+      "termination": "Résiliation",
+      "terminationDesc": "Nous pouvons suspendre ou mettre fin à l’accès au service à tout moment en cas de violation de ces conditions.",
+      "changesToService": "Modifications du service",
+      "changesToServiceDesc": "Nous nous réservons le droit de modifier, suspendre ou interrompre le service (ou toute partie) à tout moment, avec ou sans préavis. Nous ne serons pas responsables envers vous ni envers des tiers pour toute modification, suspension ou interruption du service.",
+      "contactUs": "Informations de contact",
+      "contactUsDesc": "Si vous avez des questions concernant ces conditions, veuillez nous contacter :",
+      "acknowledgment": "Reconnaissance",
+      "acknowledgmentDesc": "EN UTILISANT LE SERVICE, VOUS RECONNAISSEZ AVOIR LU CES CONDITIONS D’UTILISATION ET ACCEPTEZ D’ÊTRE LIÉ PAR ELLES.",
+      "lastUpdated": "Last Updated: December 14, 2025",
+      "acceptanceNote": "We reserve the right to modify these Terms at any time. Continued use of the Service after changes constitutes acceptance of the modified Terms.",
+      "description": "Description of Service",
+      "descriptionIntro": "Secret Santa Generator is a free online platform that allows users to:",
+      "desc1": "Create Secret Santa gift exchange events",
+      "desc2": "Add participants and set exclusion rules",
+      "desc3": "Randomly assign Secret Santa pairings",
+      "desc4": "Share invitation links with participants",
+      "desc5": "Organize and manage gift exchange events",
+      "descNote": "The Service is provided free of charge and does not require user registration.",
+      "eligibility": "Eligibility",
+      "eligibilityDesc": "You must be at least 13 years old to use this Service. If you are under 18, you must have permission from a parent or guardian.",
+      "accurateInformation": "Accurate Information",
+      "accurateInformationDesc": "You agree to provide accurate information when creating Secret Santa events. You are responsible for the accuracy of participant names and event details you enter.",
+      "prohibitedIntro": "You agree NOT to:",
+      "prohibited1": "Use the Service for any illegal or unauthorized purpose",
+      "prohibited2": "Violate any laws in your jurisdiction",
+      "prohibited3": "Harass, abuse, or harm another person",
+      "prohibited4": "Spam or send unsolicited communications",
+      "prohibited5": "Attempt to gain unauthorized access to the Service or related systems",
+      "prohibited6": "Interfere with or disrupt the Service or servers",
+      "prohibited7": "Use automated tools (bots, scrapers) without permission",
+      "prohibited8": "Collect personal information of other users without consent",
+      "prohibited9": "Impersonate any person or entity",
+      "prohibited10": "Upload viruses or malicious code",
+      "privacyData": "Privacy and Data",
+      "privacyDataDesc": "Your use of the Service is also governed by our Privacy Policy. Please review it to understand how we collect, use, and protect your information.",
+      "privacyDataNote": "By using the Service, you consent to the collection and use of information as described in our ",
+      "privacyPolicyLinkLabel": "politique de confidentialit?",
+      "intellectualProperty": "Intellectual Property",
+      "intellectualPropertyDesc": "The Service, including all content, features, functionality, and design, is owned by Secret Santa Generator and is protected by copyright, trademark, and other intellectual property laws.",
+      "intellectualPropertyNote": "You may not copy, modify, distribute, sell, or lease any part of the Service without our express written permission.",
+      "userGeneratedContent": "User-Generated Content",
+      "yourContent": "Your Content",
+      "yourContentDesc": "You retain ownership of any content you create through the Service (participant names, event details, messages). By using the Service, you grant us a license to store and process this content to provide the Service.",
+      "contentResponsibility": "Content Responsibility",
+      "contentResponsibilityDesc": "You are solely responsible for the content you create. We do not monitor or control user-generated content and are not responsible for its accuracy, appropriateness, or legality.",
+      "contentRemoval": "Content Removal",
+      "contentRemovalDesc": "We reserve the right to remove any content that violates these Terms or is otherwise objectionable, without notice.",
+      "disclaimers": "Disclaimers and Limitations of Liability",
+      "asIs": "\"As Is\" Service",
+      "asIsDesc": "THE SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE\" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.",
+      "noGuarantee": "No Guarantee of Availability",
+      "noGuaranteeDesc": "We do not guarantee that the Service will be available at all times, error-free, or free from viruses or other harmful components. We may suspend or discontinue the Service at any time without notice.",
+      "limitationOfLiability": "Limitation of Liability",
+      "limitationOfLiabilityIntro": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, SECRET SANTA GENERATOR SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM:",
+      "liability1": "Your use or inability to use the Service",
+      "liability2": "Any unauthorized access to or use of our servers and/or any personal information stored therein",
+      "liability3": "Any interruption or cessation of transmission to or from the Service",
+      "liability4": "Any bugs, viruses, or other harmful code transmitted through the Service",
+      "liability5": "Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content posted, emailed, transmitted, or otherwise made available through the Service",
+      "indemnification": "Indemnification",
+      "indemnificationDesc": "You agree to indemnify, defend, and hold harmless Secret Santa Generator, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorneys' fees, arising out of or in any way connected with:",
+      "indemnify1": "Your access to or use of the Service",
+      "indemnify2": "Your violation of these Terms",
+      "indemnify3": "Your violation of any third-party rights",
+      "indemnify4": "Any content you create or share through the Service",
+      "thirdPartyServices": "Third-Party Services",
+      "thirdPartyServicesDesc": "The Service may contain links to third-party websites or services that are not owned or controlled by us. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party websites or services.",
+      "thirdPartyNote": "You acknowledge and agree that we shall not be responsible or liable for any damage or loss caused by or in connection with the use of any such third-party content, goods, or services.",
+      "terminationNote": "Upon termination, your right to use the Service will cease immediately. You may also terminate your use of the Service at any time by ceasing to access it.",
+      "governingLaw": "Governing Law",
+      "governingLawDesc": "These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.",
+      "governingLawNote": "Any disputes arising from these Terms or the Service shall be resolved in the courts of Delaware.",
+      "disputeResolution": "Dispute Resolution",
+      "disputeResolutionDesc": "If you have any dispute with us, you agree to first contact us at service@secret-santa-generator.net and attempt to resolve the dispute informally.",
+      "disputeResolutionNote": "If we cannot resolve the dispute informally, any legal action must be brought in the courts of Delaware, and both parties consent to the exclusive jurisdiction of those courts.",
+      "severability": "Severability",
+      "severabilityDesc": "If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect. The invalid or unenforceable provision will be replaced with a valid provision that most closely matches the intent of the original provision.",
+      "entireAgreement": "Entire Agreement",
+      "entireAgreementDesc": "These Terms, together with our Privacy Policy, constitute the entire agreement between you and Secret Santa Generator regarding the use of the Service and supersede all prior agreements and understandings.",
+      "contactAddress": "131 Continental Dr, Suite 305, Newark, Delaware 19713, ?tats-Unis"
+    }
+  },
+  "seo": {
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "step1": {
+        "title": "Ajouter des participants",
+        "description": "Saisissez les noms de tous ceux qui participeront à votre échange de cadeaux. Vous pouvez en ajouter autant que vous voulez - aucune limite !"
+      },
+      "step2": {
+        "title": "Définir des règles (optionnel)",
+        "description": "Évitez que les couples ou membres de la famille se tirent mutuellement. Notre algorithme intelligent garantit une attribution équitable."
+      },
+      "step3": {
+        "title": "Partager et révéler",
+        "description": "Envoyez le lien d’invitation à votre groupe. Chaque personne clique pour révéler à qui elle doit offrir un cadeau - c’est aussi simple que ça !"
+      }
+    },
+    "features": {
+      "title": "Pourquoi choisir notre générateur Secret Santa ?",
+      "feature1": {
+        "title": "100 % gratuit et sans inscription",
+        "description": "Créez des événements Secret Santa illimités sans vous inscrire ni fournir d’informations personnelles. Pas de frais cachés, pas d’abonnements premium."
+      },
+      "feature2": {
+        "title": "Configuration instantanée",
+        "description": "Configurez votre échange de cadeaux en moins de 2 minutes. Notre processus simplifié rend l’organisation rapide et sans stress."
+      },
+      "feature3": {
+        "title": "Algorithme intelligent d’appariement",
+        "description": "Notre algorithme avancé garantit des appariements équitables tout en respectant toutes vos règles d’exclusion. Plus de situations gênantes !"
+      },
+      "feature4": {
+        "title": "Multiples options de partage",
+        "description": "Partagez via WhatsApp, email ou lien direct. Choisissez des liens universels pour les groupes ou des liens personnalisés pour les individus."
+      },
+      "feature5": {
+        "title": "Anonymat complet",
+        "description": "Toutes les attributions restent secrètes jusqu’à ce que chaque participant révèle la sienne. Personne ne peut voir qui a tiré qui, sauf l’organisateur."
+      },
+      "feature6": {
+        "title": "Compatible mobile",
+        "description": "Fonctionne parfaitement sur tous les appareils : téléphones, tablettes et ordinateurs. Vos participants peuvent rejoindre depuis n’importe où."
+      }
+    },
+    "useCases": {
+      "title": "Parfait pour chaque occasion",
+      "useCase1": {
+        "title": "Secret Santa au bureau",
+        "description": "Organisez des échanges de cadeaux pour votre lieu de travail ou vos événements de team building. Idéal aussi pour les équipes à distance !"
+      },
+      "useCase2": {
+        "title": "Échange de cadeaux en famille",
+        "description": "Rassemblez la famille avec une tradition festive. Définissez des règles pour éviter que les couples se tirent mutuellement."
+      },
+      "useCase3": {
+        "title": "Amis et groupes sociaux",
+        "description": "Parfait pour les groupes d’amis, clubs ou réunions sociales. Rendez l’échange excitant et équitable pour tous."
+      },
+      "useCase4": {
+        "title": "Secret Santa virtuel",
+        "description": "Parfait pour les équipes à distance ou les amis vivant dans différentes villes. Partagez des liens et célébrez ensemble en ligne."
+      },
+      "useCase5": {
+        "title": "École et classe",
+        "description": "Les enseignants peuvent organiser des échanges de cadeaux pour les élèves. Sûr, amusant et facile à gérer."
+      },
+      "useCase6": {
+        "title": "Toute célébration festive",
+        "description": "Fonctionne pour Noël, Hanoucca, Nouvel An, anniversaires ou toute occasion d’offrir des cadeaux."
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": {
+        "question": "Le générateur Secret Santa est-il vraiment gratuit ?",
+        "answer": "Oui ! Notre générateur Secret Santa est totalement gratuit. Aucun frais caché, aucun plan premium, aucune inscription requise. Vous pouvez créer des événements illimités gratuitement."
+      },
+      "q2": {
+        "question": "Dois-je créer un compte ?",
+        "answer": "Aucun compte requis ! Vous pouvez créer votre événement Secret Santa immédiatement. Nous ne demandons votre email que si vous souhaitez recevoir les liens par email, et cela reste totalement optionnel."
+      },
+      "q3": {
+        "question": "Comment fonctionne l’appariement ?",
+        "answer": "Notre algorithme intelligent attribue aléatoirement à chaque personne quelqu’un pour qui acheter un cadeau. Le système garantit que personne ne se tire soi-même et respecte toutes les règles d’exclusion (par ex. éviter que les couples se tirent mutuellement)."
+      },
+      "q4": {
+        "question": "Puis-je empêcher certaines personnes de se tirer mutuellement ?",
+        "answer": "Absolument ! Vous pouvez définir des règles d’exclusion pour empêcher des appariements spécifiques. Par exemple, vous pouvez garantir que des conjoints ne se tirent pas mutuellement. Ces restrictions sont bidirectionnelles - si A ne peut pas tirer B, alors B ne peut pas tirer A."
+      },
+      "q5": {
+        "question": "Comment les participants savent-ils qui ils ont tiré ?",
+        "answer": "Après avoir créé votre événement, vous recevrez un lien unique à partager. Chaque personne clique sur le lien, sélectionne son nom et voit instantanément à qui elle doit offrir un cadeau. Vous pouvez aussi envoyer des liens personnalisés qui identifient automatiquement chaque participant."
+      },
+      "q6": {
+        "question": "Mes données sont-elles privées et sécurisées ?",
+        "answer": "Oui, nous prenons la confidentialité au sérieux. Les données de votre événement sont stockées de manière sécurisée, et toutes les attributions Secret Santa restent confidentielles. Seul l’organisateur peut voir toutes les correspondances. Nous ne vendons jamais vos données à des tiers."
+      },
+      "q7": {
+        "question": "Puis-je utiliser ceci pour un Secret Santa virtuel/à distance ?",
+        "answer": "Oui ! Notre plateforme est parfaite pour les échanges Secret Santa virtuels. Partagez le lien d’invitation par email, WhatsApp ou toute application de messagerie. Les participants peuvent rejoindre depuis n’importe où dans le monde."
+      },
+      "q8": {
+        "question": "Que se passe-t-il si quelqu’un ne peut plus participer ?",
+        "answer": "Si quelqu’un se retire, vous devrez créer un nouvel événement sans cette personne. Notre système ne permet pas de modifier les événements après création pour garantir l’équité et éviter la triche."
+      },
+      "q9": {
+        "question": "Combien de personnes peuvent participer ?",
+        "answer": "Aucune limite ! Vous pouvez avoir aussi peu que 3 personnes ou autant que vous voulez. Notre système fonctionne aussi bien pour les petites réunions familiales que pour les grands événements d’entreprise."
+      },
+      "q10": {
+        "question": "Puis-je fixer un budget cadeau ?",
+        "answer": "Oui ! Vous pouvez définir un budget suggéré lors de la création de l’événement. Cela aide chacun à savoir combien dépenser et maintient l’échange équitable."
+      }
+    },
+    "relatedArticles": {
+      "title": "Articles connexes",
+      "article1": {
+        "title": "Meilleures applications de générateur Secret Santa",
+        "description": "Comparez les meilleures applications Secret Santa et trouvez celle qui vous convient."
+      },
+      "article2": {
+        "title": "Secret Santa de Noël 2025",
+        "description": "Planifiez votre échange de cadeaux de Noël avec notre guide complet."
+      },
+      "article3": {
+        "title": "Cadeaux Secret Santa DIY",
+        "description": "Idées créatives et réfléchies sans se ruiner."
+      },
+      "article4": {
+        "title": "Idées de Secret Santa familial",
+        "description": "Conseils et astuces pour organiser l’échange familial parfait."
+      },
+      "article5": {
+        "title": "Cadeaux Secret Santa drôles",
+        "description": "Des idées hilarantes qui feront rire tout le monde."
+      },
+      "article6": {
+        "title": "Comment fonctionne le Secret Santa ?",
+        "description": "Tout ce que vous devez savoir sur la tradition du Secret Santa."
+      },
+      "article7": {
+        "title": "Comment organiser un Secret Santa",
+        "description": "Guide étape par étape pour un échange réussi."
+      },
+      "article8": {
+        "title": "Cadeaux Secret Santa pour collègues",
+        "description": "Idées de cadeaux adaptés aux échanges de bureau."
+      },
+      "article9": {
+        "title": "Cadeaux Secret Santa pour hommes",
+        "description": "Excellentes idées de cadeaux pour les hommes de votre Secret Santa."
+      },
+      "article10": {
+        "title": "Cadeaux Secret Santa pour femmes",
+        "description": "Idées de cadeaux parfaites pour les femmes de votre Secret Santa."
+      },
+      "article11": {
+        "title": "Cadeaux Secret Santa à moins de 10 $",
+        "description": "Idées économiques qui restent spéciales."
+      },
+      "article12": {
+        "title": "Cadeaux Secret Santa à moins de 20 $",
+        "description": "Cadeaux abordables qui font impression."
+      },
+      "article13": {
+        "title": "Cadeaux Secret Santa à moins de 25 $, 30 $, 50 $",
+        "description": "Des idées de cadeaux pour chaque budget."
+      },
+      "article14": {
+        "title": "Questionnaire Secret Santa",
+        "description": "Aidez vos participants à partager leurs préférences cadeaux."
+      },
+      "article15": {
+        "title": "Secret Santa virtuel",
+        "description": "Organiser un échange de cadeaux pour équipes à distance."
+      },
+      "article16": {
+        "title": "Éléphant blanc vs Secret Santa",
+        "description": "Comprendre les différences entre ces jeux populaires d’échange de cadeaux."
+      }
+    }
+  },
+  "toast": {
+    "linkCopied": "Lien copié dans le presse-papiers !",
+    "emailSent": "Email envoyé avec succès ! 📧",
+    "emailFailed": "Échec de l’envoi de l’email",
+    "eventCreated": "Événement créé avec succès ! 🎉",
+    "eventFailed": "Échec de la création de l’événement. Veuillez réessayer.",
+    "invalidAssignments": "Impossible de générer des attributions valides. Veuillez ajuster vos restrictions.",
+    "invalidEmail": "Veuillez saisir une adresse email valide",
+    "emailTimeout": "L’email met plus de temps que prévu. Veuillez vérifier votre boîte de réception dans quelques minutes.",
+    "emailRateLimit": "Trop de demandes d’email. Veuillez réessayer plus tard."
+  },
+  "blog": {
+    "title": "Blog Secret Santa - Guides, conseils et idées cadeaux",
+    "subtitle": "Tout ce que vous devez savoir pour organiser un échange de cadeaux Secret Santa parfait. Des idées de cadeaux aux conseils d’organisation, questionnaires et plus encore.",
+    "header": "Blog Secret Santa",
+    "guidesResources": "Guides et ressources Secret Santa",
+    "description": "Tout ce que vous devez savoir pour organiser un échange de cadeaux Secret Santa parfait. Des idées de cadeaux aux conseils d’organisation, questionnaires et plus encore.",
+    "categories": {
+      "all": "Tous les articles",
+      "giftIdeas": "Idées cadeaux",
+      "organizationGuides": "Guides d’organisation",
+      "toolsTemplates": "Outils et modèles"
+    },
+    "stats": {
+      "guides": "Guides complets",
+      "gifts": "Idées cadeaux couvertes",
+      "resources": "Ressources gratuites"
+    },
+    "cta": {
+      "title": "Prêt à organiser votre Secret Santa ?",
+      "description": "Utilisez notre générateur gratuit de Secret Santa pour organiser votre échange en quelques minutes. Aucun email requis, totalement privé !",
+      "button": "Essayer le générateur gratuit"
+    },
+    "newsletter": {
+      "title": "D’autres guides bientôt !",
+      "description": "Nous créons d’autres guides utiles sur le Secret Santa. Mettez cette page en favori pour rester à jour.",
+      "items": {
+        "diy": "Idées de cadeaux DIY",
+        "christmas": "Planification de Noël",
+        "email": "Modèles d’email"
+      }
+    },
+    "readMore": "Lire la suite",
+    "minRead": "{time} min de lecture",
+    "articles": {
+      "familySecretSanta": {
+        "title": "Secret Santa en famille : guide complet pour tous les âges",
+        "description": "Planifiez l’échange familial parfait. Idées adaptées pour enfants, ados, adultes et grands-parents, plus des conseils pour les grandes familles.",
+        "category": "Guides d’organisation",
+        "readTime": "16 min"
+      },
+      "giftsUnder25": {
+        "title": "Cadeaux Secret Santa à moins de 25 $, 30 $ et 50 : idées premium",
+        "description": "Plus de 80 idées de cadeaux premium à trois niveaux de budget populaires. Des cadeaux de qualité qui impressionnent sans se ruiner.",
+        "category": "Idées cadeaux",
+        "readTime": "18 min"
+      },
+      "christmas2025": {
+        "title": "Secret Santa de Noël 2025 : guide complet de planification",
+        "description": "Votre guide complet pour planifier un Secret Santa pour Noël 2025. Calendrier, conseils de budget, thèmes, idées de cadeaux et planification de fête.",
+        "category": "Guides d’organisation",
+        "readTime": "20 min"
+      },
+      "diyGifts": {
+        "title": "Cadeaux Secret Santa DIY : plus de 40 idées faites main",
+        "description": "Idées créatives de cadeaux DIY que vous pouvez réaliser vous-même. Des gourmandises aux créations, trouvez des cadeaux faits main personnels et attentionnés.",
+        "category": "Idées cadeaux",
+        "readTime": "18 min"
+      },
+      "questionnaire": {
+        "title": "Questionnaire Secret Santa : plus de 30 questions à poser",
+        "description": "Modèle de questions essentielles pour aider les personnes à choisir le cadeau parfait. Inclut un questionnaire prêt à l’emploi avec plus de 30 questions par catégorie.",
+        "category": "Outils et modèles",
+        "readTime": "12 min"
+      },
+      "virtual": {
+        "title": "Secret Santa virtuel : organiser un échange de cadeaux à distance",
+        "description": "Guide complet pour les équipes à distance - outils en ligne, logistique d’expédition et idées de révélation virtuelle pour les équipes distribuées.",
+        "category": "Guides d’organisation",
+        "readTime": "16 min"
+      },
+      "giftsUnder10": {
+        "title": "Cadeaux Secret Santa à moins de 10 $ : plus de 60 idées économiques",
+        "description": "Des cadeaux incroyables à moins de 10 $ qui ne semblent pas bon marché. Parfait pour les étudiants, grands groupes et échanges à petit budget.",
+        "category": "Idées cadeaux",
+        "readTime": "15 min"
+      },
+      "giftsForWomen": {
+        "title": "Cadeaux Secret Santa pour femmes : plus de 45 idées attentionnées",
+        "description": "Idées de cadeaux parfaites pour femmes : beauté, bien-être, accessoires, organisées par budget et personnalité.",
+        "category": "Idées cadeaux",
+        "readTime": "14 min"
+      },
+      "giftsForMen": {
+        "title": "Cadeaux Secret Santa pour hommes : plus de 40 idées qu’ils adorent vraiment",
+        "description": "Guide complet de cadeaux pour hommes avec tech, accessoires et articles pratiques qu’ils apprécieront.",
+        "category": "Idées cadeaux",
+        "readTime": "12 min"
+      },
+      "giftsForCoworkers": {
+        "title": "Cadeaux Secret Santa pour collègues : plus de 45 idées pro et fun",
+        "description": "Idées de cadeaux adaptées au bureau, équilibrant professionnalisme et personnalité. Parfait pour les échanges au travail.",
+        "category": "Idées cadeaux",
+        "readTime": "13 min"
+      },
+      "funnyGifts": {
+        "title": "Cadeaux Secret Santa drôles qui feront rire tout le monde",
+        "description": "Plus de 50 idées hilarantes, de l’humour léger pour le bureau aux cadeaux farce. Rendez votre Secret Santa inoubliable.",
+        "category": "Idées cadeaux",
+        "readTime": "11 min"
+      },
+      "giftsUnder20": {
+        "title": "Cadeaux Secret Santa à moins de 20 $ : plus de 50 meilleures idées",
+        "description": "Idées de cadeaux économiques par catégorie. Trouvez des présents attentionnés sans vous ruiner.",
+        "category": "Idées cadeaux",
+        "readTime": "14 min"
+      },
+      "uniqueQuirky": {
+        "title": "Cadeaux de Secret Santa uniques et insolites : 45+ idées originales",
+        "description": "Idées de cadeaux insolites pour personnes créatives : curiosités de bureau, kits créatifs et trouvailles inattendues à moins de 50 $.",
+        "category": "Idées cadeaux",
+        "readTime": "12 min"
+      },
+      "printableForms": {
+        "title": "Formulaires et listes imprimables pour Secret Santa : modèles gratuits",
+        "description": "Formulaires prêts à imprimer avec check-list organisateur, listes de souhaits et feuilles de suivi.",
+        "category": "Outils et modèles",
+        "readTime": "10 min"
+      },
+      "howItWorks": {
+        "title": "Comment fonctionne le Secret Santa ? Guide complet pour débutants",
+        "description": "Apprenez tout sur le Secret Santa - des règles de base aux conseils d’experts. Parfait pour les débutants et les organisateurs expérimentés.",
+        "category": "Bien démarrer",
+        "readTime": "15 min"
+      },
+      "howToOrganize": {
+        "title": "Comment organiser un échange de cadeaux Secret Santa",
+        "description": "Guide complet pour planifier et réussir un échange Secret Santa, quel que soit la taille du groupe.",
+        "category": "Guides d’organisation",
+        "readTime": "13 min"
+      },
+      "whiteElephant": {
+        "title": "Éléphant blanc vs Secret Santa : quelle différence ?",
+        "description": "Comparaison complète de deux jeux populaires d’échange de cadeaux. Règles, différences et lequel choisir.",
+        "category": "Comparaisons",
+        "readTime": "10 min"
+      },
+      "bestApps": {
+        "title": "Les 7 meilleures applis de générateur Secret Santa en 2025",
+        "description": "Comparez les principaux générateurs et applis Secret Santa. Trouvez l’outil parfait pour organiser votre échange.",
+        "category": "Outils et modèles",
+        "readTime": "11 min"
+      }
+    }
+  }
+}

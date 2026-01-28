@@ -34,6 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/blog/christmas-secret-santa-2025', priority: 0.95, changeFrequency: 'monthly' as const },
     { path: '/blog/secret-santa-gifts-under-25-30-50', priority: 0.95, changeFrequency: 'monthly' as const },
     { path: '/blog/family-secret-santa', priority: 0.95, changeFrequency: 'monthly' as const },
+    { path: '/blog/unique-quirky-secret-santa-gifts', priority: 0.95, changeFrequency: 'monthly' as const },
+    { path: '/blog/printable-secret-santa-forms', priority: 0.95, changeFrequency: 'monthly' as const },
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];

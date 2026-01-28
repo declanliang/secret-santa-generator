@@ -212,25 +212,25 @@ H2: Perfect for Every Occasion
 ## 📊 博客文章优先级排序
 
 ### 🔥 高优先级（立即创作 - 高流量+高转化）
-1. **Secret Santa Gifts Under $20** - 超高搜索量，转化好
-2. **Secret Santa Gifts for Men/Guys** - 性别定向，转化高
-3. **Funny Secret Santa Gifts** - 娱乐性强，易传播
-4. **How Does Secret Santa Work** - 教育性内容，引流到工具
-5. **Secret Santa Gifts for Coworkers** - 场景精准，办公室市场大
+1. [x] **Secret Santa Gifts Under $20** - 超高搜索量，转化好
+2. [x] **Secret Santa Gifts for Men/Guys** - 性别定向，转化高
+3. [x] **Funny Secret Santa Gifts** - 娱乐性强，易传播
+4. [x] **How Does Secret Santa Work** - 教育性内容，引流到工具
+5. [x] **Secret Santa Gifts for Coworkers** - 场景精准，办公室市场大
 
 ### ⚡ 中优先级（第二批 - 中等流量）
-6. **Secret Santa Gifts Under $10** - 预算友好
-7. **Virtual Secret Santa Guide** - 远程工作趋势
-8. **Secret Santa Questionnaire** - 工具型内容
-9. **DIY Secret Santa Gifts** - 长尾词覆盖
-10. **Secret Santa vs White Elephant** - 对比类文章
+6. [x] **Secret Santa Gifts Under $10** - 预算友好
+7. [x] **Virtual Secret Santa Guide** - 远程工作趋势
+8. [x] **Secret Santa Questionnaire** - 工具型内容
+9. [x] **DIY Secret Santa Gifts** - 长尾词覆盖
+10. [x] **Secret Santa vs White Elephant** - 对比类文章
 
 ### 💡 低优先级（长期规划 - 长尾词）
-11. **Unique/Quirky Gifts**
-12. **Printable Forms & Templates**
-13. **Secret Santa Poems & Clues**
-14. **Email Templates**
-15. **Cadbury Secret Santa Review**
+11. [x] **Unique/Quirky Gifts**
+12. [x] **Printable Forms & Templates**
+13. [ ] **Secret Santa Poems & Clues**
+14. [ ] **Email Templates**
+15. [ ] **Cadbury Secret Santa Review**
 
 ### 📅 季节性内容（提前准备）
 - **Christmas Secret Santa 2025** - 10月开始准备

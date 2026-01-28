@@ -6,6 +6,16 @@
     "delete": "Eliminar",
     "edit": "Editar",
     "close": "Cerrar",
+    "back": "Atrás",
+    "continue": "Continuar",
+    "next": "Siguiente",
+    "skip": "Omitir",
+    "submit": "Enviar",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "address": "Dirección",
     "backToHome": "Volver al inicio"
   },
   "header": {
@@ -30,11 +40,13 @@
     "address": "131 Continental Dr, Suite 305",
     "addressLine2": "Newark, DE 19713, EE. UU.",
     "copyright": "© {year} Generador de Amigo Secreto. Todos los derechos reservados.",
-    "madeWith": "Hecho con ❤️ para la temporada navideña"
+    "madeWith": "Hecho con ❤️ para la temporada navideña",
+    "openSource": "Código abierto en GitHub",
+    "watchTutorials": "Ver tutoriales"
   },
   "home": {
     "title": "Generador Gratuito de Amigo Secreto",
-    "subtitle": "¡Crea tu intercambio de regalos en minutos - sin correo electrónico requerido! 🎁",
+    "subtitle": "Crea tu intercambio de regalos en minutos - ¡sin correo electrónico requerido! 🎁",
     "metaTitle": "Generador Gratuito de Amigo Secreto - Sin Correo Electrónico | 2025",
     "metaDescription": "Crea tu intercambio de Amigo Secreto en minutos. Generador en línea gratuito sin registro. Perfecto para oficina, familia y amigos. ¡Comparte vía WhatsApp, correo electrónico o enlace directo!"
   },
@@ -45,5 +57,907 @@
     "publish": "Publicar",
     "email": "Correo",
     "success": "Éxito"
+  },
+  "participantsStep": {
+    "title": "¿Cuál es tu nombre?",
+    "subtitle": "¿Con quién estás sorteando nombres?",
+    "placeholder": "Ingresa tu nombre",
+    "includeMe": "Incluirme (el organizador) en el sorteo",
+    "addName": "Agregar nombre {number}",
+    "addMore": "Agregar nombre {number}",
+    "atLeast": "Agrega al menos {count} {count, plural, one {persona más} other {personas más}} para continuar",
+    "continue": "Continuar →"
+  },
+  "restrictionsStep": {
+    "title": "Establecer Restricciones de Sorteo (Opcional)",
+    "description": "Evita que ciertas personas se saquen mutuamente (por ejemplo, parejas, compañeros de cuarto o personas que ya saben qué regalarse).",
+    "yesSet": "Sí, quiero establecer restricciones de sorteo",
+    "noSkip": "No, omitir este paso",
+    "selectParticipants": "Selecciona participantes para establecer restricciones:",
+    "bidirectionalNotice": "Nota: Restricciones Bidireccionales",
+    "bidirectionalDescription": "Todas las restricciones son de dos vías. Si Tom no puede sacar a Kevin, entonces Kevin tampoco puede sacar a Tom. Agregar o eliminar una restricción afecta a ambos participantes.",
+    "cannotDraw": "{name} no puede sacar a:",
+    "noRestrictions": "Sin Restricciones",
+    "restrictionCount": "{count} {count, plural, one {restricción} other {restricciones}}",
+    "clear": "Limpiar"
+  },
+  "detailsStep": {
+    "title": "Detalles del Evento",
+    "eventNameLabel": "¿Para qué quieres sortear nombres?",
+    "suggestion1": "Amigo Secreto 2025",
+    "suggestion2": "Navidad 2025",
+    "suggestion3": "Intercambio de Regalos Festivos",
+    "suggestion4": "Año Nuevo 2026",
+    "suggestion5": "Amigo Secreto de Oficina",
+    "exchangeDateLabel": "Fecha de Intercambio de Regalos",
+    "date1": "Sábado, 20 de diciembre de 2025",
+    "date2": "Miércoles, 24 de diciembre de 2025",
+    "date3": "Jueves, 25 de diciembre de 2025",
+    "budgetLabel": "Presupuesto de Regalo",
+    "budgetDescription": "Monto sugerido de gasto por regalo",
+    "budget1": "$10",
+    "budget2": "$20",
+    "budget3": "$50",
+    "enterAmount": "Ingresa el monto",
+    "maxBudgetError": "El presupuesto máximo es $999",
+    "addCustomMessage": "Agregar Mensaje Personalizado",
+    "customMessagePlaceholder": "Agrega instrucciones especiales o mensaje para los participantes...",
+    "defaultGroupName": "Amigo Secreto 2025",
+    "defaultMessage": "¡Has sido invitado a unirte a {groupName}! Haz una lista de deseos, saca un nombre y deja que la magia comience."
+  },
+  "emailStep": {
+    "title": "¡Un Último Paso!",
+    "description": "Guarda los enlaces de tu evento por correo electrónico (opcional)",
+    "whyProvide": "¿Por qué proporcionar tu correo electrónico?",
+    "whyProvideDescription": "Te enviaremos todos los enlaces de tu evento en un solo correo electrónico conveniente:",
+    "linkList": {
+      "universal": "Enlace universal de unión para compartir con participantes",
+      "personalized": "Enlaces personalizados individuales para cada participante",
+      "organizer": "Enlace del panel del organizador para gestionar tu evento"
+    },
+    "neverLose": "¡Nunca pierdas tus enlaces de nuevo!",
+    "yourEmail": "Tu Dirección de Correo Electrónico",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "privacy": "🔒 Privacidad: Solo usamos tu correo electrónico para enviar enlaces del evento. Sin spam, nunca.",
+    "skipForNow": "Omitir por Ahora",
+    "sendEmail": "Enviar Correo →",
+    "sending": "Enviando...",
+    "skipNote": "Aún puedes acceder a tus enlaces en la siguiente página incluso si omites este paso"
+  },
+  "successStep": {
+    "eventCreated": "Evento Creado Exitosamente",
+    "readyTitle": "¡Tu Amigo Secreto Está Listo!",
+    "howItWorks": "Cómo funciona",
+    "step1": "Elige tu método de compartir a continuación (enlace compartido universal o enlaces personalizados)",
+    "step2": "Envía los enlaces a tus {count} participantes vía WhatsApp, correo electrónico o copiar/pegar",
+    "step3": "Cada persona hace clic en su enlace para revelar a quién le está comprando un regalo",
+    "shareInvitations": "Comparte Tus Invitaciones",
+    "chooseDistribution": "Elige cómo distribuir los enlaces a tus participantes",
+    "universalSharedLink": "Enlace Compartido Universal",
+    "personalizedLinks": "Enlaces Personalizados",
+    "universalDescription": "Perfecto para grupos de WhatsApp, Slack o Discord. Comparte este único enlace, y todos reclaman su nombre.",
+    "bestForGroupChats": "Mejor para chats grupales",
+    "groupChatsDescription": "Comparte este único enlace, y todos hacen clic, seleccionan su nombre, e instantáneamente ven a quién les tocó. ¡Rápido y fácil!",
+    "moreSecure": "Más Seguro",
+    "secureDescription": "Cada participante obtiene su propio enlace único. Más seguro y evita que otros vean quién no está participando.",
+    "bestForDirectMessaging": "Mejor para mensajería directa",
+    "directMessagingDescription": "Cada enlace es único y automáticamente muestra a la persona a quién le tocó. ¡No se necesita selección de nombre!",
+    "loadingLinks": "Cargando enlaces personalizados...",
+    "linkCopied": "¡Enlace copiado al portapapeles!",
+    "copied": "¡Copiado!",
+    "copy": "Copiar",
+    "organizerView": "Vista del Organizador",
+    "organizerViewDescription": "Ver todos los emparejamientos para hacer seguimiento de quién le está comprando a quién (¡mantén esto en secreto!)",
+    "viewPairings": "Ver Todos los Emparejamientos (Vista del Organizador)",
+    "saveLinksEmail": "Guarda Tus Enlaces por Correo Electrónico",
+    "saveLinksDescription": "Obtén todos los enlaces de tu evento enviados a tu correo electrónico para guardarlos. Te enviaremos el enlace universal, enlaces personalizados para cada participante, y tu enlace del panel del organizador.",
+    "emailPlaceholder": "tu@correo.com",
+    "sendEmail": "Enviar Correo",
+    "sending": "Enviando...",
+    "emailPrivacy": "Solo usamos tu correo electrónico para enviar enlaces del evento. Sin spam, nunca.",
+    "emailSentSuccess": "¡Correo enviado exitosamente!",
+    "emailSentSuccessMessage": "¡Correo enviado exitosamente! Revisa tu bandeja de entrada para todos los enlaces de tu evento.",
+    "linksAvailableAbove": "No te preocupes, ¡ya tienes tus enlaces arriba!",
+    "enterEmailError": "Por favor ingresa una dirección de correo electrónico",
+    "validEmailError": "Por favor ingresa una dirección de correo electrónico válida",
+    "sendEmailError": "Fallo al enviar correo",
+    "emailTimeoutWarning": "El correo está tardando más de lo esperado. Por favor revisa tu bandeja de entrada en unos minutos.",
+    "allSetTitle": "¡Todo listo!",
+    "allSetDescription": "¡Tu evento de Amigo Secreto ha sido creado. ¡Comparte el enlace y que comience el intercambio de regalos!",
+    "createAnother": "Crear Otro Amigo Secreto"
+  },
+  "event": {
+    "join": {
+      "selectName": "Selecciona Tu Nombre para Revelar Tu Asignación de Amigo Secreto",
+      "eventType": "Tipo de Evento",
+      "exchangeDate": "Fecha de Intercambio",
+      "budget": "Presupuesto",
+      "messageFromOrganizer": "Mensaje del organizador:",
+      "selectYourName": "Selecciona tu nombre:",
+      "chooseName": "Elige tu nombre...",
+      "continue": "Continuar",
+      "participants": "Participantes: {names}",
+      "confirmIdentity": "Confirma Tu Identidad",
+      "pleaseConfirm": "Por favor confirma que eres",
+      "onceReveal": "Una vez que reveles, no puedes cambiar tu selección",
+      "yesIm": "Sí, soy {name}",
+      "back": "Atrás",
+      "saveAssignment": "Guarda Tu Asignación",
+      "saveDescription": "Obtén tu asignación de Amigo Secreto enviada a tu correo electrónico (opcional)",
+      "whyProvideEmail": "¿Por qué proporcionar tu correo electrónico?",
+      "whyProvideEmailDescription": "Te enviaremos un recordatorio con los detalles de tu asignación, incluyendo a quién le estás comprando, el presupuesto y la fecha de intercambio. ¡Nunca pierdas el rastro de tu Amigo Secreto!",
+      "privacy": "🔒 Privacidad: Solo usamos tu correo electrónico para enviar tu asignación. Sin spam, nunca.",
+      "yourEmailAddress": "Tu Dirección de Correo Electrónico",
+      "sendEmailReveal": "Enviar Correo y Revelar",
+      "skipReveal": "Omitir y Revelar Ahora",
+      "sending": "Enviando...",
+      "buyingFor": "Le estás comprando un regalo para:",
+      "remember": "Recuerda:",
+      "budgetLabel": "Presupuesto: {currency} {amount}",
+      "exchangeDateLabel": "Fecha de Intercambio: {date}",
+      "keepSecret": "¡Manténlo en secreto! ¡No le digas a nadie a quién le tocó 🤫",
+      "bookmark": "Marca esta página para ver tu asignación en cualquier momento",
+      "assignmentViewed": "✓ ¡Asignación vista! Puedes cerrar esta página o marcarla para referencia posterior.",
+      "loading": "Cargando evento...",
+      "eventNotFound": "Evento No Encontrado",
+      "eventNotFoundDescription": "Este evento no existe o el enlace es incorrecto.",
+      "invalidLink": "Enlace personalizado inválido. Por favor usa el enlace correcto enviado a ti.",
+      "selectNameFirst": "Por favor selecciona tu nombre primero",
+      "loadEventError": "Fallo al cargar el evento. Por favor verifica el enlace.",
+      "failedReveal": "Fallo al revelar la asignación. Por favor intenta de nuevo.",
+      "enterEmailError": "Por favor ingresa una dirección de correo electrónico",
+      "validEmailError": "Por favor ingresa una dirección de correo electrónico válida",
+      "sendEmailError": "Fallo al enviar correo",
+      "emailSentSuccess": "¡Correo enviado exitosamente!"
+    },
+    "organizer": {
+      "organizerView": "Vista del Organizador",
+      "organizedBy": "Organizado por {name}",
+      "participants": "Participantes",
+      "viewed": "Vistos",
+      "notViewed": "No visto",
+      "exchangeDate": "Fecha de Intercambio",
+      "eventDetails": "Detalles del Evento",
+      "eventType": "Tipo de Evento",
+      "budget": "Presupuesto",
+      "customMessage": "Mensaje Personalizado",
+      "invitationLink": "Enlace de Invitación",
+      "invitationDescription": "Comparte este enlace universal con todos los participantes. Pueden seleccionar su nombre y ver a quién les tocó.",
+      "allPairings": "Todos los Emparejamientos",
+      "showAssignments": "Mostrar Asignaciones",
+      "hideAssignments": "Ocultar Asignaciones",
+      "clickReveal": "Haz clic en \"Mostrar Asignaciones\" para revelar todos los emparejamientos",
+      "keepSecret": "(¡Mantén esta información en secreto de los participantes!)",
+      "participantsList": "Lista de Participantes",
+      "loading": "Cargando vista del organizador...",
+      "eventNotFound": "Evento No Encontrado",
+      "eventNotFoundDescription": "Este evento no existe o el enlace es incorrecto.",
+      "failedLoad": "Fallo al cargar los datos del evento"
+    }
+  },
+  "pages": {
+    "about": {
+      "title": "Sobre Nosotros",
+      "subtitle": "Haciendo los intercambios de regalos simples y divertidos",
+      "ourMission": "Nuestra Misión",
+      "mission1": "El Generador de Amigo Secreto fue creado para hacer que organizar intercambios de regalos sea sin esfuerzo y divertido para todos. Creemos que el espíritu navideño debería ser sobre reunir a las personas, no estresarse por logísticas complicadas.",
+      "mission2": "Nuestra plataforma elimina la molestia de sortear nombres manualmente, rastrear exclusiones y coordinar participantes. Ya sea que estés organizando un Amigo Secreto para tu oficina, familia, amigos o grupo comunitario, te tenemos cubierto.",
+      "whatWeDo": "Lo Que Hacemos",
+      "whatWeDoIntro": "Proporcionamos un generador de Amigo Secreto gratuito y sin registro que te ayuda a:",
+      "do1": "Crear eventos ilimitados de Amigo Secreto en minutos",
+      "do2": "Asignar aleatoriamente a los participantes con completa anonimidad",
+      "do3": "Establecer reglas de exclusión para prevenir emparejamientos específicos",
+      "do4": "Compartir invitaciones vía WhatsApp, correo electrónico o enlaces directos",
+      "do5": "Garantizar equidad con nuestro sistema anti-trampas",
+      "do6": "Organizar eventos sin requerir direcciones de correo electrónico",
+      "whyChooseUs": "¿Por Qué Elegirnos?",
+      "free": "100% Gratuito",
+      "freeDesc": "Sin tarifas ocultas, sin planes premium. Todos merecen acceso fácil a grandes herramientas.",
+      "privacy": "Privacidad Primero",
+      "privacyDesc": "Protegemos tus datos y garantizamos completa anonimidad en las asignaciones de Amigo Secreto.",
+      "noRegistration": "Sin Registro",
+      "noRegistrationDesc": "Comienza a crear eventos inmediatamente sin registrarte ni proporcionar información personal.",
+      "mobileFriendly": "Compatible con Móviles",
+      "mobileFriendlyDesc": "Funciona perfectamente en cualquier dispositivo - teléfonos, tabletas y computadoras.",
+      "ourValues": "Nuestros Valores",
+      "simplicity": "Simplicidad:",
+      "simplicityDesc": "Creemos que las grandes herramientas deben ser fáciles de usar, sin instrucciones complicadas ni curvas de aprendizaje.",
+      "accessibility": "Accesibilidad:",
+      "accessibilityDesc": "Todos deben tener acceso a herramientas de calidad, independientemente del presupuesto o experiencia técnica.",
+      "privacyValue": "Privacidad:",
+      "privacyValueDesc": "Respetamos tu privacidad y solo recopilamos los datos mínimos necesarios para proporcionar nuestro servicio.",
+      "reliability": "Confiabilidad:",
+      "reliabilityDesc": "Nuestra plataforma está construida para funcionar impecablemente cuando más la necesitas.",
+      "ourStory": "Nuestra Historia",
+      "story1": "El Generador de Amigo Secreto nació de una necesidad simple: organizar un intercambio de regalos justo y divertido sin los dolores de cabeza habituales. Después de años de gestionar eventos de Amigo Secreto manualmente con papeles y hojas de cálculo, sabíamos que tenía que haber una mejor manera.",
+      "story2": "Construimos esta plataforma para resolver problemas reales que experimentamos nosotros mismos. Hoy, miles de usuarios confían en nosotros para organizar sus eventos de Amigo Secreto, desde pequeñas reuniones familiares hasta grandes fiestas corporativas.",
+      "perfectFor": "Perfecto para Cada Ocasión",
+      "perfectForIntro": "Aunque comenzamos con Amigo Secreto Navideño, nuestra plataforma funciona para cualquier ocasión de intercambio de regalos:",
+      "occasion1": "Fiestas navideñas de oficina y eventos de construcción de equipos",
+      "occasion2": "Reuniones navideñas familiares y reencuentros",
+      "occasion3": "Celebraciones de grupos de amigos y fiestas",
+      "occasion4": "Aulas escolares y actividades de clubes",
+      "occasion5": "Amigo Secreto virtual para equipos remotos",
+      "occasion6": "Janucá, Año Nuevo, intercambios de cumpleaños y más",
+      "contactInfo": "Información de Contacto",
+      "contactIntro": "¿Tienes preguntas, comentarios o necesitas soporte? ¡Nos encantaría escuchar de ti!",
+      "joinThousands": "Únete a Miles de Organizadores Felices",
+      "joinThousandsDesc": "Ya sea que estés organizando tu primer Amigo Secreto o tu quincuagésimo, estamos aquí para hacerlo fluido y sin estrés. Únete a los miles de organizadores que confían en el Generador de Amigo Secreto para crear intercambios de regalos memorables.",
+      "createNow": "Crea Tu Amigo Secreto Ahora",
+      "contactAddressLine1": "131 Continental Dr",
+      "contactAddressLine2": "Suite 305",
+      "contactAddressLine3": "Newark, Delaware 19713",
+      "contactAddressLine4": "Estados Unidos"
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "subtitle": "¿Tienes preguntas? ¡Estamos aquí para ayudar!",
+      "getInTouch": "Ponte en Contacto",
+      "getInTouchDesc": "Ya sea que tengas una pregunta sobre características, necesites soporte técnico, o solo quieras proporcionar comentarios, nuestro equipo está listo para responder todas tus preguntas.",
+      "email": "Correo Electrónico",
+      "emailResponse": "Generalmente respondemos dentro de 24 horas",
+      "phone": "Teléfono",
+      "phoneHours": "Lunes - Viernes, 9am - 5pm EST",
+      "address": "Dirección",
+      "faq": "Antes de contactarnos, podrías encontrar tu respuesta en nuestra sección de Preguntas Frecuentes. Hemos compilado respuestas a las preguntas más comunes sobre nuestro generador de Amigo Secreto.",
+      "supportTopics": "Temas de Soporte",
+      "technicalSupport": "Soporte Técnico",
+      "technicalSupportDesc": "Problemas con crear eventos, compartir enlaces o acceder a asignaciones de participantes",
+      "featureRequests": "Solicitudes de Características",
+      "featureRequestsDesc": "Sugerencias para nuevas características o mejoras a la funcionalidad existente",
+      "privacyData": "Privacidad y Datos",
+      "privacyDataDesc": "Preguntas sobre el manejo de datos, política de privacidad o solicitudes de eliminación",
+      "generalInquiries": "Consultas Generales",
+      "generalInquiriesDesc": "Oportunidades de asociación, consultas de medios u otras preguntas",
+      "businessInquiries": "Consultas de Negocios",
+      "businessInquiriesDesc": "Para asociaciones de negocios, oportunidades de publicidad o consultas de medios, por favor contáctenos vía correo electrónico con \"Consulta de Negocios\" en la línea de asunto. Te responderemos lo antes posible.",
+      "quickTips": "Consejos Rápidos para Contactarnos",
+      "tip1": "✓ Incluye tu ID de evento si estás reportando un problema con un evento específico de Amigo Secreto",
+      "tip2": "✓ Proporciona capturas de pantalla si estás experimentando un problema técnico",
+      "tip3": "✓ Sé específico sobre qué necesitas ayuda para que podamos asistirte más rápido",
+      "tip4": "✓ Revisa tu carpeta de spam si no recibes una respuesta dentro de 48 horas",
+      "addressLine1": "131 Continental Dr",
+      "addressLine2": "Suite 305",
+      "addressLine3": "Newark, Delaware 19713",
+      "addressLine4": "Estados Unidos",
+      "faqTitle": "Preguntas frecuentes"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el Generador de Amigo Secreto",
+      "stillHaveQuestions": "¿Aún Tienes Preguntas?",
+      "stillHaveQuestionsDesc": "¿No puedes encontrar lo que estás buscando? ¡Estamos aquí para ayudar!",
+      "contactUs": "Contáctenos"
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "lastUpdated": "Última Actualización: 14 de diciembre de 2025",
+      "introduction": "Introducción",
+      "introText": "Bienvenido al Generador de Amigo Secreto (\"nosotros,\" \"nuestro\" o \"nos\"). Estamos comprometidos a proteger tu privacidad y datos personales. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y salvaguardamos tu información cuando usas nuestro sitio web en secret-santa-generator.net (el \"Servicio\").",
+      "informationWeCollect": "Información Que Recopilamos",
+      "informationYouProvide": "Información Que Proporcionas",
+      "youProvideIntro": "Cuando usas nuestro Servicio, podemos recopilar:",
+      "participantNames": "Nombres de Participantes:",
+      "participantNamesDesc": "Nombres de las personas que participan en tu evento de Amigo Secreto",
+      "eventDetails": "Detalles del Evento:",
+      "eventDetailsDesc": "Tipo de evento, nombre del organizador, nombre del grupo, fecha de intercambio, información del presupuesto y mensajes personalizados",
+      "emailAddress": "Dirección de Correo Electrónico (Opcional):",
+      "emailAddressDesc": "Tu dirección de correo electrónico si eliges recibir enlaces del evento por correo electrónico",
+      "exclusionRules": "Reglas de Exclusión:",
+      "exclusionRulesDesc": "Información sobre qué participantes no deben ser emparejados juntos",
+      "automaticallyCollected": "Información Recopilada Automáticamente",
+      "autoCollectedIntro": "Recopilamos automáticamente cierta información cuando visitas nuestro Servicio:",
+      "usageData": "Datos de Uso:",
+      "usageDataDesc": "Tipo de navegador, información del dispositivo, dirección IP, páginas visitadas, tiempo pasado en páginas",
+      "cookies": "Cookies y Tecnologías de Rastreo:",
+      "cookiesDesc": "Usamos cookies y tecnologías similares (ver Sección 5)",
+      "howWeUse": "Cómo Usamos Tu Información",
+      "howWeUseIntro": "Usamos la información recopilada para los siguientes propósitos:",
+      "use1": "Proporcionar y mantener el Servicio del generador de Amigo Secreto",
+      "use2": "Crear eventos de Amigo Secreto y asignar aleatoriamente a los participantes",
+      "use3": "Enviar enlaces de invitación del evento por correo electrónico (solo si proporcionas tu correo electrónico)",
+      "use4": "Prevenir que los participantes sean emparejados con individuos excluidos",
+      "use5": "Mejorar y optimizar nuestro Servicio",
+      "use6": "Analizar patrones de uso y tendencias",
+      "use7": "Cumplir con obligaciones legales",
+      "use8": "Mostrar anuncios a través de Google AdSense",
+      "thirdPartyServices": "Servicios de Terceros",
+      "thirdPartyIntro": "Usamos los siguientes servicios de terceros que pueden recopilar información:",
+      "supabase": "Supabase (Base de Datos)",
+      "supabaseDesc": "Usamos Supabase para almacenar datos del evento, información de participantes y reglas de exclusión. Supabase cumple con el RGPD y prácticas de seguridad estándar de la industria. Más información en Política de Privacidad de Supabase.",
+      "resend": "Resend (Servicio de Correo Electrónico)",
+      "resendDesc": "Usamos Resend para enviar correos electrónicos opcionales que contienen enlaces del evento. Tu dirección de correo electrónico solo se usa para este propósito si eliges proporcionarla. Más información en Política de Privacidad de Resend.",
+      "vercel": "Vercel (Alojamiento)",
+      "vercelDesc": "Nuestro Servicio está alojado en Vercel, que puede recopilar registros de uso y datos de análisis. Más información en Política de Privacidad de Vercel.",
+      "googleAdSense": "Google AdSense (Publicidad)",
+      "googleAdSenseDesc": "Usamos Google AdSense para mostrar anuncios. Google puede usar cookies y web beacons para servir anuncios basados en tus visitas previas a nuestro sitio web u otros sitios web. Puedes optar por no recibir publicidad personalizada visitando Configuración de Anuncios de Google.",
+      "cookiesTracking": "Cookies y Tecnologías de Rastreo",
+      "cookiesIntro": "Usamos cookies y tecnologías de rastreo similares para:",
+      "essentialCookies": "Cookies Esenciales:",
+      "essentialCookiesDesc": "Requeridos para que el Servicio funcione correctamente",
+      "analyticsCookies": "Cookies de Análisis:",
+      "analyticsCookiesDesc": "Nos ayudan a entender cómo los visitantes usan nuestro Servicio",
+      "advertisingCookies": "Cookies de Publicidad:",
+      "advertisingCookiesDesc": "Usados por Google AdSense para servir anuncios relevantes",
+      "preferenceCookies": "Cookies de Preferencias:",
+      "preferenceCookiesDesc": "Recordar tus preferencias de consentimiento de cookies",
+      "cookiesControl": "Puedes controlar tus preferencias de cookies a través de nuestro banner de consentimiento de cookies o la configuración de tu navegador. Nota que deshabilitar ciertas cookies puede limitar la funcionalidad del Servicio.",
+      "dataRetention": "Retención de Datos",
+      "dataRetentionDesc": "Retenemos tus datos del evento e información de participantes por el tiempo necesario para proporcionar el Servicio. Puedes solicitar la eliminación de tus datos del evento en cualquier momento contactándonos. Eliminaremos los datos dentro de 30 días de tu solicitud a menos que obligaciones legales requieran una retención más larga.",
+      "yourRights": "Tus Derechos de Privacidad",
+      "yourRightsIntro": "Dependiendo de tu ubicación, puedes tener los siguientes derechos:",
+      "rightAccess": "Acceso:",
+      "rightAccessDesc": "Solicitar una copia de tus datos personales",
+      "rightCorrection": "Corrección:",
+      "rightCorrectionDesc": "Solicitar la corrección de datos inexactos",
+      "rightDeletion": "Eliminación:",
+      "rightDeletionDesc": "Solicitar la eliminación de tus datos personales",
+      "rightObjection": "Objeción:",
+      "rightObjectionDesc": "Oponerte al procesamiento de tus datos",
+      "rightPortability": "Portabilidad de Datos:",
+      "rightPortabilityDesc": "Solicitar la transferencia de tus datos a otro servicio",
+      "rightWithdraw": "Retirar Consentimiento:",
+      "rightWithdrawDesc": "Retirar el consentimiento para el procesamiento de datos en cualquier momento",
+      "exerciseRights": "Para ejercer estos derechos, contáctenos a service@secret-santa-generator.net.",
+      "childrenPrivacy": "Privacidad de Niños",
+      "childrenPrivacyDesc": "Nuestro Servicio no está destinado a niños menores de 13 años de edad. No recopilamos conscientemente información personal de niños menores de 13. Si crees que hemos recopilado información de un niño menor de 13, por favor contáctenos inmediatamente.",
+      "internationalTransfers": "Transferencias Internacionales de Datos",
+      "internationalTransfersDesc": "Tu información puede ser transferida y procesada en países distintos al tuyo. Aseguramos que se implementen las salvaguardas apropiadas para proteger tus datos de acuerdo con esta Política de Privacidad y las leyes aplicables.",
+      "security": "Seguridad",
+      "securityDesc": "Implementamos medidas técnicas y organizacionales apropiadas para proteger tus datos personales contra el acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ninguna transmisión por internet es 100% segura, y no podemos garantizar seguridad absoluta.",
+      "changesToPolicy": "Cambios a Esta Política de Privacidad",
+      "changesToPolicyDesc": "Podemos actualizar esta Política de Privacidad de vez en cuando. Te notificaremos de cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de \"Última Actualización\". Se te aconseja revisar esta Política de Privacidad periódicamente para cualquier cambio.",
+      "contactUs": "Contáctenos",
+      "contactUsDesc": "Si tienes preguntas sobre esta Política de Privacidad o nuestras prácticas de datos, por favor contáctenos:",
+      "gdpr": "Cumplimiento del RGPD (Usuarios de la UE)",
+      "gdprDesc": "Si estás ubicado en el Espacio Económico Europeo (EEE), procesamos tus datos personales basados en los siguientes fundamentos legales:",
+      "gdprConsent": "Consentimiento:",
+      "gdprConsentDesc": "Has dado consentimiento para propósitos específicos",
+      "gdprContract": "Cumplimiento del Contrato:",
+      "gdprContractDesc": "El procesamiento es necesario para proporcionar el Servicio",
+      "gdprLegal": "Obligaciones Legales:",
+      "gdprLegalDesc": "El procesamiento es requerido por ley",
+      "gdprLegitimate": "Intereses Legítimos:",
+      "gdprLegitimateDesc": "El procesamiento es necesario para nuestros intereses comerciales legítimos",
+      "ccpa": "Cumplimiento de la CCPA (Usuarios de California)",
+      "ccpaDesc": "Si eres residente de California, tienes derechos adicionales bajo la Ley de Privacidad del Consumidor de California (CCPA):",
+      "ccpa1": "Derecho a saber qué información personal se recopila",
+      "ccpa2": "Derecho a saber si la información personal se vende o divulga",
+      "ccpa3": "Derecho a decir que no a la venta de información personal",
+      "ccpa4": "Derecho a acceder a tu información personal",
+      "ccpa5": "Derecho a servicio y precio igual",
+      "ccpaNote": "No vendemos tu información personal a terceros.",
+      "contactAddress": "131 Continental Dr, Suite 305, Newark, Delaware 19713, Estados Unidos"
+    },
+    "terms": {
+      "title": "Términos de Servicio",
+      "lastUpdated": "Última Actualización: 14 de diciembre de 2025",
+      "acceptance": "Aceptación de Términos",
+      "acceptanceDesc": "Bienvenido al Generador de Amigo Secreto. Al acceder o usar nuestro sitio web en secret-santa-generator.net (el \"Servicio\"), aceptas estar vinculado por estos Términos de Servicio (\"Términos\"). Si no estás de acuerdo con estos Términos, por favor no uses el Servicio.",
+      "acceptanceNote": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. El uso continuado del Servicio después de los cambios constituye la aceptación de los Términos modificados.",
+      "description": "Descripción del Servicio",
+      "descriptionIntro": "El Generador de Amigo Secreto es una plataforma en línea gratuita que permite a los usuarios:",
+      "desc1": "Crear eventos de intercambio de regalos de Amigo Secreto",
+      "desc2": "Agregar participantes y establecer reglas de exclusión",
+      "desc3": "Asignar aleatoriamente emparejamientos de Amigo Secreto",
+      "desc4": "Compartir enlaces de invitación con participantes",
+      "desc5": "Organizar y gestionar eventos de intercambio de regalos",
+      "descNote": "El Servicio se proporciona sin cargo y no requiere registro de usuario.",
+      "userResponsibilities": "Responsabilidades del Usuario",
+      "eligibility": "Elegibilidad",
+      "eligibilityDesc": "Debes tener al menos 13 años de edad para usar este Servicio. Si eres menor de 18, debes tener permiso de un padre o tutor.",
+      "accurateInformation": "Información Exacta",
+      "accurateInformationDesc": "Aceptas proporcionar información exacta al crear eventos de Amigo Secreto. Eres responsable de la exactitud de los nombres de participantes y detalles del evento que ingresas.",
+      "prohibitedUses": "Usos Prohibidos",
+      "prohibitedIntro": "Aceptas NO:",
+      "prohibited1": "Usar el Servicio para cualquier propósito ilegal o no autorizado",
+      "prohibited2": "Violar cualquier ley en tu jurisdicción",
+      "prohibited3": "Acosar, abusar o dañar a otra persona",
+      "prohibited4": "Hacer spam o enviar comunicaciones no solicitadas",
+      "prohibited5": "Intentar obtener acceso no autorizado al Servicio o sistemas relacionados",
+      "prohibited6": "Interferir o interrumpir el Servicio o servidores",
+      "prohibited7": "Usar herramientas automatizadas (bots, raspadores) sin permiso",
+      "prohibited8": "Recopilar información personal de otros usuarios sin consentimiento",
+      "prohibited9": "Hacerse pasar por cualquier persona o entidad",
+      "prohibited10": "Subir virus o código malicioso",
+      "privacyData": "Privacidad y Datos",
+      "privacyDataDesc": "El uso de tu Servicio también se rige por nuestra Política de Privacidad. Por favor revísala para entender cómo recopilamos, usamos y protegemos tu información.",
+      "privacyDataNote": "Al usar el Servicio, consientes la recopilación y uso de información como se describe en nuestra Política de Privacidad.",
+      "intellectualProperty": "Propiedad Intelectual",
+      "intellectualPropertyDesc": "El Servicio, incluyendo todo el contenido, características, funcionalidad y diseño, es propiedad del Generador de Amigo Secreto y está protegido por derechos de autor, marca registrada y otras leyes de propiedad intelectual.",
+      "intellectualPropertyNote": "No puedes copiar, modificar, distribuir, vender o arrendar ninguna parte del Servicio sin nuestro permiso por escrito.",
+      "userGeneratedContent": "Contenido Generado por el Usuario",
+      "yourContent": "Tu Contenido",
+      "yourContentDesc": "Retienes la propiedad de cualquier contenido que crees a través del Servicio (nombres de participantes, detalles del evento, mensajes). Al usar el Servicio, nos concedes una licencia para almacenar y procesar este contenido para proporcionar el Servicio.",
+      "contentResponsibility": "Responsabilidad del Contenido",
+      "contentResponsibilityDesc": "Eres el único responsable del contenido que creas. No monitoreamos ni controlamos el contenido generado por el usuario y no somos responsables de su exactitud, adecuacidad o legalidad.",
+      "contentRemoval": "Eliminación de Contenido",
+      "contentRemovalDesc": "Nos reservamos el derecho de eliminar cualquier contenido que viole estos Términos o sea de otra manera objetable, sin aviso.",
+      "disclaimers": "Descargos de Responsabilidad y Limitaciones",
+      "asIs": "Servicio \"Tal Cual\"",
+      "asIsDesc": "EL SERVICIO SE PROPORCIONA \"TAL CUAL\" Y \"TAL COMO ESTÁ DISPONIBLE\" SIN GARANTÍAS DE NINGÚN TIPO, YA SEA EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIABILIDAD, APTITUD PARA UN PROPÓSITO PARTICULAR O NO VIOLACIÓN.",
+      "noGuarantee": "Sin Garantía de Disponibilidad",
+      "noGuaranteeDesc": "No garantizamos que el Servicio estará disponible en todo momento, sin errores o libre de virus u otros componentes dañinos. Podemos suspender o discontinuar el Servicio en cualquier momento sin aviso.",
+      "limitationOfLiability": "Limitación de Responsabilidad",
+      "limitationOfLiabilityIntro": "HASTA EL MÁXIMO EXTENTO PERMITIDO POR LEY, EL GENERADOR DE AMIGO SECRETO NO SERÁ RESPONSABLE POR NINGÚN DAÑO INDIRECTO, INCIDENTAL, ESPECIAL, CONSECUENCIAL O PUNITIVO, O CUALQUIER PÉRDIDA DE BENEFICIOS O INGRESOS, YA SEA INCURRIDO DIRECTA O INDIRECTAMENTE, O CUALQUIER PÉRDIDA DE DATOS, USO, BUENA VOLUNTAD U OTRAS PÉRDIDAS INTANGIBLES RESULTANTES DE:",
+      "liability1": "Tu uso o incapacidad para usar el Servicio",
+      "liability2": "Cualquier acceso no autorizado a o uso de nuestros servidores y/o cualquier información personal almacenada en ellos",
+      "liability3": "Cualquier interrupción o cesación de transmisión hacia o desde el Servicio",
+      "liability4": "Cualquier error, virus u otro código dañino transmitido a través del Servicio",
+      "liability5": "Cualquier error u omisión en cualquier contenido o cualquier pérdida o daño incurrido como resultado del uso de cualquier contenido publicado, enviado por correo electrónico, transmitido o de otra manera puesto a disposición a través del Servicio",
+      "indemnification": "Indemnización",
+      "indemnificationDesc": "Aceptas indemnizar, defender y mantener indemne al Generador de Amigo Secreto, sus oficiales, directores, empleados y agentes de y contra cualquier reclamación, responsabilidad, daños, pérdidas y gastos, incluyendo honorarios razonables de abogados, que surjan de o estén conectados de alguna manera con:",
+      "indemnify1": "Tu acceso a o uso del Servicio",
+      "indemnify2": "Tu violación de estos Términos",
+      "indemnify3": "Tu violación de cualquier derecho de terceros",
+      "indemnify4": "Cualquier contenido que crees o compartas a través del Servicio",
+      "thirdPartyServices": "Servicios de Terceros",
+      "thirdPartyServicesDesc": "El Servicio puede contener enlaces a sitios web o servicios de terceros que no son propiedad ni controlados por nosotros. No tenemos control sobre y no asumimos responsabilidad por el contenido, políticas de privacidad o prácticas de cualquier sitio web o servicio de terceros.",
+      "thirdPartyNote": "Reconoces y aceptas que no seremos responsables ni responsables por cualquier daño o pérdida causado por o en conexión con el uso de cualquier contenido, bienes o servicios de terceros.",
+      "termination": "Terminación",
+      "terminationDesc": "Podemos terminar o suspender tu acceso al Servicio inmediatamente, sin aviso previo ni responsabilidad, por cualquier razón, incluyendo si violas estos Términos.",
+      "terminationNote": "Tras la terminación, tu derecho a usar el Servicio cesará inmediatamente. También puedes terminar tu uso del Servicio en cualquier momento dejando de acceder a él.",
+      "governingLaw": "Ley Regente",
+      "governingLawDesc": "Estos Términos se regirán e interpretarán de acuerdo con las leyes del Estado de Delaware, Estados Unidos, sin tener en cuenta sus disposiciones de conflicto de leyes.",
+      "governingLawNote": "Cualquier disputa que surja de estos Términos o del Servicio se resolverá en los tribunales de Delaware.",
+      "disputeResolution": "Resolución de Disputas",
+      "disputeResolutionDesc": "Si tienes alguna disputa con nosotros, aceptas primero contactarnos a service@secret-santa-generator.net e intentar resolver la disputa informalmente.",
+      "disputeResolutionNote": "Si no podemos resolver la disputa informalmente, cualquier acción legal debe presentarse en los tribunales de Delaware, y ambas partes consienten la jurisdicción exclusiva de esos tribunales.",
+      "severability": "Separabilidad",
+      "severabilityDesc": "Si alguna disposición de estos Términos se considera inválida o inaplicable, las disposiciones restantes permanecerán en plena fuerza y efecto. La disposición inválida o inaplicable se reemplazará con una disposición válida que coincida más estrechamente con la intención de la disposición original.",
+      "entireAgreement": "Acuerdo Completo",
+      "entireAgreementDesc": "Estos Términos, junto con nuestra Política de Privacidad, constituyen el acuerdo completo entre ti y el Generador de Amigo Secreto con respecto al uso del Servicio y sustituyen todos los acuerdos y entendimientos anteriores.",
+      "changesToService": "Cambios al Servicio",
+      "changesToServiceDesc": "Nos reservamos el derecho de modificar, suspender o discontinuar el Servicio (o cualquier parte del mismo) en cualquier momento, con o sin aviso. No seremos responsables ante ti ni ningún tercero por cualquier modificación, suspensión o discontinuación del Servicio.",
+      "contactUs": "Información de Contacto",
+      "contactUsDesc": "Si tienes alguna pregunta sobre estos Términos, por favor contáctenos:",
+      "acknowledgment": "Reconocimiento",
+      "acknowledgmentDesc": "AL USAR EL SERVICIO, RECONOCES QUE HAS LEÍDO ESTOS TÉRMINOS DE SERVICIO Y ACEPTAS ESTAR VINCULADO POR ELLOS.",
+      "contactAddress": "131 Continental Dr, Suite 305, Newark, Delaware 19713, Estados Unidos",
+      "privacyPolicyLinkLabel": "Política de privacidad"
+    }
+  },
+  "seo": {
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "step1": {
+        "title": "Agregar Participantes",
+        "description": "Ingresa los nombres de todos los que se unan a tu intercambio de regalos. Puedes agregar tantas personas como quieras - ¡no hay límite!"
+      },
+      "step2": {
+        "title": "Establecer Reglas (Opcional)",
+        "description": "Evita que parejas o miembros de la familia se saquen mutuamente. Nuestro algoritmo inteligente garantiza que todos obtengan una asignación justa."
+      },
+      "step3": {
+        "title": "Compartir y Revelar",
+        "description": "Envía el enlace de invitación a tu grupo. Cada persona hace clic para revelar a quién le está comprando un regalo - ¡es así de simple!"
+      }
+    },
+    "features": {
+      "title": "¿Por Qué Elegir Nuestro Generador de Amigo Secreto?",
+      "feature1": {
+        "title": "100% Gratuito y Sin Registro",
+        "description": "Crea eventos ilimitados de Amigo Secreto sin registrarte ni proporcionar información personal. Sin tarifas ocultas, sin planes premium."
+      },
+      "feature2": {
+        "title": "Configuración Instantánea",
+        "description": "Configura tu intercambio de regalos en menos de 2 minutos. Nuestro proceso optimizado hace que organizar sea rápido y sin dolor."
+      },
+      "feature3": {
+        "title": "Algoritmo Inteligente de Emparejamiento",
+        "description": "Nuestro algoritmo avanzado garantiza emparejamientos justos mientras respeta todas tus reglas de exclusión. ¡No más situaciones incómodas!"
+      },
+      "feature4": {
+        "title": "Múltiples Opciones de Compartir",
+        "description": "Comparte vía WhatsApp, correo electrónico o enlace directo. Elige enlaces universales para grupos o enlaces personalizados para individuos."
+      },
+      "feature5": {
+        "title": "Completa Anonimidad",
+        "description": "Todas las asignaciones se mantienen en secreto hasta que cada participante revele la suya. Nadie puede ver a quién le tocó a quién excepto el organizador."
+      },
+      "feature6": {
+        "title": "Compatible con Móviles",
+        "description": "Funciona perfectamente en cualquier dispositivo - teléfonos, tabletas y computadoras. Tus participantes pueden unirse desde cualquier lugar."
+      }
+    },
+    "useCases": {
+      "title": "Perfecto para Cada Ocasión",
+      "useCase1": {
+        "title": "Amigo Secreto de Oficina",
+        "description": "Organiza intercambios de regalos para tu lugar de trabajo o eventos de construcción de equipos. ¡Genial para equipos remotos también!"
+      },
+      "useCase2": {
+        "title": "Intercambio de Regalos Familiar",
+        "description": "Reúne a la familia con una tradición navideña divertida. Establece reglas para evitar que las parejas se saquen mutuamente."
+      },
+      "useCase3": {
+        "title": "Amigos y Grupos Sociales",
+        "description": "Perfecto para grupos de amigos, clubes o reuniones sociales. Haz que dar regalos sea emocionante y justo para todos."
+      },
+      "useCase4": {
+        "title": "Amigo Secreto Virtual",
+        "description": "Genial para equipos remotos o amigos que viven en diferentes ciudades. Comparte enlaces y celebra juntos en línea."
+      },
+      "useCase5": {
+        "title": "Escuela y Aula",
+        "description": "Los maestros pueden organizar intercambios de regalos para estudiantes. Seguro, divertido y fácil de gestionar."
+      },
+      "useCase6": {
+        "title": "Cualquier Celebración Festiva",
+        "description": "Funciona para Navidad, Janucá, Año Nuevo, cumpleaños o cualquier ocasión de dar regalos."
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "¿El Generador de Amigo Secreto es realmente gratuito?",
+        "answer": "¡Sí! Nuestro Generador de Amigo Secreto es completamente gratuito de usar. No hay tarifas ocultas, no hay planes premium, y no se requiere registro. Puedes crear eventos ilimitados sin pagar nada."
+      },
+      "q2": {
+        "question": "¿Necesito crear una cuenta?",
+        "answer": "¡No se necesita cuenta! Puedes comenzar a crear tu evento de Amigo Secreto inmediatamente. Solo te pedimos tu dirección de correo electrónico si quieres recibir enlaces del evento por correo electrónico, pero esto es completamente opcional."
+      },
+      "q3": {
+        "question": "¿Cómo funciona el emparejamiento?",
+        "answer": "Nuestro algoritmo inteligente asigna aleatoriamente a cada persona para comprar un regalo para otra persona. El sistema garantiza que nadie saque su propio nombre y respeta cualquier regla de exclusión que hayas establecido (como evitar que las parejas se saquen mutuamente)."
+      },
+      "q4": {
+        "question": "¿Puedo evitar que ciertas personas se saquen mutuamente?",
+        "answer": "¡Absolutamente! Puedes establecer reglas de exclusión para prevenir emparejamientos específicos. Por ejemplo, puedes garantizar que los cónyuges no se saquen mutuamente los nombres. Estas restricciones son bidireccionales - si A no puede sacar a B, entonces B tampoco puede sacar a A."
+      },
+      "q5": {
+        "question": "¿Cómo saben los participantes a quién les tocó?",
+        "answer": "Después de crear tu evento, obtendrás un enlace único para compartir con los participantes. Cada persona hace clic en el enlace, selecciona su nombre e instantáneamente ve a quién le está comprando un regalo. También puedes enviar enlaces personalizados que identifican automáticamente a cada participante."
+      },
+      "q6": {
+        "question": "¿Mis datos son privados y seguros?",
+        "answer": "Sí, nos tomamos la privacidad en serio. Tus datos del evento se almacenan de forma segura, y todas las asignaciones de Amigo Secreto se mantienen confidenciales. Solo el organizador puede ver todos los emparejamientos. Nunca vendemos tus datos a terceros."
+      },
+      "q7": {
+        "question": "¿Puedo usar esto para Amigo Secreto virtual/remoto?",
+        "answer": "¡Sí! Nuestra plataforma es perfecta para intercambios de Amigo Secreto virtuales. Comparte el enlace de invitación por correo electrónico, WhatsApp o cualquier aplicación de mensajería. Los participantes pueden unirse desde cualquier lugar del mundo."
+      },
+      "q8": {
+        "question": "¿Qué pasa si alguien ya no puede participar?",
+        "answer": "Si alguien se retira, necesitarás crear un nuevo evento sin esa persona. Nuestro sistema no admite editar eventos después de la creación para mantener la equidad y evitar trampas."
+      },
+      "q9": {
+        "question": "¿Cuántas personas pueden participar?",
+        "answer": "¡No hay límite! Puedes tener tan pocas como 3 personas o tantas como quieras. Nuestro sistema funciona igualmente bien para pequeñas reuniones familiares y grandes eventos corporativos."
+      },
+      "q10": {
+        "question": "¿Puedo establecer un presupuesto para los regalos?",
+        "answer": "¡Sí! Puedes establecer un monto de presupuesto sugerido para los regalos al crear tu evento. Esto ayuda a todos a saber cuánto gastar y mantiene el intercambio justo para todos los participantes."
+      }
+    },
+    "relatedArticles": {
+      "title": "Artículos Relacionados",
+      "article1": {
+        "title": "Mejores Aplicaciones de Generador de Amigo Secreto",
+        "description": "Compara las mejores aplicaciones de Amigo Secreto y encuentra la perfecta para tus necesidades."
+      },
+      "article2": {
+        "title": "Amigo Secreto Navideño 2025",
+        "description": "Planifica tu intercambio de regalos navideños con nuestra guía completa."
+      },
+      "article3": {
+        "title": "Regalos de Amigo Secreto DIY",
+        "description": "Ideas de regalos creativos y pensados que no romperán el banco."
+      },
+      "article4": {
+        "title": "Ideas de Amigo Secreto Familiar",
+        "description": "Consejos y trucos para organizar el intercambio de regalos familiar perfecto."
+      },
+      "article5": {
+        "title": "Regalos Divertidos de Amigo Secreto",
+        "description": "Ideas de regalos hilarantes que harán reír a todos."
+      },
+      "article6": {
+        "title": "¿Cómo Funciona el Amigo Secreto?",
+        "description": "Todo lo que necesitas saber sobre la tradición del Amigo Secreto."
+      },
+      "article7": {
+        "title": "Cómo Organizar un Amigo Secreto",
+        "description": "Guía paso a paso para planificar un intercambio de regalos exitoso."
+      },
+      "article8": {
+        "title": "Regalos de Amigo Secreto para Compañeros de Trabajo",
+        "description": "Ideas de regalos apropiadas para intercambios de regalos de oficina."
+      },
+      "article9": {
+        "title": "Regalos de Amigo Secreto para Hombres",
+        "description": "Grandes ideas de regalos para los hombres en tu Amigo Secreto."
+      },
+      "article10": {
+        "title": "Regalos de Amigo Secreto para Mujeres",
+        "description": "Ideas de regalos maravillosas para las mujeres en tu Amigo Secreto."
+      },
+      "article11": {
+        "title": "Regalos de Amigo Secreto Menos de $10",
+        "description": "Ideas de regalos amigables con el presupuesto que aún se sientan especiales."
+      },
+      "article12": {
+        "title": "Regalos de Amigo Secreto Menos de $20",
+        "description": "Regalos asequibles que parecen que gastaste más."
+      },
+      "article13": {
+        "title": "Regalos de Amigo Secreto Menos de $25, $30, $50",
+        "description": "Ideas de regalos para cada nivel de presupuesto."
+      },
+      "article14": {
+        "title": "Cuestionario de Amigo Secreto",
+        "description": "Ayuda a tus participantes a compartir sus preferencias de regalos."
+      },
+      "article15": {
+        "title": "Amigo Secreto Virtual",
+        "description": "Cómo organizar un intercambio de regalos para equipos remotos."
+      },
+      "article16": {
+        "title": "Elefante Blanco vs Amigo Secreto",
+        "description": "Entendiendo las diferencias entre estos populares juegos de intercambio de regalos."
+      }
+    }
+  },
+  "toast": {
+    "linkCopied": "¡Enlace copiado al portapapeles!",
+    "emailSent": "¡Correo enviado exitosamente! 📧",
+    "emailFailed": "Fallo al enviar correo electrónico",
+    "eventCreated": "¡Evento creado exitosamente! 🎉",
+    "eventFailed": "Fallo al crear el evento. Por favor intenta de nuevo.",
+    "invalidAssignments": "No se pudieron generar asignaciones válidas. Por favor ajusta tus restricciones.",
+    "invalidEmail": "Por favor ingresa una dirección de correo electrónico válida",
+    "emailTimeout": "El correo electrónico está tardando más de lo esperado. Por favor revisa tu bandeja de entrada en unos minutos.",
+    "emailRateLimit": "Demasiadas solicitudes de correo electrónico. Por favor intenta más tarde."
+  },
+  "blog": {
+    "title": "Blog de Amigo Secreto - Guías, Consejos e Ideas de Regalos",
+    "subtitle": "Todo lo que necesitas saber sobre organizar intercambios de regalos de Amigo Secreto perfectos. Desde ideas de regalos hasta consejos de organización, cuestionarios y más.",
+    "header": "Blog de Amigo Secreto",
+    "guidesResources": "Guías y Recursos de Amigo Secreto",
+    "description": "Todo lo que necesitas saber sobre organizar intercambios de regalos de Amigo Secreto perfectos. Desde ideas de regalos hasta consejos de organización, cuestionarios y más.",
+    "categories": {
+      "all": "Todos los Artículos",
+      "giftIdeas": "Ideas de Regalos",
+      "organizationGuides": "Guías de Organización",
+      "toolsTemplates": "Herramientas y Plantillas"
+    },
+    "stats": {
+      "guides": "Guías Completas",
+      "gifts": "Ideas de Regalos Cubiertas",
+      "resources": "Recursos Gratuitos"
+    },
+    "cta": {
+      "title": "¿Listo para Organizar tu Amigo Secreto?",
+      "description": "Usa nuestro generador gratuito de Amigo Secreto para organizar tu intercambio de regalos en minutos. ¡Sin correo electrónico requerido, completamente privado!",
+      "button": "Prueba el Generador Gratuito"
+    },
+    "newsletter": {
+      "title": "¡Más Guías Próximamente!",
+      "description": "Estamos creando más guías útiles sobre Amigo Secreto. Marca esta página para mantenerte actualizado.",
+      "items": {
+        "diy": "Ideas de Regalos DIY",
+        "christmas": "Planificación Navideña",
+        "email": "Plantillas de Correo Electrónico"
+      }
+    },
+    "readMore": "Leer Más",
+    "minRead": "{time} min de lectura",
+    "articles": {
+      "familySecretSanta": {
+        "title": "Amigo Secreto Familiar: Guía Completa para Todas las Edades",
+        "description": "Planifica el intercambio de regalos familiar perfecto. Ideas apropiadas para la edad para niños, adolescentes, adultos y abuelos, más consejos para familias grandes.",
+        "category": "Guías de Organización",
+        "readTime": "16 min"
+      },
+      "giftsUnder25": {
+        "title": "Regalos de Amigo Secreto Bajo $25, $30 y $50: Ideas Premium",
+        "description": "Más de 80 ideas de regalos premium en tres puntos de precio populares. Regalos de calidad que impresionan sin romper el banco.",
+        "category": "Ideas de Regalos",
+        "readTime": "18 min"
+      },
+      "christmas2025": {
+        "title": "Amigo Secreto Navideño 2025: Guía Completa de Planificación",
+        "description": "Tu guía completa para planificar Amigo Secreto para Navidad 2025. Cronograma, consejos de presupuesto, temas, ideas de regalos y planificación de fiestas.",
+        "category": "Guías de Organización",
+        "readTime": "20 min"
+      },
+      "diyGifts": {
+        "title": "Regalos de Amigo Secreto DIY: Más de 40 Ideas Hechas a Mano",
+        "description": "Ideas creativas de regalos DIY que puedes hacer tú mismo. Desde golosinas comestibles hasta manualidades, encuentra regalos hechos a mano que se sientan personales y reflexivos.",
+        "category": "Ideas de Regalos",
+        "readTime": "18 min"
+      },
+      "questionnaire": {
+        "title": "Cuestionario de Amigo Secreto: Más de 30 Preguntas para Hacer",
+        "description": "Plantilla de preguntas esenciales para ayudar a los regaladores a elegir los regalos perfectos. Incluye cuestionario listo para usar con más de 30 preguntas organizadas por categoría.",
+        "category": "Herramientas y Plantillas",
+        "readTime": "12 min"
+      },
+      "virtual": {
+        "title": "Amigo Secreto Virtual: Cómo Organizar Intercambio de Regalos Remoto",
+        "description": "Guía completa para equipos remotos - herramientas en línea, logística de envío e ideas creativas de revelación virtual para equipos distribuidos.",
+        "category": "Guías de Organización",
+        "readTime": "16 min"
+      },
+      "giftsUnder10": {
+        "title": "Regalos de Amigo Secreto Bajo $10: Más de 60 Ideas Económicas",
+        "description": "Regalos increíbles bajo $10 que no parecen baratos. Perfectos para estudiantes, grupos grandes e intercambios conscientes del presupuesto.",
+        "category": "Ideas de Regalos",
+        "readTime": "15 min"
+      },
+      "giftsForWomen": {
+        "title": "Regalos de Amigo Secreto para Mujeres: Más de 45 Ideas Reflexivas",
+        "description": "Ideas de regalos perfectas para mujeres desde belleza y autocuidado hasta accesorios. Organizadas por presupuesto y tipo de personalidad.",
+        "category": "Ideas de Regalos",
+        "readTime": "14 min"
+      },
+      "giftsForMen": {
+        "title": "Regalos de Amigo Secreto para Hombres: Más de 40 Ideas que a los Hombres Realmente Les Gustan",
+        "description": "Guía completa de regalos para hombres con tecnología, accesorios y artículos prácticos que a los hombres realmente les encantarán.",
+        "category": "Ideas de Regalos",
+        "readTime": "12 min"
+      },
+      "giftsForCoworkers": {
+        "title": "Regalos de Amigo Secreto para Compañeros de Trabajo: Más de 45 Ideas Profesionales y Divertidas",
+        "description": "Ideas de regalos apropiados para la oficina que equilibran profesionalismo con personalidad. Perfectos para intercambios laborales.",
+        "category": "Ideas de Regalos",
+        "readTime": "13 min"
+      },
+      "funnyGifts": {
+        "title": "Regalos de Amigo Secreto Divertidos que Harán Reír a Todos",
+        "description": "Más de 50 ideas de regalos hilarantes desde humor seguro para la oficina hasta regalos de broma extravagantes. Haz que tu Amigo Secreto sea inolvidable.",
+        "category": "Ideas de Regalos",
+        "readTime": "11 min"
+      },
+      "giftsUnder20": {
+        "title": "Regalos de Amigo Secreto Bajo $20: Más de 50 Mejores Ideas",
+        "description": "Ideas de regalos económicas organizadas por categoría. Encuentra presentes reflexivos sin romper el banco.",
+        "category": "Ideas de Regalos",
+        "readTime": "14 min"
+      },
+      "uniqueQuirky": {
+        "title": "Regalos de Amigo Secreto Únicos y Peculiares: 45+ Ideas Inusuales",
+        "description": "Ideas de regalos inusuales para personas creativas: curiosidades de escritorio, kits de creación y hallazgos inesperados por menos de $50.",
+        "category": "Ideas de Regalos",
+        "readTime": "12 min"
+      },
+      "printableForms": {
+        "title": "Formularios y Listas Imprimibles de Amigo Secreto: Plantillas Gratis",
+        "description": "Formularios listos para imprimir con lista del organizador, listas de deseos y hojas de seguimiento.",
+        "category": "Herramientas y Plantillas",
+        "readTime": "10 min"
+      },
+      "howItWorks": {
+        "title": "¿Cómo Funciona el Amigo Secreto? Guía Completa para Principiantes",
+        "description": "Aprende todo sobre el Amigo Secreto - desde reglas básicas hasta consejos de expertos. Perfecto para principiantes y organizadores experimentados.",
+        "category": "Comenzando",
+        "readTime": "15 min"
+      },
+      "howToOrganize": {
+        "title": "Cómo Organizar un Intercambio de Regalos de Amigo Secreto",
+        "description": "Guía completa para planificar y ejecutar un intercambio de Amigo Secreto perfecto para cualquier tamaño de grupo o entorno.",
+        "category": "Guías de Organización",
+        "readTime": "13 min"
+      },
+      "whiteElephant": {
+        "title": "Elefante Blanco vs Amigo Secreto: ¿Cuál es la Diferencia?",
+        "description": "Comparación completa de dos juegos populares de intercambio de regalos. Aprende las reglas, diferencias y cuál es adecuado para tu grupo.",
+        "category": "Comparaciones",
+        "readTime": "10 min"
+      },
+      "bestApps": {
+        "title": "Las 7 Mejores Aplicaciones de Generador de Amigo Secreto en 2025",
+        "description": "Compara los principales generadores y aplicaciones de Amigo Secreto. Encuentra la herramienta perfecta para organizar tu intercambio de regalos.",
+        "category": "Herramientas y Plantillas",
+        "readTime": "11 min"
+      }
+    },
+    "detailsStep": {
+      "eventDetails": "Detalles del Evento",
+      "whatDoYouWantToDrawNamesFor": "¿Para qué quieres sacar nombres?",
+      "giftExchangeDate": "Fecha de Intercambio de Regalos",
+      "giftBudget": "Presupuesto de Regalos",
+      "suggestedSpendingAmount": "Monto de gasto sugerido por regalo",
+      "addCustomMessage": "Agregar Mensaje Personalizado",
+      "addAnySpecialInstructions": "Agrega instrucciones especiales o mensajes para los participantes...",
+      "back": "← Atrás",
+      "continue": "Continuar →",
+      "maximumBudget": "El presupuesto máximo es $999",
+      "enterAmount": "Ingresar monto",
+      "other": "Otro",
+      "saturday": "Sábado",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "december": "Diciembre",
+      "secretSanta2025": "Amigo Secreto 2025",
+      "christmas2025": "Navidad 2025",
+      "holidayGiftExchange": "Intercambio de Regalos de Vacaciones",
+      "newYear2026": "Año Nuevo 2026",
+      "officeSecretSanta": "Amigo Secreto de Oficina",
+      "youveBeenInvited": "¡Has sido invitado a unirte a {groupName}! Haz una lista de deseos, saca un nombre y deja que comience la magia."
+    },
+    "participantsStep": {
+      "whatsYourName": "¿Cuál es tu nombre?",
+      "enterYourName": "Ingresa tu nombre",
+      "includeMeInDraw": "Incluirme (el organizador) en el sorteo",
+      "whoAreYouDrawingNamesWith": "¿Con quién estás sacando nombres?",
+      "addName": "Agregar nombre",
+      "addAtLeast": "Agrega al menos {count} {people} más para continuar",
+      "person": "persona",
+      "people": "personas"
+    },
+    "restrictionsStep": {
+      "setDrawRestrictions": "Establecer Restricciones de Sorteo (Opcional)",
+      "restrictionsDescription": "Evita que ciertas personas se saquen mutuamente (por ejemplo, parejas, compañeros de habitación o personas que ya saben qué regalar).",
+      "yesSetRestrictions": "Sí, quiero establecer restricciones de sorteo",
+      "noSkipStep": "No, omitir este paso",
+      "selectParticipants": "Selecciona participantes para establecer restricciones:",
+      "bidirectionalRestrictions": "Nota: Restricciones Bidireccionales",
+      "bidirectionalDescription": "Todas las restricciones son <strong>de dos vías</strong>. Si Tom no puede sacar a Kevin, entonces Kevin tampoco puede sacar a Tom. Agregar o eliminar una restricción afecta a ambos participantes.",
+      "noRestrictions": "Sin Restricciones",
+      "cannotDraw": "{name} no puede sacar:",
+      "clear": "Limpiar",
+      "restriction": "restricción",
+      "restrictions": "restricciones"
+    },
+    "emailStep": {
+      "oneLastStep": "¡Un Último Paso!",
+      "saveEventLinksByEmail": "Guarda los enlaces de tu evento por correo electrónico (opcional)",
+      "whyProvideEmail": "¿Por qué proporcionar tu correo electrónico?",
+      "wellSendYouAllLinks": "Te enviaremos todos los enlaces de tu evento en un correo electrónico conveniente:",
+      "universalJoinLink": "Enlace universal de unión para compartir con los participantes",
+      "individualPersonalizedLinks": "Enlaces personalizados individuales para cada participante",
+      "organizerDashboardLink": "Enlace del panel del organizador para gestionar tu evento",
+      "neverLoseYourLinks": "¡Nunca pierdas tus enlaces de nuevo!",
+      "yourEmailAddress": "Tu Dirección de Correo Electrónico",
+      "pleaseEnterEmailAddress": "Por favor ingresa una dirección de correo electrónico",
+      "pleaseEnterValidEmailAddress": "Por favor ingresa una dirección de correo electrónico válida",
+      "privacy": "🔒 Privacidad: Solo usamos tu correo electrónico para enviar enlaces del evento. Sin spam, nunca.",
+      "skipForNow": "Omitir por Ahora",
+      "sendEmail": "Enviar Correo →",
+      "sending": "Enviando...",
+      "emailSentSuccessfully": "¡Correo enviado exitosamente! 📧",
+      "emailTakingLonger": "El correo electrónico está tardando más de lo esperado. Puedes continuar y revisar tu bandeja de entrada más tarde.",
+      "emailSendingTimedOut": "El envío del correo electrónico agotó el tiempo. No te preocupes, puedes encontrar tus enlaces en la siguiente página.",
+      "emailFailedToSend": "Falló el envío del correo electrónico. Aún puedes acceder a tus enlaces en la siguiente página.",
+      "youCanStillAccessLinks": "Aún puedes acceder a tus enlaces en la siguiente página incluso si omites este paso"
+    },
+    "successStep": {
+      "eventCreatedSuccessfully": "Evento Creado Exitosamente",
+      "yourSecretSantaIsReady": "¡Tu Amigo Secreto Está Listo!",
+      "howItWorks": "Cómo funciona",
+      "step1": "Elige tu método de compartir a continuación (enlace compartido universal o enlaces personalizados)",
+      "step2": "Envía enlaces a tus {count} participantes vía WhatsApp, correo electrónico, o copiar/pegar",
+      "step3": "Cada persona hace clic en su enlace para revelar a quién le está comprando un regalo",
+      "shareYourInvitations": "Comparte Tus Invitaciones",
+      "chooseHowToDistributeLinks": "Elige cómo distribuir los enlaces a tus participantes",
+      "universalSharedLink": "Enlace Compartido Universal",
+      "personalizedLinks": "Enlaces Personalizados",
+      "perfectForWhatsApp": "Perfecto para grupos de WhatsApp, Slack o Discord. Comparte este único enlace, y todos reclaman su nombre.",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "bestForGroupChats": "Mejor para chats de grupo - Comparte este enlace, todos hacen clic, seleccionan su nombre, y al instante ven quién les tocó. ¡Rápido y fácil!",
+      "moreSecure": "Más Seguro",
+      "eachParticipantGetsOwnUniqueLink": "Cada participante obtiene su propio enlace único. Más seguro y evita que otros vean quién no está participando.",
+      "loadingPersonalizedLinks": "Cargando enlaces personalizados...",
+      "bestForDirectMessaging": "Mejor para mensajería directa - Cada enlace es único y muestra automáticamente a la persona quién le tocó. ¡No se necesita selección de nombre!",
+      "organizerView": "Vista del Organizador",
+      "viewAllPairings": "Ver todos los emparejamientos para rastrear quién le está comprando a quién (¡mantén esto en secreto!)",
+      "viewAllPairingsOrganizerView": "Ver Todos los Emparejamientos (Vista del Organizador)",
+      "saveYourLinksViaEmail": "Guarda Tus Enlaces por Correo Electrónico",
+      "getAllLinksSentToEmail": "Obtén todos los enlaces de tu evento enviados a tu correo electrónico para guardarlos. Te enviaremos el enlace universal, enlaces personalizados para cada participante, y tu enlace del panel del organizador.",
+      "sending": "Enviando...",
+      "sendEmail": "Enviar Correo",
+      "weOnlyUseEmailToSendLinks": "Solo usamos tu correo electrónico para enviar enlaces del evento. Sin spam, nunca.",
+      "emailSentSuccessfullyCheckInbox": "¡Correo enviado exitosamente! Revisa tu bandeja de entrada para todos los enlaces de tu evento.",
+      "allSet": "¡Todo listo!",
+      "yourSecretSantaEventHasBeenCreated": "Tu evento de Amigo Secreto ha sido creado. ¡Comparte el enlace y deja que comience el intercambio de regalos!",
+      "createAnotherSecretSanta": "Crear Otro Amigo Secreto",
+      "linkCopiedToClipboard": "¡Enlace copiado al portapapeles!",
+      "pleaseEnterEmailAddress": "Por favor ingresa una dirección de correo electrónico",
+      "pleaseEnterValidEmailAddress": "Por favor ingresa una dirección de correo electrónico válida",
+      "emailTakingLonger": "El correo electrónico está tardando más de lo esperado. Por favor revisa tu bandeja de entrada en unos minutos.",
+      "emailFailedToSend": "Falló el envío del correo electrónico. No te preocupes, ¡ya tienes tus enlaces arriba!"
+    }
   }
 }
