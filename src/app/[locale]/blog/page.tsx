@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, Clock, Gift, Users, Laptop, DollarSign, Heart, Briefcase, HelpCircle, Laugh, Scale, Sparkles, ClipboardList, Scissors, Calendar, Home } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: 'Secret Santa Blog - Guides, Tips & Gift Ideas | Secret Santa Generator',
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   keywords: 'secret santa blog, secret santa guides, secret santa tips, gift exchange ideas',
 };
 
-export default function BlogPage({ params }: { params: { locale: string } }) {
-  const t = useTranslations('blog');
-  const locale = params.locale || 'en';
+export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale = 'en' } = await params;
+  const t = await getTranslations({ locale, namespace: 'blog' });
 
   const articles = [
     {
@@ -306,14 +306,15 @@ export default function BlogPage({ params }: { params: { locale: string } }) {
             {t('newsletter.description')}
           </p>
           <div className="flex gap-4 justify-center text-sm text-gray-500">
-            <span>📝 {t('newsletter.items.diy')}</span>
-            <span>•</span>
-            <span>🎄 {t('newsletter.items.christmas')}</span>
-            <span>•</span>
-            <span>✉️ {t('newsletter.items.email')}</span>
+            <span>[DIY] {t('newsletter.items.diy')}</span>
+            <span>-</span>
+            <span>[Holiday] {t('newsletter.items.christmas')}</span>
+            <span>-</span>
+            <span>[Email] {t('newsletter.items.email')}</span>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
