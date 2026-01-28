@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Clock, Gift, Users, ArrowRight, CheckCircle2, Calendar, AlertCircle, TreePine, Star, Bell } from 'lucide-react';
+import { Clock, Gift, Users, ArrowRight, CheckCircle2, Calendar, AlertCircle, TreePine, Star, Bell, ShoppingBag } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Christmas Secret Santa 2025: Complete Planning Guide & Timeline',
@@ -60,7 +60,7 @@ export default function ChristmasSecretSanta2025() {
         </p>
 
         <p className="text-gray-700 leading-relaxed">
-          The magic of Christmas Secret Santa lies in the anticipation, surprise, and joy of giving. But that magic requires thoughtful planning—from setting the right budget to creating a timeline that doesn't clash with the holiday rush. Start too late and you're shopping on December 23rd in a panic; start too early and people forget the details. This guide provides the perfect balance.
+          The magic of Christmas Secret Santa lies in the anticipation, surprise, and joy of giving. But that magic requires thoughtful planningrom setting the right budget to creating a timeline that doesn't clash with the holiday rush. Start too late and you're shopping on December 23rd in a panic; start too early and people forget the details. This guide provides the perfect balance.
         </p>
 
         <p className="text-gray-700 leading-relaxed">
@@ -159,9 +159,9 @@ export default function ChristmasSecretSanta2025() {
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">Shopping Deadlines to Remember:</p>
                   <ul className="text-sm text-gray-700 space-y-1">
-                    <li>• <strong>Online shopping:</strong> Order by December 15 for guaranteed delivery</li>
-                    <li>• <strong>International shipping:</strong> Order by December 1-5</li>
-                    <li>• <strong>In-store pickup:</strong> December 18-20 for best selection</li>
+                    <li>?<strong>Online shopping:</strong> Order by December 15 for guaranteed delivery</li>
+                    <li>?<strong>International shipping:</strong> Order by December 1-5</li>
+                    <li>?<strong>In-store pickup:</strong> December 18-20 for best selection</li>
                   </ul>
                 </div>
               </div>
@@ -297,10 +297,10 @@ export default function ChristmasSecretSanta2025() {
               <p className="text-gray-600 text-sm">For students, large groups</p>
             </div>
             <ul className="space-y-2 text-gray-700 text-sm">
-              <li>• Allows for thoughtful gifts</li>
-              <li>• Reduces financial stress</li>
-              <li>• Great for 15+ people</li>
-              <li>• Focus on creativity over cost</li>
+              <li>?Allows for thoughtful gifts</li>
+              <li>?Reduces financial stress</li>
+              <li>?Great for 15+ people</li>
+              <li>?Focus on creativity over cost</li>
             </ul>
           </div>
 
@@ -309,14 +309,14 @@ export default function ChristmasSecretSanta2025() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-red-600 rounded-full mb-3">
                 <span className="text-2xl font-bold text-white">$25</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Most Popular ⭐</h3>
+              <h3 className="text-xl font-bold text-gray-900">Most Popular</h3>
               <p className="text-gray-600 text-sm">Sweet spot for most groups</p>
             </div>
             <ul className="space-y-2 text-gray-700 text-sm">
-              <li>• Wide variety of quality gifts</li>
-              <li>• Standard for office exchanges</li>
-              <li>• Balances generosity & budget</li>
-              <li>• Recommended for Christmas</li>
+              <li>?Wide variety of quality gifts</li>
+              <li>?Standard for office exchanges</li>
+              <li>?Balances generosity & budget</li>
+              <li>?Recommended for Christmas</li>
             </ul>
           </div>
 
@@ -329,10 +329,10 @@ export default function ChristmasSecretSanta2025() {
               <p className="text-gray-600 text-sm">For close friends, small groups</p>
             </div>
             <ul className="space-y-2 text-gray-700 text-sm">
-              <li>• High-quality, memorable gifts</li>
-              <li>• Best for 5-10 people</li>
-              <li>• Special occasion exchanges</li>
-              <li>• Luxury item possibilities</li>
+              <li>?High-quality, memorable gifts</li>
+              <li>?Best for 5-10 people</li>
+              <li>?Special occasion exchanges</li>
+              <li>?Luxury item possibilities</li>
             </ul>
           </div>
         </div>
@@ -433,24 +433,21 @@ export default function ChristmasSecretSanta2025() {
             className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 rounded-lg border border-green-200 hover:shadow-md transition-all group"
           >
             <p className="font-bold text-gray-900 group-hover:text-green-600 transition-colors">
-              50+ Gifts Under $20 →
-            </p>
+              50+ Gifts Under $20 ?            </p>
           </Link>
           <Link
             href="/en/blog/diy-secret-santa-gifts"
             className="bg-gradient-to-br from-pink-50 to-rose-50 p-4 rounded-lg border border-pink-200 hover:shadow-md transition-all group"
           >
             <p className="font-bold text-gray-900 group-hover:text-pink-600 transition-colors">
-              40+ DIY Gift Ideas →
-            </p>
+              40+ DIY Gift Ideas ?            </p>
           </Link>
           <Link
             href="/en/blog/funny-secret-santa-gifts"
             className="bg-gradient-to-br from-orange-50 to-red-50 p-4 rounded-lg border border-orange-200 hover:shadow-md transition-all group"
           >
             <p className="font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
-              Funny Gift Ideas →
-            </p>
+              Funny Gift Ideas ?            </p>
           </Link>
         </div>
       </section>
@@ -466,23 +463,23 @@ export default function ChristmasSecretSanta2025() {
               <div>
                 <h4 className="font-bold text-gray-900 mb-3">Activities</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Ugly Christmas sweater contest</li>
-                  <li>• Holiday trivia or bingo</li>
-                  <li>• Secret Santa guessing game</li>
-                  <li>• Cookie decorating station</li>
-                  <li>• Christmas carol karaoke</li>
-                  <li>• White elephant exchange combo</li>
+                  <li>?Ugly Christmas sweater contest</li>
+                  <li>?Holiday trivia or bingo</li>
+                  <li>?Secret Santa guessing game</li>
+                  <li>?Cookie decorating station</li>
+                  <li>?Christmas carol karaoke</li>
+                  <li>?White elephant exchange combo</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 mb-3">Food & Drink</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Hot chocolate bar with toppings</li>
-                  <li>• Holiday cookie exchange</li>
-                  <li>• Mulled wine or cider</li>
-                  <li>• Potluck festive dishes</li>
-                  <li>• Gingerbread house decorating</li>
-                  <li>• Candy cane cocktails</li>
+                  <li>?Hot chocolate bar with toppings</li>
+                  <li>?Holiday cookie exchange</li>
+                  <li>?Mulled wine or cider</li>
+                  <li>?Potluck festive dishes</li>
+                  <li>?Gingerbread house decorating</li>
+                  <li>?Candy cane cocktails</li>
                 </ul>
               </div>
             </div>
@@ -547,11 +544,11 @@ export default function ChristmasSecretSanta2025() {
               },
               {
                 problem: "Inappropriate gift given",
-                solution: "Privately approach giver and recipient. Apologize to recipient. Offer to replace gift. Use as learning opportunity for group—review gift guidelines next year."
+                solution: "Privately approach giver and recipient. Apologize to recipient. Offer to replace gift. Use as learning opportunity for groupeview gift guidelines next year."
               },
               {
                 problem: "Duplicate gifts for same person",
-                solution: "Prevent with questionnaire asking 'what do you already have?' If happens, person keeps both or exchanges one—make light of it rather than embarrassing givers."
+                solution: "Prevent with questionnaire asking 'what do you already have?' If happens, person keeps both or exchanges oneake light of it rather than embarrassing givers."
               }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg">
@@ -576,7 +573,7 @@ export default function ChristmasSecretSanta2025() {
           {[
             {
               q: "When should I start organizing Secret Santa for Christmas 2025?",
-              a: "Begin in early November (Nov 1-7) to give participants 6-8 weeks for shopping. This timeline allows for Black Friday sales (Nov 28), handles shipping delays, and reduces last-minute stress. For virtual exchanges with international shipping, start even earlier—mid-October."
+              a: "Begin in early November (Nov 1-7) to give participants 6-8 weeks for shopping. This timeline allows for Black Friday sales (Nov 28), handles shipping delays, and reduces last-minute stress. For virtual exchanges with international shipping, start even earlierid-October."
             },
             {
               q: "What's the best budget for Christmas Secret Santa?",
@@ -588,7 +585,7 @@ export default function ChristmasSecretSanta2025() {
             },
             {
               q: "Should we do Secret Santa before or after Christmas?",
-              a: "Before Christmas is traditional and captures the holiday excitement. The week of December 15-22 is ideal. Post-Christmas (Dec 26-31) works for relaxed exchanges or if your group can't meet beforehand—turn it into a fun New Year's celebration."
+              a: "Before Christmas is traditional and captures the holiday excitement. The week of December 15-22 is ideal. Post-Christmas (Dec 26-31) works for relaxed exchanges or if your group can't meet beforehandurn it into a fun New Year's celebration."
             },
             {
               q: "How do I handle Secret Santa for remote team members?",
@@ -688,7 +685,7 @@ export default function ChristmasSecretSanta2025() {
           Ready to Organize Your Christmas Secret Santa 2025?
         </h2>
         <p className="text-xl mb-8 text-red-50 max-w-2xl mx-auto">
-          Use our free Secret Santa generator to organize your Christmas exchange perfectly. Set budget limits, collect preferences, and share assignments—all for free!
+          Use our free Secret Santa generator to organize your Christmas exchange perfectly. Set budget limits, collect preferences, and share assignmentsll for free!
         </p>
         <Link
           href="/en"
@@ -701,3 +698,5 @@ export default function ChristmasSecretSanta2025() {
     </article>
   );
 }
+
+
