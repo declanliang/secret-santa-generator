@@ -52,15 +52,15 @@ export default function UniqueQuirkySecretSantaGifts() {
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
         <p className="text-xl text-gray-700 leading-relaxed">
-          Looking for a Secret Santa gift that feels genuinely different? Unique and quirky gifts are perfect when you want to stand out, spark conversation, and give something the recipient won¡¯t already own. These ideas are surprising, creative, and still practical enough to be appreciated long after the exchange ends.
+          Looking for a Secret Santa gift that feels genuinely different? Unique and quirky gifts are perfect when you want to stand out, spark conversation, and give something the recipient will not already own. These ideas are surprising, creative, and still practical enough to be appreciated long after the exchange ends.
         </p>
 
         <p className="text-gray-700 leading-relaxed">
-          The best unusual Secret Santa gifts balance novelty with usefulness. Think unexpected desk toys that actually calm stress, oddly-designed kitchen tools that work better than you¡¯d expect, or tiny experience kits that let people try something new. These are the gifts that get remembered.
+          The best unusual Secret Santa gifts balance novelty with usefulness. Think unexpected desk toys that actually calm stress, oddly designed kitchen tools that work better than you would expect, or tiny experience kits that let people try something new. These are the gifts that get remembered.
         </p>
 
         <p className="text-gray-700 leading-relaxed">
-          Below you¡¯ll find 45+ unique and quirky Secret Santa gift ideas organized by vibe: creative desk finds, home decor oddities, maker kits, weird snacks, and more. There¡¯s something here for every personality, budget, and exchange setting.
+          Below you will find 45+ unique and quirky Secret Santa gift ideas organized by vibe: creative desk finds, home decor oddities, maker kits, weird snacks, and more. There is something here for every personality, budget, and exchange setting.
         </p>
       </div>
 
@@ -100,18 +100,18 @@ export default function UniqueQuirkySecretSantaGifts() {
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Oddly Satisfying Desk Toys</h2>
           <p className="text-gray-700 text-lg">
-            These quirky desk gifts are perfect for coworkers or anyone who likes to fidget while thinking. They¡¯re small, memorable, and oddly calming.
+            These quirky desk gifts are perfect for coworkers or anyone who likes to fidget while thinking. They are small, memorable, and oddly calming.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
             { name: "Kinetic Desk Sculpture", price: "$20-35", desc: "A spinning, flowing metal sculpture that moves with a gentle touch. Mesmerizing and surprisingly calming for busy desks." },
-            { name: "Magnetic Sand Hourglass", price: "$15-25", desc: "Iron filings create spiky patterns as they fall. A modern twist on a classic hourglass that people can¡¯t stop staring at." },
+            { name: "Magnetic Sand Hourglass", price: "$15-25", desc: "Iron filings create spiky patterns as they fall. A modern twist on a classic hourglass that people cannot stop staring at." },
             { name: "Satisfying Clicker Cube", price: "$8-15", desc: "A compact fidget cube with switches, buttons, and textures. Great for focus without being noisy." },
             { name: "Mini Zen Garden", price: "$12-20", desc: "Tiny rake, sand, and stones for quick desk mindfulness breaks. A quirky gift that actually gets used." },
             { name: "Balancing Desk Pebbles", price: "$15-25", desc: "Stackable stones that challenge coordination. Looks like modern art when arranged." },
-            { name: "Floating Globe Magnet", price: "$25-40", desc: "A levitating globe that spins in midair. Attention-grabbing without feeling gimmicky." },
+            { name: "Floating Globe Magnet", price: "$25-40", desc: "A levitating globe that spins in midair. Attention grabbing without feeling gimmicky." },
             { name: "Color-Shift Desk Light", price: "$20-30", desc: "Compact LED light that cycles through colors. Adds a playful vibe to any workspace." },
             { name: "Puzzle Cable Organizer", price: "$12-18", desc: "Interlocking pieces that tame messy cords. Functional and fun to assemble." },
           ].map((gift, idx) => (
@@ -142,7 +142,7 @@ export default function UniqueQuirkySecretSantaGifts() {
             { name: "Neon Quote Light", price: "$25-40", desc: "A mini LED neon sign with a fun phrase. Adds cozy, quirky ambience to any room." },
             { name: "Upside-Down Planter", price: "$18-30", desc: "Plants hang upside down for a fun twist. Great for small spaces and conversation." },
             { name: "Color-Drip Candles", price: "$12-18", desc: "Tall candles that melt into wild color patterns. A quick way to make any space feel artsy." },
-            { name: "Mini Storm Cloud Diffuser", price: "$20-35", desc: "An essential-oil diffuser shaped like a cloud. Mist looks like rain and feels whimsical." },
+            { name: "Mini Storm Cloud Diffuser", price: "$20-35", desc: "An essential oil diffuser shaped like a cloud. Mist looks like rain and feels whimsical." },
             { name: "3D Printed Vase", price: "$18-30", desc: "Organic, geometric shapes that look handcrafted. Pairs well with a single flower or sprig." },
             { name: "Glow-in-the-Dark Wall Stars (Retro)", price: "$8-12", desc: "Nostalgic and unexpectedly fun. Works great for quirky adults too." },
             { name: "Tiny Cozy Lamp", price: "$20-30", desc: "A warm, miniature lamp that adds instant charm to desks and shelves." },
@@ -175,7 +175,7 @@ export default function UniqueQuirkySecretSantaGifts() {
             { name: "Mini Terrarium Kit", price: "$25-40", desc: "Includes tiny plants, stones, and a jar to build a desktop ecosystem." },
             { name: "DIY Hot Sauce Kit", price: "$20-35", desc: "Spices, bottles, and instructions for crafting custom hot sauces." },
             { name: "Beginner Embroidery Kit", price: "$12-20", desc: "A small hoop, thread, and pattern for a simple, relaxing craft." },
-            { name: "Paint-by-Number Postcard Set", price: "$10-18", desc: "Relaxing mini art projects with display-worthy results." },
+            { name: "Paint-by-Number Postcard Set", price: "$10-18", desc: "Relaxing mini art projects with display worthy results." },
             { name: "Book Nook Miniature Scene", price: "$30-45", desc: "A detailed, glowing diorama that fits between books. Unique and impressive." },
             { name: "Make-Your-Own Candle Kit", price: "$25-40", desc: "Simple materials and scents for custom candles." },
             { name: "DIY Ramen Spice Mix", price: "$12-20", desc: "Create bold seasonings to upgrade instant noodles." },
@@ -199,7 +199,7 @@ export default function UniqueQuirkySecretSantaGifts() {
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Quirky Tech & Gadgets</h2>
           <p className="text-gray-700 text-lg">
-            Tech doesn¡¯t have to be predictable. These gadgets are clever, a little odd, and surprisingly useful.
+            Tech does not have to be predictable. These gadgets are clever, a little odd, and surprisingly useful.
           </p>
         </div>
 
@@ -207,10 +207,10 @@ export default function UniqueQuirkySecretSantaGifts() {
           {[
             { name: "Pocket Thermal Printer", price: "$30-45", desc: "Prints tiny stickers, notes, and photos from your phone. Great for journaling and planners." },
             { name: "Retro Mini Game Console", price: "$25-40", desc: "Loaded with classic games for quick nostalgia hits." },
-            { name: "Smartphone Telescope Lens", price: "$20-35", desc: "Clips on for zoomed-in stargazing or long-distance shots." },
+            { name: "Smartphone Telescope Lens", price: "$20-35", desc: "Clips on for zoomed in stargazing or long distance shots." },
             { name: "USB Aroma Diffuser", price: "$18-25", desc: "Small diffuser that plugs into a laptop for subtle desk aromatherapy." },
             { name: "Self-Watering Plant Sensor", price: "$25-40", desc: "A tiny sensor that helps keep plants alive. Practical and geeky." },
-            { name: "Mini Projector (Phone Size)", price: "$35-50", desc: "Projects videos on a wall for an instant movie-night vibe." },
+            { name: "Mini Projector (Phone Size)", price: "$35-50", desc: "Projects videos on a wall for an instant movie night vibe." },
             { name: "Color-Shifting Charging Cable", price: "$12-18", desc: "Cable glows while charging. A small but delightful touch." },
             { name: "Sound-Reactive LED Strip", price: "$20-35", desc: "Lights sync to music. Perfect for game rooms or parties." },
           ].map((gift, idx) => (
@@ -241,9 +241,9 @@ export default function UniqueQuirkySecretSantaGifts() {
             { name: "International Snack Box", price: "$20-35", desc: "A mix of global chips, candies, and drinks for a mini taste adventure." },
             { name: "Mushroom Hot Chocolate", price: "$15-25", desc: "Earthy, cozy, and different in the best way." },
             { name: "Truffle Popcorn Seasoning", price: "$12-18", desc: "Elevates movie night with gourmet flavor." },
-            { name: "Unusual Jam Trio", price: "$15-25", desc: "Flavors like lavender, fig-rose, or spicy citrus." },
+            { name: "Unusual Jam Trio", price: "$15-25", desc: "Flavors like lavender, fig rose, or spicy citrus." },
             { name: "Cereal Milk Candy", price: "$10-18", desc: "Nostalgic cereal flavor in candy form." },
-            { name: "Hot Honey Gift Jar", price: "$12-20", desc: "Sweet-heat drizzle for pizza or roasted veggies." },
+            { name: "Hot Honey Gift Jar", price: "$12-20", desc: "Sweet heat drizzle for pizza or roasted veggies." },
             { name: "Salt Flight Sampler", price: "$18-30", desc: "Smoked, flaky, and flavored salts for cooking lovers." },
             { name: "Tea & Syrup Pairing Set", price: "$20-35", desc: "Unique tea blends with matching syrups for custom drinks." },
           ].map((gift, idx) => (
@@ -272,7 +272,7 @@ export default function UniqueQuirkySecretSantaGifts() {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             { name: "Scratch-Off Adventure Map", price: "$18-30", desc: "Scratch destinations or local challenges. Encourages fun weekend plans." },
-            { name: "Murder Mystery Party Kit", price: "$25-40", desc: "A small, self-contained mystery for a fun night in." },
+            { name: "Murder Mystery Party Kit", price: "$25-40", desc: "A small, self contained mystery for a fun night in." },
             { name: "Astrology Birth Chart Print", price: "$20-35", desc: "Personalized and quirky. Great for astrology fans." },
             { name: "Mini Indoor Herb Garden", price: "$20-35", desc: "Compact grow kit for fresh basil or mint." },
             { name: "DIY Cocktail Dice", price: "$10-18", desc: "Roll dice to build random drink combos. Great for parties." },
@@ -302,7 +302,7 @@ export default function UniqueQuirkySecretSantaGifts() {
             {[
               {
                 title: "Choose a Conversation Starter",
-                desc: "Unique gifts should spark a quick story. If you can imagine someone saying 'Where did you get this?' you¡¯re on the right track."
+                desc: "Unique gifts should spark a quick story. If you can imagine someone saying 'Where did you get this?' you are on the right track."
               },
               {
                 title: "Keep It Useful",
@@ -355,10 +355,10 @@ export default function UniqueQuirkySecretSantaGifts() {
               <li>? Satisfying clicker cube</li>
               <li>? Mini zen garden</li>
               <li>? Cereal milk candy</li>
-              <li>? Color-drip candles</li>
+              <li>? Color drip candles</li>
               <li>? DIY cocktail dice</li>
               <li>? Puzzle postcard set</li>
-              <li>? Glow-in-the-dark stars</li>
+              <li>? Glow in the dark stars</li>
               <li>? Tiny origami challenge book</li>
             </ul>
           </div>
@@ -372,13 +372,13 @@ export default function UniqueQuirkySecretSantaGifts() {
             </div>
             <ul className="space-y-2 text-gray-700">
               <li>? Magnetic sand hourglass</li>
-              <li>? Upside-down planter</li>
+              <li>? Upside down planter</li>
               <li>? Mini terrarium kit</li>
               <li>? International snack box</li>
               <li>? LED neon quote light</li>
               <li>? USB aroma diffuser</li>
               <li>? Hot honey gift jar</li>
-              <li>? Scratch-off adventure map</li>
+              <li>? Scratch off adventure map</li>
             </ul>
           </div>
 
@@ -415,15 +415,15 @@ export default function UniqueQuirkySecretSantaGifts() {
             },
             {
               q: "Are quirky gifts appropriate for office exchanges?",
-              a: "Yes, as long as they¡¯re tasteful and work-appropriate. Stick to clever desk items, creative snacks, or small decor pieces. Avoid anything too loud, crude, or overly personal."
+              a: "Yes, as long as they are tasteful and work appropriate. Stick to clever desk items, creative snacks, or small decor pieces. Avoid anything too loud, crude, or overly personal."
             },
             {
-              q: "What are safe quirky gifts if I don¡¯t know the person well?",
-              a: "Safe bets include desk toys, interesting candles, snack boxes, mini plant kits, or novelty kitchen tools. These feel creative but aren¡¯t too personal."
+              q: "What are safe quirky gifts if I do not know the person well?",
+              a: "Safe bets include desk toys, interesting candles, snack boxes, mini plant kits, or novelty kitchen tools. These feel creative but are not too personal."
             },
             {
               q: "Can a unique gift still be affordable?",
-              a: "Absolutely. Many unique gifts are under $20 because they¡¯re small but thoughtfully designed. A creative presentation also makes budget gifts feel more special."
+              a: "Absolutely. Many unique gifts are under $20 because they are small but thoughtfully designed. A creative presentation also makes budget gifts feel more special."
             },
             {
               q: "Should I prioritize usefulness or novelty?",
@@ -493,7 +493,7 @@ export default function UniqueQuirkySecretSantaGifts() {
           Ready to Organize Your Secret Santa Exchange?
         </h2>
         <p className="text-xl mb-8 text-amber-50 max-w-2xl mx-auto">
-          Now that you have unique gift ideas, use our free Secret Santa generator to organize a fun exchange. No email required, completely free!
+          Now that you have unique gift ideas, use our free Secret Santa generator to organize a fun exchange. No email required, completely free.
         </p>
         <Link
           href="/en"
